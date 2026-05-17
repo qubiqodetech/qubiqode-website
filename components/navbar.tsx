@@ -7,10 +7,10 @@ import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { name: "Services", href: "#services" },
-  { name: "Portfolio", href: "#portfolio" },
-  { name: "Process", href: "#process" },
-  { name: "Testimonials", href: "#testimonials" },
+  { name: "Services", href: "/services" },
+  { name: "Portfolio", href: "/#portfolio" },
+  { name: "Process", href: "/#process" },
+  { name: "Testimonials", href: "/#testimonials" },
 ];
 
 export function Navbar() {
@@ -62,7 +62,7 @@ export function Navbar() {
 
           <div className="hidden md:flex items-center space-x-4 z-50">
             <Link
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center justify-center rounded-full bg-stone-950 px-6 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-stone-800 focus:outline-none focus:ring-2 focus:ring-stone-950 focus:ring-offset-2 transition-all"
             >
               Get a Quote
@@ -107,7 +107,7 @@ export function Navbar() {
               ))}
               <div className="pt-4 border-t border-stone-200">
                 <Link
-                  href="#contact"
+                  href="/contact"
                   className="w-full inline-flex justify-center rounded-full bg-stone-950 px-6 py-3 text-sm font-medium text-white shadow-sm hover:bg-stone-800 transition-all"
                   onClick={() => setMobileMenuOpen(false)}
                 >

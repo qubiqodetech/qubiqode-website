@@ -57,7 +57,7 @@ export function Footer() {
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="#services"
+                  href="/services/web-development"
                   className="text-stone-400 hover:text-white transition-colors text-sm"
                 >
                   Web Development
@@ -65,7 +65,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="#services"
+                  href="/services/ui-ux-design"
                   className="text-stone-400 hover:text-white transition-colors text-sm"
                 >
                   UI/UX Design
@@ -73,15 +73,15 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="#services"
+                  href="/services/seo-optimized-websites"
                   className="text-stone-400 hover:text-white transition-colors text-sm"
                 >
-                  Brand Identity
+                  SEO Optimization
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#services"
+                  href="/services/video-editing"
                   className="text-stone-400 hover:text-white transition-colors text-sm"
                 >
                   Video Editing
@@ -95,7 +95,7 @@ export function Footer() {
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="#portfolio"
+                  href="/#portfolio"
                   className="text-stone-400 hover:text-white transition-colors text-sm"
                 >
                   Portfolio
@@ -103,7 +103,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="#process"
+                  href="/#process"
                   className="text-stone-400 hover:text-white transition-colors text-sm"
                 >
                   Our Process
@@ -111,7 +111,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="#testimonials"
+                  href="/#testimonials"
                   className="text-stone-400 hover:text-white transition-colors text-sm"
                 >
                   Testimonials
@@ -119,7 +119,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="#contact"
+                  href="/contact"
                   className="text-stone-400 hover:text-white transition-colors text-sm"
                 >
                   Contact Us

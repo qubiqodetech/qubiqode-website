@@ -54,14 +54,14 @@ export function Hero() {
             className="flex flex-col sm:flex-row gap-4"
           >
             <Link
-              href="#contact"
+              href="/#contact"
               className="inline-flex items-center justify-center rounded-full bg-stone-950 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-stone-900/20 hover:bg-stone-800 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
             >
               Start a Project
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
-              href="#portfolio"
+              href="/#portfolio"
               className="inline-flex items-center justify-center rounded-full bg-white border border-stone-200 px-8 py-4 text-base font-semibold text-stone-900 hover:bg-stone-50 hover:border-stone-300 transition-all duration-200"
             >
               View Our Work

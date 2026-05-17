@@ -1,34 +1,9 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Code, PenTool, LayoutTemplate, Video } from "lucide-react";
-
-const services = [
-  {
-    icon: Code,
-    title: "Web Development",
-    description:
-      "High-performance websites and web applications built with modern frameworks like Next.js and React.",
-  },
-  {
-    icon: PenTool,
-    title: "UI/UX Design",
-    description:
-      "User-centric interfaces that combine stunning aesthetics with frictionless user journeys.",
-  },
-  {
-    icon: LayoutTemplate,
-    title: "Brand Identity",
-    description:
-      "Memorable visual identities, logos, and design systems that communicate your brand values.",
-  },
-  {
-    icon: Video,
-    title: "Video Editing",
-    description:
-      "Professional video production and editing to engage your audience on social and digital channels.",
-  },
-];
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { services } from "@/lib/services";
 
 const containerVariants = {
   hidden: { opacity: 1 },
@@ -67,6 +42,13 @@ export function Services() {
               design to development and launch.
             </p>
           </div>
+          <Link
+            href="/services"
+            className="group flex items-center text-sm font-semibold text-stone-950 hover:text-orange-600 transition-colors"
+          >
+            View all services
+            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
 
         <motion.div
@@ -76,23 +58,31 @@ export function Services() {
           viewport={{ once: true, amount: 0.1 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              className="group p-8 rounded-3xl bg-stone-50 border border-stone-100 hover:bg-stone-100 hover:border-stone-200 transition-all duration-300"
-            >
-              <div className="w-12 h-12 rounded-2xl bg-white border border-stone-200 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 group-hover:bg-stone-950 group-hover:text-white transition-all duration-300">
-                <service.icon className="w-6 h-6 text-stone-700 group-hover:text-white transition-colors" />
-              </div>
-              <h3 className="font-display text-xl font-bold text-stone-950 mb-3">
-                {service.title}
-              </h3>
-              <p className="text-stone-600 leading-relaxed text-sm">
-                {service.description}
-              </p>
-            </motion.div>
-          ))}
+          {services.slice(0, 4).map((service, index) => {
+            const Icon = service.icon;
+            return (
+              <motion.div
+                key={service.slug}
+                variants={itemVariants}
+                className="group p-8 rounded-3xl bg-stone-50 border border-stone-100 hover:bg-stone-100 hover:border-stone-200 transition-all duration-300 flex flex-col"
+              >
+                <div className="w-12 h-12 rounded-2xl bg-white border border-stone-200 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 group-hover:bg-stone-950 group-hover:text-white transition-all duration-300">
+                  <Icon className="w-6 h-6 text-stone-700 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="font-display text-xl font-bold text-stone-950 mb-3">
+                  <Link
+                    href={`/services/${service.slug}`}
+                    className="hover:text-orange-600 transition-colors"
+                  >
+                    {service.title}
+                  </Link>
+                </h3>
+                <p className="text-stone-600 leading-relaxed text-sm">
+                  {service.summary}
+                </p>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>

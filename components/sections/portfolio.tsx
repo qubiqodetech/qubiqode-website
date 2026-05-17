@@ -4,33 +4,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-
-const projects = [
-  {
-    title: "Fintech Dashboard",
-    category: "UI/UX & Web App",
-    image: "https://picsum.photos/seed/fintech1/800/600",
-    link: "#",
-  },
-  {
-    title: "E-commerce Platform",
-    category: "Development",
-    image: "https://picsum.photos/seed/ecomm/800/600",
-    link: "#",
-  },
-  {
-    title: "Eco Lifestyle Brand",
-    category: "Brand Identity",
-    image: "https://picsum.photos/seed/brand/800/600",
-    link: "#",
-  },
-  {
-    title: "Tech Startup Landing",
-    category: "Web Design",
-    image: "https://picsum.photos/seed/startup/800/600",
-    link: "#",
-  },
-];
+import { portfolioProjects } from "@/lib/portfolio";
 
 export function Portfolio() {
   return (
@@ -50,7 +24,7 @@ export function Portfolio() {
             </p>
           </div>
           <Link
-            href="#portfolio"
+            href="/portfolio"
             className="group flex items-center text-sm font-semibold hover:text-orange-500 transition-colors"
           >
             View all projects
@@ -59,7 +33,7 @@ export function Portfolio() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-          {projects.map((project, index) => (
+          {portfolioProjects.slice(0, 4).map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 1, y: 0 }}
@@ -73,13 +47,14 @@ export function Portfolio() {
               className={`group relative ${index % 2 !== 0 ? "md:mt-16" : ""}`}
             >
               <Link
-                href={project.link}
+                href={`/portfolio/${project.slug}`}
                 className="block w-full overflow-hidden rounded-3xl bg-stone-900 border border-white/10 aspect-[4/3] relative"
               >
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   referrerPolicy="no-referrer"
                 />
@@ -88,12 +63,14 @@ export function Portfolio() {
               <div className="mt-6 flex justify-between items-start">
                 <div>
                   <h3 className="font-display text-2xl font-bold mb-1 group-hover:text-orange-500 transition-colors">
-                    {project.title}
+                    <Link href={`/portfolio/${project.slug}`}>
+                      {project.title}
+                    </Link>
                   </h3>
                   <p className="text-stone-400 text-sm">{project.category}</p>
                 </div>
                 <Link
-                  href={project.link}
+                  href={`/portfolio/${project.slug}`}
                   className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-stone-950 transition-colors group-hover:-rotate-45"
                 >
                   <ArrowUpRight className="w-5 h-5" />

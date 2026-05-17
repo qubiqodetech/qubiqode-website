@@ -23,6 +23,7 @@ export function About() {
                 src="https://picsum.photos/seed/agency-office/800/1000"
                 alt="QubiQode team collaborating"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
                 referrerPolicy="no-referrer"
               />
