@@ -2,346 +2,337 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import {
-  Mail,
-  MessageCircle,
-  ArrowRight,
-  CheckCircle2,
-  MapPin,
-  Linkedin,
-  Twitter,
-  Instagram,
-} from "lucide-react";
 import Link from "next/link";
+import { ArrowRight, Mail, MessageSquare, MapPin, CheckCircle2, ChevronDown, Send, Linkedin, Twitter, Instagram } from "lucide-react";
 
-const services = [
-  "Web Development",
-  "UI/UX Design",
-  "SEO & Marketing",
-  "Video Editing",
-  "Brand Identity",
-  "Other",
+const faqs = [
+  {
+    question: "What is your typical project timeline?",
+    answer: "Project timelines vary depending on complexity. A standard corporate website takes 4-6 weeks, while a custom web application can take 3-6 months. We will provide a detailed timeline during the proposal phase."
+  },
+  {
+    question: "Do you work with startups?",
+    answer: "Absolutely. We love partnering with ambitious startups to build scalable MVPs and establish strong brand identities from day one."
+  },
+  {
+    question: "What is your pricing structure?",
+    answer: "We offer both fixed-price contracts for well-defined projects and retainer models for ongoing product development and marketing. Minimum project size usually starts at $10k."
+  }
 ];
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    service: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [formState, setFormState] = useState<"idle" | "submitting" | "success">("idle");
+  const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
+    setFormState("submitting");
+    
     // Simulate API call
     setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      // Reset after showing success state for a while
-      setTimeout(() => {
-        setIsSuccess(false);
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          service: "",
-          message: "",
-        });
-      }, 5000);
+      setFormState("success");
     }, 1500);
   };
 
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
-  ) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.id]: e.target.value,
-    }));
-  };
-
   return (
-    <>
-      <section className="pt-32 pb-24 bg-stone-50 min-h-screen">
-        <div className="container mx-auto px-6 max-w-7xl">
-          <div className="max-w-3xl mb-16">
-            <h1 className="font-display text-5xl md:text-6xl font-bold tracking-tight text-stone-950 mb-6">
-              Let&apos;s build something{" "}
-              <span className="text-orange-600">extraordinary</span>.
-            </h1>
-            <p className="text-xl text-stone-600 leading-relaxed">
-              We&apos;re ready to turn your vision into reality. Tell us about
-              your project, and we&apos;ll get back to you within 24 hours.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-            {/* Left Column: Contact Info */}
-            <div className="lg:col-span-5 space-y-12">
-              {/* Contact Blocks */}
-              <div className="space-y-6">
-                <a
-                  href="mailto:hello@qubiqode.com"
-                  className="flex items-start gap-4 group p-6 bg-white rounded-3xl shadow-sm border border-stone-100 hover:border-orange-200 hover:shadow-orange-100/50 transition-all duration-300"
-                >
-                  <div className="w-12 h-12 rounded-2xl bg-stone-50 flex items-center justify-center group-hover:bg-orange-50 transition-colors flex-shrink-0">
-                    <Mail className="w-5 h-5 text-stone-700 group-hover:text-orange-600 transition-colors" />
-                  </div>
-                  <div>
-                    <h3 className="font-display font-bold text-stone-950 mb-1">
-                      Email Us
-                    </h3>
-                    <p className="text-sm text-stone-600 mb-2">
-                      For general inquiries and project proposals.
-                    </p>
-                    <p className="font-medium text-stone-950 group-hover:text-orange-600 transition-colors">
-                      hello@qubiqode.com
-                    </p>
-                  </div>
-                </a>
-
-                <a
-                  href="https://wa.me/1234567890"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-4 group p-6 bg-white rounded-3xl shadow-sm border border-stone-100 hover:border-green-200 hover:shadow-green-100/50 transition-all duration-300"
-                >
-                  <div className="w-12 h-12 rounded-2xl bg-stone-50 flex items-center justify-center group-hover:bg-green-50 transition-colors flex-shrink-0">
-                    <MessageCircle className="w-5 h-5 text-stone-700 group-hover:text-green-600 transition-colors" />
-                  </div>
-                  <div>
-                    <h3 className="font-display font-bold text-stone-950 mb-1">
-                      WhatsApp Chat
-                    </h3>
-                    <p className="text-sm text-stone-600 mb-2">
-                      For quick questions and urgent matters.
-                    </p>
-                    <p className="font-medium text-stone-950 group-hover:text-green-600 transition-colors">
-                      +1 (234) 567-890
-                    </p>
-                  </div>
-                </a>
-              </div>
-
-              {/* Location */}
-              <div>
-                <h3 className="font-display text-xl font-bold text-stone-950 mb-4 flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-stone-400" /> Output Location
-                </h3>
-                <address className="not-italic text-stone-600 pl-7">
-                  123 Innovation Drive
-                  <br />
-                  Tech District, Suite 400
-                  <br />
-                  San Francisco, CA 94103
-                </address>
-              </div>
-
-              {/* Socials */}
-              <div>
-                <h3 className="font-display text-xl font-bold text-stone-950 mb-4">
-                  Follow along
-                </h3>
-                <div className="flex gap-4">
-                  <a
-                    href="#"
-                    className="w-10 h-10 rounded-full bg-stone-200 flex items-center justify-center text-stone-600 hover:bg-stone-950 hover:text-white transition-colors"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin className="w-4 h-4" />
-                  </a>
-                  <a
-                    href="#"
-                    className="w-10 h-10 rounded-full bg-stone-200 flex items-center justify-center text-stone-600 hover:bg-stone-950 hover:text-white transition-colors"
-                    aria-label="Twitter"
-                  >
-                    <Twitter className="w-4 h-4" />
-                  </a>
-                  <a
-                    href="#"
-                    className="w-10 h-10 rounded-full bg-stone-200 flex items-center justify-center text-stone-600 hover:bg-stone-950 hover:text-white transition-colors"
-                    aria-label="Instagram"
-                  >
-                    <Instagram className="w-4 h-4" />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Column: Form */}
-            <div className="lg:col-span-7">
-              <div className="bg-white p-8 md:p-12 rounded-[2rem] shadow-xl shadow-stone-200/50 border border-stone-100 relative overflow-hidden">
-                <AnimatePresence mode="wait">
-                  {isSuccess ? (
-                    <motion.div
-                      key="success"
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.95 }}
-                      className="absolute inset-0 bg-white z-10 flex flex-col items-center justify-center p-8 text-center"
-                    >
-                      <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mb-6">
-                        <CheckCircle2 className="w-10 h-10 text-green-500" />
-                      </div>
-                      <h3 className="font-display text-3xl font-bold text-stone-950 mb-4">
-                        Message Sent!
-                      </h3>
-                      <p className="text-stone-600 max-w-sm mx-auto">
-                        Thank you for reaching out. A member of our team will
-                        review your inquiry and get back to you within 24 hours.
-                      </p>
-                    </motion.div>
-                  ) : (
-                    <motion.form
-                      key="form"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
-                      onSubmit={handleSubmit}
-                      className="space-y-6"
-                    >
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div className="space-y-2">
-                          <label
-                            htmlFor="firstName"
-                            className="text-sm font-semibold text-stone-950"
-                          >
-                            First name{" "}
-                            <span className="text-orange-500">*</span>
-                          </label>
-                          <input
-                            id="firstName"
-                            type="text"
-                            required
-                            value={formData.firstName}
-                            onChange={handleChange}
-                            className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3.5 text-stone-950 outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
-                            placeholder="John"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <label
-                            htmlFor="lastName"
-                            className="text-sm font-semibold text-stone-950"
-                          >
-                            Last name <span className="text-orange-500">*</span>
-                          </label>
-                          <input
-                            id="lastName"
-                            type="text"
-                            required
-                            value={formData.lastName}
-                            onChange={handleChange}
-                            className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3.5 text-stone-950 outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
-                            placeholder="Doe"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="space-y-2">
-                        <label
-                          htmlFor="email"
-                          className="text-sm font-semibold text-stone-950"
-                        >
-                          Work email <span className="text-orange-500">*</span>
-                        </label>
-                        <input
-                          id="email"
-                          type="email"
-                          required
-                          value={formData.email}
-                          onChange={handleChange}
-                          className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3.5 text-stone-950 outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
-                          placeholder="john@company.com"
-                        />
-                      </div>
-
-                      <div className="space-y-2">
-                        <label
-                          htmlFor="service"
-                          className="text-sm font-semibold text-stone-950"
-                        >
-                          What are you looking for?{" "}
-                          <span className="text-orange-500">*</span>
-                        </label>
-                        <div className="relative">
-                          <select
-                            id="service"
-                            required
-                            value={formData.service}
-                            onChange={handleChange}
-                            className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3.5 text-stone-950 outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all appearance-none"
-                          >
-                            <option value="" disabled>
-                              Select a service
-                            </option>
-                            {services.map((service, idx) => (
-                              <option key={idx} value={service}>
-                                {service}
-                              </option>
-                            ))}
-                          </select>
-                          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-stone-500">
-                            <svg
-                              className="fill-current h-4 w-4"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 20 20"
-                            >
-                              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="space-y-2">
-                        <label
-                          htmlFor="message"
-                          className="text-sm font-semibold text-stone-950"
-                        >
-                          Project details{" "}
-                          <span className="text-orange-500">*</span>
-                        </label>
-                        <textarea
-                          id="message"
-                          required
-                          rows={5}
-                          value={formData.message}
-                          onChange={handleChange}
-                          className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3.5 text-stone-950 outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all resize-none"
-                          placeholder="Tell us about your goals, timeline, and budget..."
-                        ></textarea>
-                      </div>
-
-                      <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="w-full bg-stone-950 hover:bg-stone-800 disabled:bg-stone-400 text-white rounded-xl px-8 py-4 font-semibold flex items-center justify-center gap-2 transition-colors group"
-                      >
-                        {isSubmitting ? "Sending..." : "Send Inquiry"}
-                        {!isSubmitting && (
-                          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        )}
-                      </button>
-
-                      <p className="text-xs text-stone-500 text-center mt-4">
-                        By submitting this form, you agree to our <Link href="/privacy-policy" className="underline hover:text-stone-800">privacy policy</Link>
-                        and <Link href="/terms-of-service" className="underline hover:text-stone-800">terms of service</Link>.
-                      </p>
-                    </motion.form>
-                  )}
-                </AnimatePresence>
-              </div>
-            </div>
+    <main className="min-h-screen bg-stone-50 selection:bg-orange-200">
+      
+      {/* Hero Section */}
+      <section className="pt-32 pb-16 lg:pt-48 lg:pb-24 bg-stone-950 text-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-600/20 via-stone-950/5 to-transparent pointer-events-none" />
+        
+        <div className="container mx-auto px-6 max-w-7xl relative z-10">
+          <div className="max-w-3xl">
+             <motion.div
+               initial={{ opacity: 0, y: 20 }}
+               animate={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.6 }}
+               className="inline-flex items-center rounded-full border border-stone-800 bg-stone-900/60 backdrop-blur-md px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-stone-300 mb-8 shadow-sm"
+             >
+               Get in Touch
+             </motion.div>
+             
+             <motion.h1
+               initial={{ opacity: 0, y: 30 }}
+               animate={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.6, delay: 0.1 }}
+               className="font-display text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-8"
+             >
+               Let&apos;s build something <span className="text-orange-500 italic">extraordinary.</span>
+             </motion.h1>
+             
+             <motion.p
+               initial={{ opacity: 0, y: 20 }}
+               animate={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.6, delay: 0.2 }}
+               className="text-lg md:text-xl text-stone-400 leading-relaxed max-w-2xl"
+             >
+               Whether you have a fully formed RFP or just a spark of an idea, our team is ready to listen, strategize, and execute. We typically respond within 24 hours.
+             </motion.p>
           </div>
         </div>
       </section>
-    </>
+
+      {/* Main Content Area */}
+      <section className="py-24 -mt-16 sm:-mt-24 lg:-mt-32 relative z-20">
+         <div className="container mx-auto px-6 max-w-7xl">
+            <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+               
+               {/* Left Column: Form Submittal */}
+               <motion.div 
+                 initial={{ opacity: 0, y: 40 }}
+                 animate={{ opacity: 1, y: 0 }}
+                 transition={{ duration: 0.8, delay: 0.3 }}
+                 className="lg:col-span-7 bg-white rounded-3xl p-8 md:p-12 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] border border-stone-200"
+               >
+                  <AnimatePresence mode="wait">
+                    {formState === "success" ? (
+                       <motion.div
+                         key="success"
+                         initial={{ opacity: 0, scale: 0.95 }}
+                         animate={{ opacity: 1, scale: 1 }}
+                         className="h-full min-h-[500px] flex flex-col items-center justify-center text-center py-12"
+                       >
+                          <div className="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center mb-8">
+                             <CheckCircle2 className="w-12 h-12 text-green-500" />
+                          </div>
+                          <h3 className="font-display text-3xl font-bold text-stone-950 mb-4">Message Received</h3>
+                          <p className="text-stone-600 text-lg mb-8 max-w-md mx-auto">
+                            Thank you for reaching out to QubiQode. A member of our strategy team will follow up with you shortly.
+                          </p>
+                          <button
+                            onClick={() => setFormState("idle")}
+                            className="text-stone-900 font-semibold underline underline-offset-4 hover:text-orange-600 transition-colors"
+                          >
+                            Send another message
+                          </button>
+                       </motion.div>
+                    ) : (
+                       <motion.div
+                         key="form"
+                         initial={{ opacity: 0 }}
+                         animate={{ opacity: 1 }}
+                         exit={{ opacity: 0 }}
+                       >
+                         <div className="mb-10">
+                           <h3 className="font-display text-2xl md:text-3xl font-bold text-stone-950 mb-3">Project Inquiry</h3>
+                           <p className="text-stone-600">Fill out the form below and we&apos;ll get back to you promptly.</p>
+                         </div>
+                         
+                         <form onSubmit={handleSubmit} className="space-y-6">
+                            <div className="grid md:grid-cols-2 gap-6">
+                               <div className="space-y-2">
+                                 <label htmlFor="firstName" className="text-sm font-semibold text-stone-950">First name <span className="text-orange-500">*</span></label>
+                                 <input 
+                                   id="firstName"
+                                   type="text" 
+                                   required
+                                   className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all font-medium placeholder:text-stone-400"
+                                   placeholder="John"
+                                 />
+                               </div>
+                               <div className="space-y-2">
+                                 <label htmlFor="lastName" className="text-sm font-semibold text-stone-950">Last name <span className="text-orange-500">*</span></label>
+                                 <input 
+                                   id="lastName"
+                                   type="text" 
+                                   required
+                                   className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all font-medium placeholder:text-stone-400"
+                                   placeholder="Doe"
+                                 />
+                               </div>
+                            </div>
+                            
+                            <div className="space-y-2">
+                              <label htmlFor="email" className="text-sm font-semibold text-stone-950">Work email <span className="text-orange-500">*</span></label>
+                              <input 
+                                id="email"
+                                type="email" 
+                                required
+                                className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all font-medium placeholder:text-stone-400"
+                                placeholder="john@company.com"
+                              />
+                            </div>
+
+                            <div className="space-y-2">
+                              <label htmlFor="interest" className="text-sm font-semibold text-stone-950">What are you looking for? <span className="text-orange-500">*</span></label>
+                              <div className="relative">
+                                <select 
+                                  id="interest"
+                                  required
+                                  className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all font-medium appearance-none"
+                                >
+                                  <option value="" disabled selected>Select a service...</option>
+                                  <option value="web-dev">Web Development</option>
+                                  <option value="ui-ux">UI/UX Design</option>
+                                  <option value="branding">Brand Identity</option>
+                                  <option value="seo">SEO & Marketing</option>
+                                  <option value="other">Other</option>
+                                </select>
+                                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-500 pointer-events-none" />
+                              </div>
+                            </div>
+                            
+                            <div className="space-y-2">
+                              <label htmlFor="message" className="text-sm font-semibold text-stone-950">Project details <span className="text-orange-500">*</span></label>
+                              <textarea 
+                                id="message"
+                                required
+                                rows={5}
+                                className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all font-medium placeholder:text-stone-400 resize-y"
+                                placeholder="Tell us about your goals, timeline, and budget..."
+                              />
+                            </div>
+
+                            <p className="text-xs text-stone-500 mt-4 leading-relaxed">
+                              By submitting this form, you agree to our <Link href="/privacy-policy" className="underline hover:text-stone-800">privacy policy</Link> and <Link href="/terms-of-service" className="underline hover:text-stone-800">terms of service</Link>.
+                            </p>
+                            
+                            <button
+                              type="submit"
+                              disabled={formState === "submitting"}
+                              className={`w-full group flex items-center justify-center rounded-xl px-8 py-4 text-sm font-semibold text-white shadow-xl transition-all duration-300 ${
+                                formState === "submitting" ? "bg-stone-400 cursor-not-allowed" : "bg-orange-600 hover:bg-orange-500"
+                              }`}
+                            >
+                              {formState === "submitting" ? "Sending..." : "Submit Inquiry"}
+                              {formState !== "submitting" && <Send className="ml-2 w-4 h-4 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />}
+                            </button>
+                         </form>
+                       </motion.div>
+                    )}
+                  </AnimatePresence>
+               </motion.div>
+
+               {/* Right Column: Contact Info & FAQs */}
+               <motion.div 
+                 initial={{ opacity: 0, x: 20 }}
+                 animate={{ opacity: 1, x: 0 }}
+                 transition={{ duration: 0.8, delay: 0.4 }}
+                 className="lg:col-span-5 space-y-8"
+               >
+                  {/* Direct Contact Cards */}
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-4">
+                     <a href="mailto:hello@qubiqode.com" className="flex items-start gap-4 p-6 bg-white rounded-2xl border border-stone-200 hover:border-orange-500 hover:shadow-lg transition-all group">
+                        <div className="w-12 h-12 bg-orange-50 text-orange-600 rounded-full flex items-center justify-center shrink-0 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                           <Mail className="w-5 h-5" />
+                        </div>
+                        <div>
+                           <div className="text-sm font-semibold text-stone-500 mb-1">Email Us</div>
+                           <div className="font-bold text-stone-950 group-hover:text-orange-600 transition-colors">hello@qubiqode.com</div>
+                        </div>
+                     </a>
+                     
+                     <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 p-6 bg-white rounded-2xl border border-stone-200 hover:border-green-500 hover:shadow-lg transition-all group">
+                        <div className="w-12 h-12 bg-[#25D366]/10 text-[#25D366] rounded-full flex items-center justify-center shrink-0 group-hover:bg-[#25D366] group-hover:text-white transition-colors">
+                           <MessageSquare className="w-5 h-5" />
+                        </div>
+                        <div>
+                           <div className="text-sm font-semibold text-stone-500 mb-1">WhatsApp Chat</div>
+                           <div className="font-bold text-stone-950 group-hover:text-[#25D366] transition-colors">Available 9am - 6pm EST</div>
+                        </div>
+                     </a>
+
+                     <div className="flex items-start gap-4 p-6 bg-white rounded-2xl border border-stone-200">
+                        <div className="w-12 h-12 bg-stone-100 text-stone-600 rounded-full flex items-center justify-center shrink-0">
+                           <MapPin className="w-5 h-5" />
+                        </div>
+                        <div>
+                           <div className="text-sm font-semibold text-stone-500 mb-1">Output Location</div>
+                           <div className="font-bold text-stone-950">
+                             123 Innovation Drive<br/>Tech District, Suite 400<br/>San Francisco, CA 94103
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  {/* Socials */}
+                  <div className="bg-white rounded-3xl p-8 border border-stone-200 shadow-sm">
+                    <h3 className="font-display font-bold text-xl text-stone-950 mb-4 flex items-center gap-2">
+                       Follow along
+                    </h3>
+                    <div className="flex gap-4">
+                      <a href="#" className="w-12 h-12 rounded-full bg-stone-50 border border-stone-200 flex items-center justify-center text-stone-600 hover:bg-stone-950 hover:text-white transition-colors" aria-label="LinkedIn">
+                        <Linkedin className="w-5 h-5" />
+                      </a>
+                      <a href="#" className="w-12 h-12 rounded-full bg-stone-50 border border-stone-200 flex items-center justify-center text-stone-600 hover:bg-stone-950 hover:text-white transition-colors" aria-label="Twitter">
+                        <Twitter className="w-5 h-5" />
+                      </a>
+                      <a href="#" className="w-12 h-12 rounded-full bg-stone-50 border border-stone-200 flex items-center justify-center text-stone-600 hover:bg-stone-950 hover:text-white transition-colors" aria-label="Instagram">
+                        <Instagram className="w-5 h-5" />
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* FAQs */}
+                  <div className="bg-white rounded-3xl p-8 border border-stone-200 shadow-sm">
+                     <h3 className="font-display font-bold text-xl text-stone-950 mb-6">Frequently Asked Questions</h3>
+                     <div className="space-y-4">
+                       {faqs.map((faq, idx) => (
+                          <div key={idx} className="border-b border-stone-100 pb-4 last:border-0 last:pb-0">
+                            <button 
+                              onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
+                              className="w-full flex items-center justify-between text-left font-semibold text-stone-900 group"
+                            >
+                              {faq.question}
+                              <ChevronDown className={`w-4 h-4 text-stone-400 group-hover:text-stone-900 transition-all ${activeFaq === idx ? 'rotate-180' : ''}`} />
+                            </button>
+                            <AnimatePresence>
+                              {activeFaq === idx && (
+                                <motion.div
+                                  initial={{ height: 0, opacity: 0 }}
+                                  animate={{ height: "auto", opacity: 1 }}
+                                  exit={{ height: 0, opacity: 0 }}
+                                  className="overflow-hidden"
+                                >
+                                  <p className="pt-4 text-sm text-stone-600 leading-relaxed">
+                                    {faq.answer}
+                                  </p>
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
+                          </div>
+                       ))}
+                     </div>
+                  </div>
+               </motion.div>
+
+            </div>
+         </div>
+      </section>
+
+      {/* Global Presence Map or Banner */}
+      <section className="py-24 bg-stone-950 text-white relative overflow-hidden mt-12">
+        <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/noise/800/800')] opacity-5 mix-blend-overlay pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[600px] bg-orange-600/5 rounded-full blur-[100px] pointer-events-none" />
+        
+        <div className="container mx-auto px-6 max-w-5xl text-center relative z-10">
+           <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">Global reach. Local impact.</h2>
+           <p className="text-xl text-stone-400 mb-12 max-w-2xl mx-auto">
+             While headquartered in San Francisco, our distributed team partners with organizations across North America, Europe, and Asia.
+           </p>
+
+           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-stone-800">
+             <div>
+               <div className="font-display text-3xl font-bold text-white mb-2">SF</div>
+               <div className="text-stone-500 text-sm">Headquarters</div>
+             </div>
+             <div>
+               <div className="font-display text-3xl font-bold text-white mb-2">LDN</div>
+               <div className="text-stone-500 text-sm">Design Lab</div>
+             </div>
+             <div>
+               <div className="font-display text-3xl font-bold text-white mb-2">NY</div>
+               <div className="text-stone-500 text-sm">Engineering Hub</div>
+             </div>
+             <div>
+               <div className="font-display text-3xl font-bold text-white mb-2">SGP</div>
+               <div className="text-stone-500 text-sm">APAC Office</div>
+             </div>
+           </div>
+        </div>
+      </section>
+      
+    </main>
   );
 }
