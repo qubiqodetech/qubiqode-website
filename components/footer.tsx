@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Instagram, Linkedin, Twitter, Github, Mail, MessageCircle } from "lucide-react";
 import { motion } from "motion/react";
 
@@ -58,9 +59,13 @@ export function Footer() {
             className="lg:col-span-3 pr-4 flex flex-col items-start"
           >
             <Link href="/" className="inline-block group mb-6">
-              <span className="font-display font-bold text-2xl tracking-tight text-white group-hover:opacity-80 transition-opacity">
-                QubiQode<span className="text-orange-500">.</span>
-              </span>
+              <Image 
+                src="/logo_light.png" 
+                alt="QubiQode Logo" 
+                width={280} 
+                height={70}
+                className="h-16 sm:h-20 w-auto transition-opacity group-hover:opacity-80 pb-2"
+              />
             </Link>
             <p className="text-stone-400 text-sm leading-relaxed mb-6 max-w-sm">
               A modern creative technology studio focused on premium web development, design, and digital innovation.

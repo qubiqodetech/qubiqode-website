@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence, useScroll, useSpring } from "motion/react";
 import { 
   Menu, 
@@ -292,9 +293,14 @@ export function Navbar() {
           >
             {/* Logo */}
             <Link href="/" className="group flex items-center gap-2 z-50 relative shrink-0" onClick={() => setMobileMenuOpen(false)}>
-              <span className={`font-display font-bold text-xl tracking-tight transition-opacity ${useLightText ? "text-white group-hover:text-stone-200" : "text-stone-950 group-hover:opacity-80"}`}>
-                QubiQode<span className="text-orange-600">.</span>
-              </span>
+              <Image 
+                src={useLightText ? "/logo_light.png" : "/logo_dark.png"} 
+                alt="QubiQode Logo" 
+                width={200} 
+                height={50}
+                className="h-12 sm:h-14 w-auto transition-opacity group-hover:opacity-80"
+                priority
+              />
             </Link>
 
             {/* Desktop Nav */}
