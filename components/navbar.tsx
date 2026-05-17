@@ -210,12 +210,28 @@ export function Navbar() {
     restDelta: 0.001
   });
 
-  const isDarkHero = 
-    pathname === '/services/ai-automation' || 
-    pathname === '/services/video-editing' || 
-    pathname === '/tech-stack';
+  const darkHeroRoutes = [
+    '/testimonials',
+    '/tech-stack',
+    '/services/web-development',
+    '/services/video-editing',
+    '/services/seo',
+    '/services/branding',
+    '/services/ai-automation',
+    '/process',
+    '/maintenance',
+    '/design-system',
+    '/contact',
+    '/careers',
+    '/book'
+  ];
 
-  // Determine if we should use dark text (default) or light text (on dark heroes when not scrolled)
+  const isDarkHero = 
+    darkHeroRoutes.includes(pathname) || 
+    (pathname.startsWith('/portfolio/') && pathname !== '/portfolio');
+
+  // Determine if we should use light text (white text, light logo)
+  // useLightText is true when on a dark hero and NOT scrolled
   const useLightText = isDarkHero && !isScrolled;
 
   React.useEffect(() => {
