@@ -1,33 +1,37 @@
-'use client';
+"use client";
 
-import { motion } from 'motion/react';
-import { Code, PenTool, LayoutTemplate, Video } from 'lucide-react';
+import { motion } from "motion/react";
+import { Code, PenTool, LayoutTemplate, Video } from "lucide-react";
 
 const services = [
   {
     icon: Code,
-    title: 'Web Development',
-    description: 'High-performance websites and web applications built with modern frameworks like Next.js and React.',
+    title: "Web Development",
+    description:
+      "High-performance websites and web applications built with modern frameworks like Next.js and React.",
   },
   {
     icon: PenTool,
-    title: 'UI/UX Design',
-    description: 'User-centric interfaces that combine stunning aesthetics with frictionless user journeys.',
+    title: "UI/UX Design",
+    description:
+      "User-centric interfaces that combine stunning aesthetics with frictionless user journeys.",
   },
   {
     icon: LayoutTemplate,
-    title: 'Brand Identity',
-    description: 'Memorable visual identities, logos, and design systems that communicate your brand values.',
+    title: "Brand Identity",
+    description:
+      "Memorable visual identities, logos, and design systems that communicate your brand values.",
   },
   {
     icon: Video,
-    title: 'Video Editing',
-    description: 'Professional video production and editing to engage your audience on social and digital channels.',
+    title: "Video Editing",
+    description:
+      "Professional video production and editing to engage your audience on social and digital channels.",
   },
 ];
 
 const containerVariants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 1 },
   visible: {
     opacity: 1,
     transition: {
@@ -37,7 +41,7 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 1, y: 0 },
   visible: {
     opacity: 1,
     y: 0,
@@ -55,10 +59,12 @@ export function Services() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div className="max-w-2xl">
             <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-stone-950 mb-4">
-              Capabilities that drive <span className="text-stone-400">growth</span>.
+              Capabilities that drive{" "}
+              <span className="text-stone-400">growth</span>.
             </h2>
             <p className="text-lg text-stone-600">
-              We offer end-to-end digital services, from initial strategy and design to development and launch.
+              We offer end-to-end digital services, from initial strategy and
+              design to development and launch.
             </p>
           </div>
         </div>

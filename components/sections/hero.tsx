@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { motion } from 'motion/react';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { motion } from "motion/react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
@@ -16,7 +16,7 @@ export function Hero() {
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         <div className="max-w-4xl">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
@@ -27,7 +27,7 @@ export function Hero() {
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight text-stone-950 leading-[1.05] mb-8"
@@ -37,16 +37,18 @@ export function Hero() {
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="text-lg md:text-xl text-stone-600 mb-10 max-w-2xl leading-relaxed"
           >
-            QubiQode is a premium creative agency specializing in world-class web development, UI/UX design, and brand identity for forward-thinking companies.
+            QubiQode is a premium creative agency specializing in world-class
+            web development, UI/UX design, and brand identity for
+            forward-thinking companies.
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col sm:flex-row gap-4"

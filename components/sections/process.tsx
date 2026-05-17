@@ -1,28 +1,32 @@
-'use client';
+"use client";
 
-import { motion } from 'motion/react';
+import { motion } from "motion/react";
 
 const steps = [
   {
-    number: '01',
-    title: 'Discovery & Strategy',
-    description: 'We dive deep into your business goals, target audience, and competition to craft a roadmap for success.'
+    number: "01",
+    title: "Discovery & Strategy",
+    description:
+      "We dive deep into your business goals, target audience, and competition to craft a roadmap for success.",
   },
   {
-    number: '02',
-    title: 'Design & Prototyping',
-    description: 'Our design team creates Wireframes and high-fidelity prototypes, focusing on user experience and brand alignment.'
+    number: "02",
+    title: "Design & Prototyping",
+    description:
+      "Our design team creates Wireframes and high-fidelity prototypes, focusing on user experience and brand alignment.",
   },
   {
-    number: '03',
-    title: 'Development',
-    description: 'We build scalable, high-performance applications using modern web technologies and best practices.'
+    number: "03",
+    title: "Development",
+    description:
+      "We build scalable, high-performance applications using modern web technologies and best practices.",
   },
   {
-    number: '04',
-    title: 'Launch & Scale',
-    description: 'After rigorous testing, we launch your product and provide ongoing support to help your team scale.'
-  }
+    number: "04",
+    title: "Launch & Scale",
+    description:
+      "After rigorous testing, we launch your product and provide ongoing support to help your team scale.",
+  },
 ];
 
 export function Process() {
@@ -36,17 +40,18 @@ export function Process() {
                 Our proven <span className="text-orange-600">process</span>.
               </h2>
               <p className="text-lg text-stone-600 mb-8">
-                We believe in transparency, communication, and clear milestones. Here's how we turn ideas into reality.
+                We believe in transparency, communication, and clear milestones.
+                Here's how we turn ideas into reality.
               </p>
             </div>
           </div>
-          
+
           <div className="md:w-2/3">
             <div className="flex flex-col space-y-12">
               {steps.map((step, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: 20 }}
+                  initial={{ opacity: 1, x: 0 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -58,8 +63,12 @@ export function Process() {
                     </span>
                   </div>
                   <div className="pt-2">
-                    <h3 className="text-2xl font-bold text-stone-950 mb-3">{step.title}</h3>
-                    <p className="text-stone-600 leading-relaxed">{step.description}</p>
+                    <h3 className="text-2xl font-bold text-stone-950 mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-stone-600 leading-relaxed">
+                      {step.description}
+                    </p>
                   </div>
                 </motion.div>
               ))}

@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import * as React from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X } from 'lucide-react';
-import { usePathname } from 'next/navigation';
+import * as React from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "motion/react";
+import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { name: 'Services', href: '#services' },
-  { name: 'Portfolio', href: '#portfolio' },
-  { name: 'Process', href: '#process' },
-  { name: 'Testimonials', href: '#testimonials' },
+  { name: "Services", href: "#services" },
+  { name: "Portfolio", href: "#portfolio" },
+  { name: "Process", href: "#process" },
+  { name: "Testimonials", href: "#testimonials" },
 ];
 
 export function Navbar() {
@@ -22,8 +22,8 @@ export function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Close mobile menu on route change
@@ -34,7 +34,9 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-stone-50/80 backdrop-blur-lg border-b border-stone-200/50 py-4' : 'bg-transparent py-6'
+        isScrolled
+          ? "bg-stone-50/80 backdrop-blur-lg border-b border-stone-200/50 py-4"
+          : "bg-transparent py-6"
       }`}
     >
       <div className="container mx-auto px-6 max-w-7xl">
@@ -73,7 +75,11 @@ export function Navbar() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle Navigation Menu"
           >
-            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {mobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </button>
         </div>
       </div>
