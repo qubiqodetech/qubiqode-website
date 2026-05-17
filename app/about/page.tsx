@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Code2, MonitorPlay, Sparkles, Target, Zap, Diamond, Users, Lightbulb, Compass } from "lucide-react";
+import { StatsMarquee } from "@/components/sections/stats-marquee";
 
 const stats = [
   { label: "Years Experience", value: "10+" },
@@ -196,6 +197,8 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
+      
+      <StatsMarquee />
 
       {/* Values */}
       <section className="bg-stone-950 text-white py-32 mb-32">

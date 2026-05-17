@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import Link from "next/link";
 import { ArrowRight, Layout, Server, Database, Cloud, PenTool, GitBranch, Terminal, Shield, Zap, CheckCircle2 } from "lucide-react";
+import { TechMarquee } from "@/components/sections/tech-marquee";
 
 const techCategories = [
   {
@@ -261,6 +262,8 @@ export default function TechStackPage() {
             </motion.div>
          </div>
       </section>
+
+      <TechMarquee />
 
     </main>
   );

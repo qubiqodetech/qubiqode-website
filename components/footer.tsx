@@ -4,10 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Instagram, Linkedin, Twitter, Github, Mail, MessageCircle } from "lucide-react";
 import { motion } from "motion/react";
+import { CTAMarquee } from "@/components/sections/cta-marquee";
 
 export function Footer() {
   return (
-    <footer className="relative bg-stone-950 text-white overflow-hidden pt-24 pb-12 lg:pt-32">
+    <>
+      <CTAMarquee />
+      <footer className="relative bg-stone-950 text-white overflow-hidden pt-24 pb-12 lg:pt-32">
       {/* Background elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-stone-700 to-transparent" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-primary-500/10 rounded-full blur-[100px] pointer-events-none" />
@@ -202,6 +205,7 @@ export function Footer() {
         </motion.div>
       </div>
     </footer>
+    </>
   );
 }
 

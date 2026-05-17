@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Bot, Cpu, Network, Zap, Workflow, BrainCircuit, Sparkles, Database, Settings, ShieldCheck, BarChart4, TrendingUp } from "lucide-react";
+import { VerticalMarquee } from "@/components/sections/vertical-marquee";
 
 const capabilities = [
   {
@@ -80,6 +81,8 @@ export default function AiAutomationPage() {
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <VerticalMarquee />
+        
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute top-[10%] right-[10%] w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-600/20 via-blue-900/10 to-transparent rounded-full blur-[100px] pointer-events-none" />
           <div className="absolute bottom-[20%] left-[5%] w-[800px] h-[800px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-600/20 via-cyan-900/5 to-transparent rounded-full blur-[120px] pointer-events-none" />

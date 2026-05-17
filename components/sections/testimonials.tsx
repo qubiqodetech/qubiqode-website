@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { Star, Quote } from "lucide-react";
 import Image from "next/image";
+import { Marquee } from "@/components/ui/marquee";
 
 const testimonials = [
   {
@@ -26,6 +27,20 @@ const testimonials = [
     role: "Director of Marketing, CoreRetail",
     avatar: "https://picsum.photos/seed/elena/100/100",
   },
+  {
+    quote:
+      "The best development agency we have ever partnered with. The communication was excellent and the final product is stunning.",
+    name: "Michael Chang",
+    role: "CEO, Nexus Innovations",
+    avatar: "https://picsum.photos/seed/michael/100/100",
+  },
+  {
+    quote:
+      "They didn't just build a website, they built a scalable digital platform that will support our growth for years to come. Brilliant work.",
+    name: "Sophia Martinez",
+    role: "Product Lead, Vista Ventures",
+    avatar: "https://picsum.photos/seed/sophia/100/100",
+  }
 ];
 
 export function Testimonials() {
@@ -33,8 +48,8 @@ export function Testimonials() {
     <section id="testimonials" className="py-24 lg:py-32 bg-stone-950 text-white overflow-hidden relative">
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[800px] h-[800px] bg-primary-950/20 rounded-full blur-[100px] pointer-events-none" />
       
-      <div className="container mx-auto px-6 max-w-7xl relative z-10">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+      <div className="container mx-auto px-6 max-w-7xl relative z-10 mb-16">
+        <div className="text-center max-w-2xl mx-auto">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -54,16 +69,14 @@ export function Testimonials() {
             us to build incredible products.
           </motion.p>
         </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="relative flex flex-col items-center justify-center overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] w-full">
+        <Marquee pauseOnHover className="[--duration:50s] py-4">
           {testimonials.map((testimonial, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="bg-stone-900 border border-white/10 p-8 rounded-[2rem] relative group hover:border-primary-500/30 transition-colors duration-300"
+              className="w-[350px] md:w-[450px] bg-stone-900 border border-white/10 p-8 rounded-[2rem] relative group hover:border-primary-500/50 hover:shadow-[0_0_30px_rgba(30,144,255,0.1)] hover:-translate-y-1 transition-all duration-300 mx-4 flex flex-col"
             >
               <Quote className="absolute top-8 right-8 w-12 h-12 text-white/5 rotate-180 group-hover:text-primary-500/10 transition-colors duration-300" />
               <div className="flex gap-1 mb-8">
@@ -74,10 +87,10 @@ export function Testimonials() {
                   />
                 ))}
               </div>
-              <p className="text-stone-300 leading-relaxed mb-10 relative z-10 text-base md:text-lg">
+              <p className="text-stone-300 leading-relaxed mb-10 relative z-10 text-base flex-1">
                 &quot;{testimonial.quote}&quot;
               </p>
-              <div className="flex items-center gap-4 mt-auto">
+              <div className="flex items-center gap-4 mt-auto relative z-10">
                 <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-stone-800 group-hover:border-primary-500 transition-colors duration-300">
                   <Image
                     src={testimonial.avatar}
@@ -85,6 +98,7 @@ export function Testimonials() {
                     fill
                     className="object-cover"
                     referrerPolicy="no-referrer"
+                    unoptimized
                   />
                 </div>
                 <div>
@@ -94,9 +108,9 @@ export function Testimonials() {
                   <p className="text-sm text-stone-500">{testimonial.role}</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </div>
+        </Marquee>
       </div>
     </section>
   );
