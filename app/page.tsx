@@ -1,5 +1,5 @@
 import { Hero } from "@/components/sections/hero";
-import { ClientLogos } from "@/components/sections/client-logos";
+import { DigitalDNA } from "@/components/sections/digital-dna";
 import { TextMarquee } from "@/components/sections/text-marquee";
 import { Services } from "@/components/sections/services";
 import { About } from "@/components/sections/about";
@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <ClientLogos />
+      <DigitalDNA />
       <TextMarquee />
       <Services />
       <About />

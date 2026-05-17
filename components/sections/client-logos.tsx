@@ -23,30 +23,33 @@ const logos = [
 
 export function ClientLogos() {
   return (
-    <section className="py-20 bg-stone-50/50 border-y border-stone-200 overflow-hidden">
-      <div className="container mx-auto max-w-7xl">
+    <section className="py-20 bg-stone-950 border-t border-stone-800 overflow-hidden relative">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-500/30 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-24 bg-primary-500/5 blur-[80px] pointer-events-none" />
+      
+      <div className="container mx-auto max-w-7xl relative z-10">
         <motion.p 
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center text-sm font-medium text-stone-500 uppercase tracking-widest mb-12 px-6"
+          className="text-center text-sm font-medium text-stone-500 uppercase tracking-[0.2em] mb-12 px-6"
         >
           Built with premium technologies
         </motion.p>
 
-        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
-          <Marquee pauseOnHover className="[--duration:30s] opacity-60 grayscale hover:grayscale-[0.2] transition-all duration-700 mix-blend-multiply flex items-center">
+        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <Marquee pauseOnHover className="[--duration:40s] flex items-center">
             {logos.map((logo, idx) => (
-              <div key={idx} className="flex items-center px-8">
+              <div key={idx} className="flex items-center px-10">
                 <Image
                   src={logo.url}
                   alt={`${logo.name} logo`}
-                  width={120}
+                  width={140}
                   height={50}
-                  className="object-contain max-h-10 w-auto"
+                  className="object-contain max-h-12 w-auto brightness-0 invert opacity-40 hover:opacity-100 transition-all duration-500 hover:scale-105"
                   referrerPolicy="no-referrer"
-                  unoptimized // since we are using external random images which might not be configured
+                  unoptimized
                 />
               </div>
             ))}
