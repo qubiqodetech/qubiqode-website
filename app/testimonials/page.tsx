@@ -4,6 +4,69 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Star, Quote, ShieldCheck, Trophy, Target, Globe, Building2, Hexagon, CircleDashed, Triangle } from "lucide-react";
+import { TestimonialsColumn } from "@/components/ui/testimonials-columns-1";
+
+// Mock data for testimonials
+const testimonialsAnimation = [
+  {
+    text: "QubiQode revolutionized our operations, streamlining our digital presence. The custom platform keeps us ahead of the competition.",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=faces",
+    name: "Briana Patton",
+    role: "Operations Manager",
+  },
+  {
+    text: "Implementing this new system was smooth and quick. The customizable, user-friendly interface made team training effortless.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=faces",
+    name: "Bilal Ahmed",
+    role: "IT Manager",
+  },
+  {
+    text: "The team is exceptional, guiding us through setup and providing ongoing assistance, ensuring our complete satisfaction.",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=faces",
+    name: "Saman Malik",
+    role: "Customer Support Lead",
+  },
+  {
+    text: "This seamless integration enhanced our business operations and efficiency. Highly recommend QubiQode for their intuitive design.",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=faces",
+    name: "Omar Raza",
+    role: "CEO",
+  },
+  {
+    text: "Their robust expertise and quick turnaround have transformed our workflow, making us significantly more efficient.",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=faces",
+    name: "Zainab Hussain",
+    role: "Project Manager",
+  },
+  {
+    text: "The smooth implementation exceeded expectations. It streamlined processes, improving overall business performance.",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=faces",
+    name: "Aliza Khan",
+    role: "Business Analyst",
+  },
+  {
+    text: "Our business functions improved with a user-friendly design and positive customer feedback after we launched the new site.",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=faces",
+    name: "Farhan Siddiqui",
+    role: "Marketing Director",
+  },
+  {
+    text: "They delivered a solution that exceeded expectations, understanding our unique needs and enhancing our operations.",
+    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=150&h=150&fit=crop&crop=faces",
+    name: "Sana Sheikh",
+    role: "Sales Manager",
+  },
+  {
+    text: "Working with QubiQode, our online presence and conversions significantly improved, boosting absolute business performance.",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=faces",
+    name: "Hassan Ali",
+    role: "E-commerce Manager",
+  },
+];
+
+const firstColumn = testimonialsAnimation.slice(0, 3);
+const secondColumn = testimonialsAnimation.slice(3, 6);
+const thirdColumn = testimonialsAnimation.slice(6, 9);
 
 // Mock data for testimonials
 const testimonials = [
@@ -215,52 +278,27 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Standard Testimonials Grid */}
-      <section className="py-24 bg-stone-50">
+      <section className="bg-stone-50 py-24 relative overflow-hidden">
         <div className="container mx-auto px-6 max-w-7xl">
-          <div className="mb-16 text-center">
-             <h2 className="font-display text-4xl font-bold text-stone-950 mb-4">More Client Love</h2>
-             <p className="text-stone-600 text-lg">Consistent quality, consistent praise.</p>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center justify-center max-w-2xl mx-auto text-center"
+          >
+            <h2 className="font-display text-4xl font-bold text-stone-950 mb-4">
+              More Client Love
+            </h2>
+            <p className="text-stone-600 text-lg">
+              Consistent quality, consistent praise. See what our customers have to say about us.
+            </p>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {standardTestimonials.map((testimonial, i) => (
-               <motion.div
-                 key={i}
-                 initial={{ opacity: 0, y: 20 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 viewport={{ once: true }}
-                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                 className="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm hover:shadow-xl hover:border-primary-200 transition-all duration-300 flex flex-col"
-               >
-                 <div className="flex justify-between items-start mb-6">
-                   <div className="flex gap-1">
-                      {[...Array(testimonial.rating)].map((_, idx) => (
-                         <Star key={idx} className="w-4 h-4 fill-primary-500 text-primary-500" />
-                      ))}
-                   </div>
-                   <Quote className="w-8 h-8 text-stone-200" />
-                 </div>
-                 
-                 <p className="text-stone-600 leading-relaxed mb-8 flex-1">
-                   "{testimonial.quote}"
-                 </p>
-                 
-                 <div className="flex items-center gap-4">
-                    <Image 
-                      src={testimonial.avatar}
-                      alt={testimonial.author}
-                      width={48}
-                      height={48}
-                      className="rounded-full object-cover bg-stone-100"
-                      referrerPolicy="no-referrer"
-                    />
-                    <div>
-                      <div className="font-bold text-stone-950">{testimonial.author}</div>
-                      <div className="text-stone-500 text-sm">{testimonial.role}, {testimonial.company}</div>
-                    </div>
-                 </div>
-               </motion.div>
-            ))}
+          <div className="flex justify-center gap-6 mt-16 [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)] max-h-[740px] overflow-hidden relative">
+            <TestimonialsColumn testimonials={firstColumn} duration={15} />
+            <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={19} />
+            <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={17} />
           </div>
         </div>
       </section>
