@@ -1,0 +1,8 @@
+{
+  "name": "QubiQode Agency Website",
+  "description": "Modern, premium digital agency website for QubiQode. Featuring services, portfolio, process, and clear CTAs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
