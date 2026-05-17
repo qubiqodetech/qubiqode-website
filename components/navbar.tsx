@@ -231,6 +231,7 @@ export function Navbar() {
   });
 
   const darkHeroRoutes = [
+    '/',
     '/testimonials',
     '/tech-stack',
     '/services/web-development',
