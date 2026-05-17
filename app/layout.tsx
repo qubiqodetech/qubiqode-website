@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Chatbot } from "@/components/chatbot";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import { Preloader } from "@/components/preloader";
 import { PageTransition } from "@/components/page-transition";
 
@@ -111,6 +112,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <Chatbot />
+        <ScrollToTop />
       </body>
     </html>
   );
