@@ -160,9 +160,10 @@ export default function ContactPage() {
                                 <select 
                                   id="interest"
                                   required
+                                  defaultValue=""
                                   className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all font-medium appearance-none"
                                 >
-                                  <option value="" disabled selected>Select a service...</option>
+                                  <option value="" disabled>Select a service...</option>
                                   <option value="web-dev">Web Development</option>
                                   <option value="ui-ux">UI/UX Design</option>
                                   <option value="branding">Brand Identity</option>
