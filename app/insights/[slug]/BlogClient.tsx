@@ -137,13 +137,13 @@ export function BlogClient({ article, relatedPosts }: { article: any, relatedPos
            {/* Main Body */}
            <div className="lg:w-2/3 max-w-3xl">
               <article 
-                className="prose pindigo-lg md:pindigo-xl pindigo-stone max-w-none 
-                           pindigo-headings:font-display pindigo-headings:font-bold pindigo-headings:text-stone-950 pindigo-headings:tracking-tight 
-                           pindigo-p:text-stone-600 pindigo-p:leading-relaxed 
-                           pindigo-a:text-primary-600 pindigo-a:font-semibold pindigo-a:no-underline hover:pindigo-a:underline
-                           pindigo-blockquote:border-l-4 pindigo-blockquote:border-primary-500 pindigo-blockquote:bg-stone-50 pindigo-blockquote:px-6 pindigo-blockquote:py-4 pindigo-blockquote:rounded-r-xl pindigo-blockquote:my-10 pindigo-blockquote:font-medium pindigo-blockquote:text-stone-800 pindigo-blockquote:not-italic
-                           pindigo-strong:font-bold pindigo-strong:text-stone-900
-                           pindigo-li:text-stone-600"
+                className="prose prose-lg md:prose-xl prose-stone max-w-none 
+                           prose-headings:font-display prose-headings:font-bold prose-headings:text-stone-950 prose-headings:tracking-tight 
+                           prose-p:text-stone-600 prose-p:leading-relaxed 
+                           prose-a:text-primary-600 prose-a:font-semibold prose-a:no-underline hover:prose-a:underline
+                           prose-blockquote:border-l-4 prose-blockquote:border-primary-500 prose-blockquote:bg-stone-50 prose-blockquote:px-6 prose-blockquote:py-4 prose-blockquote:rounded-r-xl prose-blockquote:my-10 prose-blockquote:font-medium prose-blockquote:text-stone-800 prose-blockquote:not-italic
+                           prose-strong:font-bold prose-strong:text-stone-900
+                           prose-li:text-stone-600"
                 dangerouslySetInnerHTML={{ __html: article.content }}
               />
 

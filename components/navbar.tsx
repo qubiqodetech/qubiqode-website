@@ -211,10 +211,9 @@ export function Navbar() {
   });
 
   const isDarkHero = 
-    pathname.startsWith('/services/') || 
-    pathname.startsWith('/portfolio/') || 
-    pathname.startsWith('/insights/') || 
-    ['/testimonials', '/process', '/book', '/maintenance', '/about', '/tech-stack', '/careers', '/pricing', '/contact', '/resources', '/design-system', '/faq', '/privacy', '/terms', '/sitemap'].includes(pathname);
+    pathname === '/services/ai-automation' || 
+    pathname === '/services/video-editing' || 
+    pathname === '/tech-stack';
 
   // Determine if we should use dark text (default) or light text (on dark heroes when not scrolled)
   const useLightText = isDarkHero && !isScrolled;

@@ -177,7 +177,7 @@ export function Chatbot() {
                       }`}
                     >
                       {msg.role === "assistant" ? (
-                        <div className="prose pindigo-sm pindigo-stone max-w-none pindigo-p:leading-relaxed pindigo-pre:bg-stone-100 pindigo-pre:text-stone-900 pindigo-a:text-primary-600 hover:pindigo-a:text-primary-700">
+                        <div className="prose prose-sm prose-stone max-w-none prose-p:leading-relaxed prose-pre:bg-stone-100 prose-pre:text-stone-900 prose-a:text-primary-600 hover:prose-a:text-primary-700">
                           <Markdown>{msg.content}</Markdown>
                         </div>
                       ) : (
