@@ -19,7 +19,7 @@ export function Portfolio() {
               Selected <span className="text-stone-500">works</span>.
             </h2>
             <p className="text-lg text-stone-400">
-              A glimpse into the digital experiences we've crafted for ambitious
+              A glimpse into the digital experiences we&apos;ve crafted for ambitious
               brands worldwide.
             </p>
           </div>

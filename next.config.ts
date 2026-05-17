@@ -1,6 +1,10 @@
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
+  allowedDevOrigins: [
+    'ais-dev-kzdnwmif4bd6fm5tbt5xju-819516856011.asia-east1.run.app',
+    'localhost:3000'
+  ],
   reactStrictMode: true,
   typescript: {
     ignoreBuildErrors: false,

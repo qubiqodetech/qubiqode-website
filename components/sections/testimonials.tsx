@@ -34,7 +34,7 @@ export function Testimonials() {
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-stone-950 mb-4">
-            Don't just take our word for it.
+            Don&apos;t just take our word for it.
           </h2>
           <p className="text-lg text-stone-600">
             Hear from the founders and marketing leaders who have partnered with
@@ -61,7 +61,7 @@ export function Testimonials() {
                 ))}
               </div>
               <p className="text-stone-700 leading-relaxed mb-8 relative z-10 text-base md:text-lg">
-                "{testimonial.quote}"
+                &quot;{testimonial.quote}&quot;
               </p>
               <div className="flex items-center gap-4 mt-auto">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden border border-stone-200">

@@ -21,8 +21,8 @@ export default function PortfolioPage() {
               Our <span className="text-orange-600">Work</span>
             </h1>
             <p className="text-xl text-stone-600 leading-relaxed">
-              We don't just build websites and apps; we build businesses. Browse
-              a selection of our recent projects and see how we've helped our
+              We don&apos;t just build websites and apps; we build businesses. Browse
+              a selection of our recent projects and see how we&apos;ve helped our
               clients achieve their goals.
             </p>
           </div>

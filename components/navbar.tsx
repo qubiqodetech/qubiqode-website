@@ -28,7 +28,8 @@ export function Navbar() {
 
   // Close mobile menu on route change
   React.useEffect(() => {
-    setMobileMenuOpen(false);
+    const timeout = setTimeout(() => setMobileMenuOpen(false), 0);
+    return () => clearTimeout(timeout);
   }, [pathname]);
 
   return (

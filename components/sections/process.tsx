@@ -41,7 +41,7 @@ export function Process() {
               </h2>
               <p className="text-lg text-stone-600 mb-8">
                 We believe in transparency, communication, and clear milestones.
-                Here's how we turn ideas into reality.
+                Here&apos;s how we turn ideas into reality.
               </p>
             </div>
           </div>

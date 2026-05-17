@@ -331,8 +331,8 @@ export default function ContactPage() {
                       </button>
 
                       <p className="text-xs text-stone-500 text-center mt-4">
-                        By submitting this form, you agree to our privacy policy
-                        and terms of service.
+                        By submitting this form, you agree to our <Link href="/privacy-policy" className="underline hover:text-stone-800">privacy policy</Link>
+                        and <Link href="/terms-of-service" className="underline hover:text-stone-800">terms of service</Link>.
                       </p>
                     </motion.form>
                   )}
