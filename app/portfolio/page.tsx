@@ -217,7 +217,7 @@ export default function PortfolioPage() {
               <div className="lg:w-1/3">
                  <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">Client Outcomes</h2>
                  <p className="text-stone-400 text-lg leading-relaxed">
-                   We let our work speak for itself, but occasionally, our clients do the talking. Here's what they have to say about partnering with QubiQode.
+                   We let our work speak for itself, but occasionally, our clients do the talking. Here&apos;s what they have to say about partnering with QubiQode.
                  </p>
               </div>
               
@@ -240,7 +240,7 @@ export default function PortfolioPage() {
                     <Quote className="w-10 h-10 text-stone-800 mb-4" />
                     
                     <p className="text-stone-300 leading-relaxed mb-8 text-sm md:text-base">
-                      "{testimonial.quote}"
+                      &quot;{testimonial.quote}&quot;
                     </p>
                     
                     <div className="flex items-center gap-4">
@@ -271,7 +271,7 @@ export default function PortfolioPage() {
            <div className="max-w-3xl mx-auto">
              <h2 className="font-display text-4xl md:text-5xl font-bold text-stone-950 mb-6">Have a project in mind?</h2>
              <p className="text-xl text-stone-600 mb-10">
-               Let's collaborate to build something extraordinary. Our team is ready to tackle your most complex challenges.
+               Let&apos;s collaborate to build something extraordinary. Our team is ready to tackle your most complex challenges.
              </p>
              <Link
                href="/contact"

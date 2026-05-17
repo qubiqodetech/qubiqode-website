@@ -83,7 +83,7 @@ export default function ProcessPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-stone-400 max-w-2xl mx-auto leading-relaxed"
           >
-            We've refined our methodology over years of building premium digital products. We believe in transparency, rigorous planning, and flawless execution.
+            We&apos;ve refined our methodology over years of building premium digital products. We believe in transparency, rigorous planning, and flawless execution.
           </motion.p>
         </div>
       </section>
@@ -159,7 +159,7 @@ export default function ProcessPage() {
         <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
            <QuoteIcon className="w-16 h-16 mx-auto text-stone-800 mb-8" />
            <h2 className="font-display text-3xl md:text-5xl font-bold leading-tight mb-8">
-             "Our process is designed to eliminate surprises, mitigate risk, and guarantee a premium outcome."
+             &quot;Our process is designed to eliminate surprises, mitigate risk, and guarantee a premium outcome.&quot;
            </h2>
            <div className="text-stone-400 font-semibold uppercase tracking-widest text-sm">
              The QubiQode Standard
@@ -181,7 +181,7 @@ export default function ProcessPage() {
              <div className="max-w-3xl mx-auto">
                <h2 className="font-display text-4xl md:text-5xl font-bold text-stone-950 mb-6">Ready to start the process?</h2>
                <p className="text-xl text-stone-600 mb-10">
-                 Let's discuss your next project. We're ready to bring our expertise to your unique challenges.
+                 Let&apos;s discuss your next project. We&apos;re ready to bring our expertise to your unique challenges.
                </p>
                <Link
                  href="/contact"

@@ -106,7 +106,7 @@ export default function TestimonialsPage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-[1.1] mb-6 max-w-4xl mx-auto"
           >
-            Don't just take <br className="hidden sm:block" />
+            Don&apos;t just take <br className="hidden sm:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-600 italic">our word for it.</span>
           </motion.h1>
 
@@ -116,7 +116,7 @@ export default function TestimonialsPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-stone-400 max-w-2xl mx-auto leading-relaxed"
           >
-            We partner with ambitious brands to build exceptional digital products. Here's what they have to say about the QubiQode experience.
+            We partner with ambitious brands to build exceptional digital products. Here&apos;s what they have to say about the QubiQode experience.
           </motion.p>
         </div>
       </section>
@@ -190,7 +190,7 @@ export default function TestimonialsPage() {
                     </div>
                     
                     <p className="text-xl md:text-2xl text-stone-300 leading-relaxed font-medium mb-12 flex-1">
-                      "{testimonial.quote}"
+                      &quot;{testimonial.quote}&quot;
                     </p>
                     
                     <div className="flex items-center gap-5 border-t border-stone-800 pt-8 mt-auto">
@@ -281,7 +281,7 @@ export default function TestimonialsPage() {
              <div className="relative z-10 max-w-3xl mx-auto">
                <h2 className="font-display text-4xl md:text-6xl font-bold mb-6">Ready to become our next success story?</h2>
                <p className="text-xl text-orange-100 mb-10 leading-relaxed">
-                 We're currently taking on new projects. Let's discuss how we can build something incredible together.
+                 We&apos;re currently taking on new projects. Let&apos;s discuss how we can build something incredible together.
                </p>
                <Link
                  href="/contact"
