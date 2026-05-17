@@ -48,6 +48,20 @@
   animation: marquee-vertical var(--duration) linear infinite;
 }
 
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thumb-stone-800::-webkit-scrollbar-thumb {
+    background-color: #292524;
+    border-radius: 9999px;
+  }
+  .scrollbar-track-transparent::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+
 @layer base {
   ::selection {
     background-color: var(--color-primary);
