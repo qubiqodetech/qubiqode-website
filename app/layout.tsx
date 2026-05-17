@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Chatbot } from "@/components/chatbot";
 import { Preloader } from "@/components/preloader";
+import { PageTransition } from "@/components/page-transition";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -103,7 +104,11 @@ export default function RootLayout({
       >
         <Preloader />
         <Navbar />
-        <main className="flex-1 flex flex-col">{children}</main>
+        <main className="flex-1 flex flex-col">
+          <PageTransition>
+            {children}
+          </PageTransition>
+        </main>
         <Footer />
         <Chatbot />
       </body>
