@@ -85,7 +85,7 @@ const navGroups = [
   }
 ];
 
-function DesktopDropdown({ group, activeGroup, setActiveGroup }: { group: typeof navGroups[0], activeGroup: string | null, setActiveGroup: (name: string | null) => void }) {
+function DesktopDropdown({ group, activeGroup, setActiveGroup, useLightText }: { group: typeof navGroups[0], activeGroup: string | null, setActiveGroup: (name: string | null) => void, useLightText?: boolean }) {
   const isOpen = activeGroup === group.name;
 
   return (
@@ -95,13 +95,13 @@ function DesktopDropdown({ group, activeGroup, setActiveGroup }: { group: typeof
       onMouseLeave={() => setActiveGroup(null)}
     >
       <button 
-        className={`relative px-4 py-2 flex items-center gap-1 rounded-full overflow-hidden shrink-0 group/btn focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 transition-colors duration-200 ${isOpen ? 'text-stone-950' : 'text-stone-500 hover:text-stone-900'}`}
+        className={`relative px-4 py-2 flex items-center gap-1 rounded-full overflow-hidden shrink-0 group/btn focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 transition-colors duration-200 ${isOpen ? 'text-stone-950' : (useLightText ? 'text-stone-300 hover:text-white' : 'text-stone-500 hover:text-stone-900')}`}
         aria-expanded={isOpen}
       >
         <span className="relative z-10 text-[13px] font-semibold tracking-wide uppercase">
           {group.name}
         </span>
-        <ChevronDown className={`w-3 h-3 relative z-10 transition-transform duration-300 ${isOpen ? 'rotate-180 text-orange-500' : ''}`} />
+        <ChevronDown className={`w-3 h-3 relative z-10 transition-transform duration-300 ${isOpen ? 'rotate-180 text-orange-500' : (useLightText ? 'text-stone-400' : '')}`} />
         {isOpen && (
           <motion.div
             layoutId="activeNavIndicator"
@@ -209,6 +209,15 @@ export function Navbar() {
     restDelta: 0.001
   });
 
+  const isDarkHero = 
+    pathname.startsWith('/services/') || 
+    pathname.startsWith('/portfolio/') || 
+    pathname.startsWith('/insights/') || 
+    ['/testimonials', '/process', '/book', '/maintenance', '/about', '/tech-stack', '/careers', '/pricing', '/contact', '/resources', '/design-system', '/faq', '/privacy', '/terms', '/sitemap'].includes(pathname);
+
+  // Determine if we should use dark text (default) or light text (on dark heroes when not scrolled)
+  const useLightText = isDarkHero && !isScrolled;
+
   React.useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -283,20 +292,21 @@ export function Navbar() {
           >
             {/* Logo */}
             <Link href="/" className="group flex items-center gap-2 z-50 relative shrink-0" onClick={() => setMobileMenuOpen(false)}>
-              <span className="font-display font-bold text-xl tracking-tight text-stone-950 group-hover:opacity-80 transition-opacity">
+              <span className={`font-display font-bold text-xl tracking-tight transition-opacity ${useLightText ? "text-white group-hover:text-stone-200" : "text-stone-950 group-hover:opacity-80"}`}>
                 QubiQode<span className="text-orange-600">.</span>
               </span>
             </Link>
 
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center justify-center absolute left-1/2 -translate-x-1/2" onMouseLeave={() => setActiveGroup(null)}>
-              <div className="flex items-center gap-1 bg-stone-100/50 backdrop-blur-md p-1 rounded-full border border-stone-200/50 shadow-sm relative">
+              <div className={`flex items-center gap-1 backdrop-blur-md p-1 rounded-full shadow-sm relative transition-colors duration-500 border ${useLightText ? "bg-white/10 border-white/10" : "bg-stone-100/50 border-stone-200/50"}`}>
                 {navGroups.map((group) => (
                   <DesktopDropdown 
                     key={group.name} 
                     group={group} 
                     activeGroup={activeGroup} 
                     setActiveGroup={setActiveGroup} 
+                    useLightText={useLightText}
                   />
                 ))}
               </div>
@@ -306,15 +316,23 @@ export function Navbar() {
             <div className="hidden lg:flex items-center space-x-3 z-50 shrink-0">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-stone-50 px-5 py-2.5 text-sm font-semibold text-stone-900 shadow-sm hover:bg-stone-100 hover:shadow disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-200 transition-all border border-stone-200/50"
+                className={`inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold shadow-sm disabled:opacity-50 disabled:pointer-events-none focus-visible:outline-none focus-visible:ring-2 transition-all border ${
+                  useLightText 
+                    ? "bg-white/10 text-white border-white/20 hover:bg-white/20 focus-visible:ring-white/50" 
+                    : "bg-stone-50 text-stone-900 border-stone-200/50 hover:bg-stone-100 hover:shadow focus-visible:ring-stone-200"
+                }`}
               >
                 Let&apos;s Talk
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-stone-950 px-5 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-stone-800 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-stone-950 focus-visible:ring-offset-2 transition-all group overflow-hidden relative"
+                className={`inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 transition-all group overflow-hidden relative ${
+                  useLightText
+                    ? "bg-orange-600 hover:bg-orange-500 focus-visible:ring-orange-600"
+                    : "bg-stone-950 hover:bg-stone-800 hover:shadow-lg focus-visible:ring-stone-950"
+                }`}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-amber-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 ${useLightText ? "bg-white" : "bg-gradient-to-r from-orange-500 to-amber-500"}`} />
                 Get a Quote
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </Link>
@@ -322,7 +340,7 @@ export function Navbar() {
 
             {/* Mobile Menu Toggle */}
             <button
-              className="lg:hidden relative z-50 p-2 text-stone-950 focus:outline-none rounded-full hover:bg-stone-200 bg-stone-100/80 transition-colors"
+              className={`lg:hidden relative z-50 p-2 focus:outline-none rounded-full transition-colors ${useLightText ? "text-white hover:bg-white/10" : "text-stone-950 hover:bg-stone-200 bg-stone-100/80"}`}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle Navigation Menu"
             >
