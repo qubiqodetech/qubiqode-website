@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Instagram, Linkedin, Twitter, Github, Sparkles } from "lucide-react";
+import { ArrowRight, Instagram, Linkedin, Twitter, Github, Mail, MessageCircle } from "lucide-react";
 import { motion } from "motion/react";
 
 export function Footer() {
@@ -14,115 +14,187 @@ export function Footer() {
       <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
         
         {/* Top CTA Section */}
-        <div className="mb-20 lg:mb-24 flex flex-col md:flex-row items-center justify-between gap-8 bg-stone-900/50 backdrop-blur-md border border-white/5 rounded-[2.5rem] p-8 md:p-12 lg:p-16">
-          <div className="max-w-xl text-center md:text-left">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20 lg:mb-24 flex flex-col items-center text-center bg-stone-900/50 backdrop-blur-md border border-white/5 rounded-[2.5rem] p-8 md:p-12 lg:p-16"
+        >
+          <div className="max-w-2xl">
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-              Ready to build something <span className="text-stone-400">amazing?</span>
+              Ready to build something <span className="text-stone-400">great?</span>
             </h2>
-            <p className="text-stone-400 text-lg">
-              Let&apos;s turn your vision into a digital reality. Reach out today to start the conversation.
+            <p className="text-stone-400 text-lg mb-8">
+              Let&apos;s create your next digital experience. We partner with ambitious brands to design and build world-class applications.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 shrink-0">
+          <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-stone-950 shadow-xl hover:bg-stone-200 active:scale-95 transition-all duration-200"
+              className="inline-flex items-center justify-center rounded-xl bg-orange-600 px-8 py-4 text-sm font-bold text-white shadow-xl shadow-orange-900/10 hover:bg-orange-500 active:scale-95 transition-all duration-200"
             >
-              Start a Project
+              Get a Quote
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-stone-800 border border-stone-700 px-8 py-4 text-sm font-semibold text-white shadow-sm hover:bg-stone-700 active:scale-95 transition-all duration-200"
+              className="inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 text-sm font-bold text-stone-950 shadow-sm hover:bg-stone-200 active:scale-95 transition-all duration-200"
             >
-              Contact Us
+              Book a Call
             </Link>
           </div>
-        </div>
+        </motion.div>
 
         {/* Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
           
           {/* Brand Info */}
-          <div className="lg:col-span-4 pr-4">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="lg:col-span-3 pr-4 flex flex-col items-start"
+          >
             <Link href="/" className="inline-block group mb-6">
               <span className="font-display font-bold text-2xl tracking-tight text-white group-hover:opacity-80 transition-opacity">
                 QubiQode<span className="text-orange-500">.</span>
               </span>
             </Link>
-            <p className="text-stone-400 text-sm leading-relaxed mb-8 max-w-sm">
-              Building modern digital experiences through premium design, robust development, and strategic innovation.
+            <p className="text-stone-400 text-sm leading-relaxed mb-6 max-w-sm">
+              A modern creative technology studio focused on premium web development, design, and digital innovation.
             </p>
-            <div className="flex flex-wrap gap-2">
+            <Link 
+              href="/contact" 
+              className="inline-flex items-center text-sm font-semibold text-orange-500 hover:text-orange-400 transition-colors mb-8"
+            >
+              Let&apos;s collaborate <ArrowRight className="ml-1 w-4 h-4" />
+            </Link>
+            <div className="flex flex-wrap gap-2 mt-auto">
               <SocialLink href="https://twitter.com" icon={<Twitter className="w-4 h-4" />} label="X / Twitter" />
               <SocialLink href="https://instagram.com" icon={<Instagram className="w-4 h-4" />} label="Instagram" />
               <SocialLink href="https://linkedin.com" icon={<Linkedin className="w-4 h-4" />} label="LinkedIn" />
               <SocialLink href="https://github.com" icon={<Github className="w-4 h-4" />} label="GitHub" />
             </div>
-          </div>
+          </motion.div>
 
           {/* Links Grid */}
-          <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-8">
-            <div>
-              <h3 className="font-semibold text-stone-100 tracking-wide mb-6">Agency</h3>
+          <div className="lg:col-span-9 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <h3 className="font-semibold text-stone-100 tracking-wide mb-6 text-sm uppercase">Company</h3>
               <ul className="space-y-4">
                 <FooterLink href="/">Home</FooterLink>
-                <FooterLink href="/about">About Us</FooterLink>
-                <FooterLink href="/portfolio">Portfolio</FooterLink>
-                <FooterLink href="/blog">Blog</FooterLink>
-                <FooterLink href="/contact">Contact</FooterLink>
+                <FooterLink href="/about">About</FooterLink>
+                <FooterLink href="/process">Process</FooterLink>
+                <FooterLink href="/testimonials">Testimonials</FooterLink>
+                <FooterLink href="/careers">Careers</FooterLink>
               </ul>
-            </div>
+            </motion.div>
 
-            <div>
-              <h3 className="font-semibold text-stone-100 tracking-wide mb-6">Services</h3>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <h3 className="font-semibold text-stone-100 tracking-wide mb-6 text-sm uppercase">Services</h3>
               <ul className="space-y-4">
+                <FooterLink href="/services">Overview</FooterLink>
                 <FooterLink href="/services/web-development">Web Development</FooterLink>
                 <FooterLink href="/services/ui-ux-design">UI/UX Design</FooterLink>
                 <FooterLink href="/services/seo">SEO Optimization</FooterLink>
-                <FooterLink href="/services/branding">Branding</FooterLink>
-                <FooterLink href="/services/video-editing">Video Editing</FooterLink>
+                <FooterLink href="/services/branding">Branding & Media</FooterLink>
+                <FooterLink href="/services/video">Video & Animation</FooterLink>
+                <FooterLink href="/services/ai">AI & Automation</FooterLink>
               </ul>
-            </div>
+            </motion.div>
 
-            <div className="col-span-2 sm:col-span-1">
-              <h3 className="font-semibold text-stone-100 tracking-wide mb-6">Stay Updated</h3>
-              <p className="text-stone-400 text-sm mb-4">
-                Subscribe for insights on digital design and engineering.
-              </p>
-              <form className="relative mt-2" onSubmit={(e) => e.preventDefault()}>
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full bg-stone-900 border border-white/10 rounded-full px-5 py-3.5 text-sm text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all pr-12"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="absolute right-1.5 top-1.5 bottom-1.5 w-10 bg-white text-stone-950 rounded-full flex items-center justify-center hover:bg-stone-200 transition-colors"
-                  aria-label="Subscribe"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </form>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <h3 className="font-semibold text-stone-100 tracking-wide mb-6 text-sm uppercase">Work</h3>
+              <ul className="space-y-4">
+                <FooterLink href="/portfolio">Portfolio</FooterLink>
+                <FooterLink href="/case-studies">Case Studies</FooterLink>
+                <FooterLink href="/tech">Technology Stack</FooterLink>
+                <FooterLink href="/industries">Industries Served</FooterLink>
+                <FooterLink href="/design-system">UI Showcase</FooterLink>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
+              <h3 className="font-semibold text-stone-100 tracking-wide mb-6 text-sm uppercase">Resources</h3>
+              <ul className="space-y-4">
+                <FooterLink href="/blog">Blog</FooterLink>
+                <FooterLink href="/resources">Freebies</FooterLink>
+                <FooterLink href="/faq">FAQ</FooterLink>
+                <FooterLink href="/maintenance">Maintenance Plans</FooterLink>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              <h3 className="font-semibold text-stone-100 tracking-wide mb-6 text-sm uppercase">Contact</h3>
+              <ul className="space-y-4 mb-6">
+                <FooterLink href="/contact">Get in Touch</FooterLink>
+                <FooterLink href="/contact">Book Consultation</FooterLink>
+              </ul>
+              
+              <div className="space-y-3">
+                <a href="mailto:hello@qubiqode.com" className="group flex items-center text-sm text-stone-400 hover:text-white transition-colors">
+                  <Mail className="w-4 h-4 mr-2" />
+                  hello@qubiqode.com
+                </a>
+                <a href="https://wa.me/something" className="group flex items-center text-sm text-stone-400 hover:text-white transition-colors">
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  WhatsApp Us
+                </a>
+              </div>
+            </motion.div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-stone-500">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-stone-500"
+        >
           <p>
             &copy; {new Date().getFullYear()} QubiQode. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link href="/privacy-policy" className="hover:text-stone-300 transition-colors">
+            <Link href="/privacy" className="hover:text-stone-300 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms-of-service" className="hover:text-stone-300 transition-colors">
-              Terms of Service
+            <Link href="/terms" className="hover:text-stone-300 transition-colors">
+              Terms & Conditions
+            </Link>
+            <Link href="/sitemap" className="hover:text-stone-300 transition-colors">
+              Sitemap
             </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );
@@ -136,7 +208,7 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
         className="text-stone-400 hover:text-white transition-colors text-sm font-medium relative group inline-flex items-center"
       >
         <span className="relative z-10">{children}</span>
-        <span className="absolute left-0 -bottom-1 w-0 h-px bg-orange-500 transition-all duration-300 group-hover:w-full opacity-0 group-hover:opacity-100" />
+        <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full opacity-0 group-hover:opacity-100" />
       </Link>
     </li>
   );
@@ -149,7 +221,7 @@ function SocialLink({ href, icon, label }: { href: string; icon: React.ReactNode
       target="_blank"
       rel="noreferrer"
       aria-label={label}
-      className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-stone-400 hover:bg-orange-500 hover:border-orange-500 hover:text-white transition-all duration-300"
+      className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-stone-400 hover:bg-orange-500 hover:border-orange-500 hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-sm"
     >
       {icon}
     </Link>
