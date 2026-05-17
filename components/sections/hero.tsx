@@ -21,7 +21,7 @@ export function Hero() {
   return (
     <section 
       ref={containerRef} 
-      className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden bg-stone-950 pt-32 pb-20 selection:bg-primary-500/30"
+      className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden bg-stone-950 pt-32 pb-32 sm:pb-24 selection:bg-primary-500/30"
     >
       {/* Background System */}
       <motion.div style={{ y: yBackground }} className="absolute inset-0 pointer-events-none">
@@ -50,6 +50,9 @@ export function Hero() {
         style={{ opacity, scale }}
         className="container mx-auto px-6 max-w-7xl relative z-10 flex flex-col items-center text-center"
       >
+        {/* Dark radial center backdrop to ensure text readability over any overlapping cards */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[50vh] bg-[radial-gradient(ellipse_at_center,_rgba(12,10,9,0.9)_0%,_rgba(12,10,9,0.7)_40%,_transparent_70%)] pointer-events-none -z-10 blur-[20px]" />
+        
         <motion.div
            initial={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }}
            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
@@ -87,7 +90,7 @@ export function Hero() {
            initial={{ opacity: 0, y: 20 }}
            animate={{ opacity: 1, y: 0 }}
            transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-           className="mt-10 flex flex-col sm:flex-row items-center gap-6"
+           className="mt-10 mb-10 flex flex-col sm:flex-row items-center gap-6"
         >
            <Link
              href="/book"
@@ -119,7 +122,7 @@ export function Hero() {
            initial={{ opacity: 0, x: -50, y: -20, rotate: -5 }}
            animate={{ opacity: 1, x: 0, y: 0, rotate: -3 }}
            transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
-           className="absolute top-[18%] left-[2%] xl:left-[8%] w-[280px] p-5 rounded-2xl bg-stone-900/40 backdrop-blur-xl border border-stone-800 shadow-2xl hidden lg:block"
+           className="absolute top-[12%] lg:top-[15%] left-[2%] xl:left-[6%] w-[260px] xl:w-[280px] p-5 rounded-2xl bg-stone-900/40 backdrop-blur-xl border border-stone-800 shadow-2xl hidden lg:block"
         >
           <div className="flex items-center gap-2 mb-4 pb-3 border-b border-stone-800/50">
             <div className="flex gap-1.5">
@@ -145,7 +148,7 @@ export function Hero() {
            initial={{ opacity: 0, x: 50, y: 20, rotate: 5 }}
            animate={{ opacity: 1, x: 0, y: 0, rotate: 4 }}
            transition={{ duration: 1.5, delay: 0.7, ease: "easeOut" }}
-           className="absolute bottom-[22%] right-[2%] xl:right-[6%] w-[260px] p-5 rounded-2xl bg-stone-900/40 backdrop-blur-xl border border-stone-800 shadow-2xl hidden lg:block"
+           className="absolute bottom-[10%] lg:bottom-[15%] right-[2%] xl:right-[5%] w-[260px] p-5 rounded-2xl bg-stone-900/40 backdrop-blur-xl border border-stone-800 shadow-2xl hidden lg:block"
         >
            <div className="flex items-start justify-between mb-6">
              <div className="w-10 h-10 rounded-xl bg-primary-500/10 border border-primary-500/20 flex items-center justify-center text-primary-400">
@@ -175,7 +178,7 @@ export function Hero() {
            initial={{ opacity: 0, scale: 0.8 }}
            animate={{ opacity: 1, scale: 1 }}
            transition={{ duration: 1.2, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-           className="absolute top-[28%] right-[10%] xl:right-[15%] z-40 bg-stone-900/60 backdrop-blur-xl border border-stone-800 p-3 pr-5 rounded-full shadow-2xl flex items-center gap-3 hidden md:flex"
+           className="absolute top-[18%] right-[5%] xl:right-[10%] z-40 bg-stone-900/60 backdrop-blur-xl border border-stone-800 p-3 pr-5 rounded-full shadow-2xl flex items-center gap-3 hidden md:flex"
         >
           <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center shadow-inner relative overflow-hidden">
             <div className="absolute inset-0 bg-white/20 animate-pulse" style={{ animationDuration: '2s' }} />
@@ -192,7 +195,7 @@ export function Hero() {
            initial={{ opacity: 0, scale: 0.8 }}
            animate={{ opacity: 1, scale: 1 }}
            transition={{ duration: 1.2, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-           className="absolute bottom-[28%] left-[8%] xl:left-[12%] z-40 bg-stone-900/60 backdrop-blur-xl border border-stone-800 py-3 px-4 rounded-2xl shadow-2xl flex items-center gap-4 hidden md:flex"
+           className="absolute bottom-[18%] left-[5%] xl:left-[10%] z-40 bg-stone-900/60 backdrop-blur-xl border border-stone-800 py-3 px-4 rounded-2xl shadow-2xl flex items-center gap-4 hidden md:flex"
         >
           <div className="flex -space-x-3">
              {[1, 2, 3].map((i) => (
@@ -220,7 +223,7 @@ export function Hero() {
          initial={{ opacity: 0 }}
          animate={{ opacity: 1 }}
          transition={{ duration: 1, delay: 1.5 }}
-         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 pointer-events-none z-20"
+         className="absolute bottom-2 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-3 pointer-events-none z-20"
       >
          <span className="text-[9px] uppercase tracking-[0.25em] text-stone-500 font-bold">Scroll to explore</span>
          <div className="w-[2px] h-12 bg-stone-800 rounded-full relative overflow-hidden">

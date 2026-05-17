@@ -277,22 +277,22 @@ export function Chatbot() {
             exit={{ opacity: 0, scale: 0.5, transition: { duration: 0.2 } }}
             className="absolute bottom-0 right-0"
           >
-             <motion.button
+              <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(true)}
-              className="relative w-16 h-16 rounded-full bg-stone-950 text-white border border-stone-800 flex justify-center items-center cursor-pointer shadow-[0_10px_40px_rgba(30,144,255,0.3)] group overflow-hidden"
+              className="relative w-16 h-16 rounded-full bg-stone-950 text-white border border-stone-800 flex justify-center items-center cursor-pointer shadow-[0_10px_40px_rgba(30,144,255,0.3)] group"
               aria-label="Open Chat Assistant"
               type="button"
             >
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary-600 to-blue-400 opacity-20 group-hover:opacity-40 transition-opacity duration-300" />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-600 to-blue-400 opacity-20 group-hover:opacity-40 transition-opacity duration-300" />
               {/* Glowing ring */}
               <div className="absolute inset-0 rounded-full border border-primary-500/50 animate-ping opacity-30 [animation-duration:3s]" />
               
               <MessageSquare className="w-7 h-7 relative z-10 group-hover:-rotate-12 transition-transform duration-300" />
               
               {/* Notification Badge */}
-              <span className="absolute top-0 right-0 w-3.5 h-3.5 bg-primary-500 border-2 border-stone-950 rounded-full" />
+              <span className="absolute top-[2px] right-[2px] w-3.5 h-3.5 bg-primary-500 border-2 border-stone-950 rounded-full z-20" />
             </motion.button>
           </motion.div>
         )}

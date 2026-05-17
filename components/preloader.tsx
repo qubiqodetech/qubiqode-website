@@ -93,7 +93,7 @@ export function Preloader() {
                   transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                   className="font-display font-bold text-4xl tracking-tight text-white flex items-center gap-1"
                 >
-                  QubiQode
+                  Qubi<span className="text-primary-500">Q</span>ode
                   <Sparkles className="w-4 h-4 text-primary-400 -mt-4 animate-pulse" />
                 </motion.h1>
               </div>

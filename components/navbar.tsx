@@ -300,23 +300,9 @@ export function Navbar() {
         style={{ scaleX }}
       />
       
-      {/* Announcement Strip */}
-      <div 
-        className={`bg-stone-950 text-white text-xs font-medium py-2 px-4 flex justify-center items-center transition-all duration-500 overflow-hidden ${
-          isScrolled ? "h-0 opacity-0 py-0" : "h-9 opacity-100"
-        }`}
-      >
-        <Sparkles className="w-3.5 h-3.5 text-primary-500 mr-2" />
-        <span className="hidden sm:inline">Award-winning premium digital agency for forward-thinking brands.</span>
-        <span className="sm:hidden">Premium digital agency.</span>
-        <Link href="/contact" className="ml-3 underline decoration-white/30 hover:decoration-white transition-colors underline-offset-2">
-          Start your project
-        </Link>
-      </div>
-
       <header
         className={`fixed left-0 right-0 z-[60] transition-all duration-500 will-change-transform ${
-          isScrolled ? "top-1 py-4" : "top-9 py-6"
+          isScrolled ? "top-1 py-4" : "top-0 py-6"
         }`}
       >
         <div className="container mx-auto px-4 md:px-6 max-w-7xl relative">
