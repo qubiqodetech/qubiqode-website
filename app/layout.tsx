@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${inter.variable} ${outfit.variable} scroll-smooth`}>
       <body className="font-sans antialiased bg-stone-50 text-stone-950 flex min-h-screen flex-col" suppressHydrationWarning>
         <Navbar />
-        <main className="flex-1 flex flex-col pt-20">
+        <main className="flex-1 flex flex-col">
           {children}
         </main>
         <Footer />
