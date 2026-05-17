@@ -64,10 +64,10 @@ const testimonials = [
 ];
 
 const metrics = [
-  { value: "4.9/5", label: "Average Client Rating", icon: <Star className="w-6 h-6 text-orange-500" /> },
-  { value: "98%", label: "Client Retention Rate", icon: <ShieldCheck className="w-6 h-6 text-orange-500" /> },
-  { value: "150+", label: "Projects Delivered", icon: <Trophy className="w-6 h-6 text-orange-500" /> },
-  { value: "12", label: "Countries Served", icon: <Globe className="w-6 h-6 text-orange-500" /> }
+  { value: "4.9/5", label: "Average Client Rating", icon: <Star className="w-6 h-6 text-primary-500" /> },
+  { value: "98%", label: "Client Retention Rate", icon: <ShieldCheck className="w-6 h-6 text-primary-500" /> },
+  { value: "150+", label: "Projects Delivered", icon: <Trophy className="w-6 h-6 text-primary-500" /> },
+  { value: "12", label: "Countries Served", icon: <Globe className="w-6 h-6 text-primary-500" /> }
 ];
 
 const clientLogos = [
@@ -83,12 +83,12 @@ export default function TestimonialsPage() {
   const standardTestimonials = testimonials.filter(t => !t.featured);
 
   return (
-    <main className="min-h-screen bg-stone-50 selection:bg-orange-200">
+    <main className="min-h-screen bg-stone-50 selection:bg-primary-200">
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 lg:pt-48 lg:pb-32 bg-stone-950 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/noise/800/800')] opacity-5 mix-blend-overlay pointer-events-none" />
-        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-600/20 via-orange-900/5 to-transparent rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-600/20 via-primary-900/5 to-transparent rounded-full blur-[100px] pointer-events-none" />
         
         <div className="container mx-auto px-6 max-w-7xl relative z-10 text-center">
           <motion.div
@@ -107,7 +107,7 @@ export default function TestimonialsPage() {
             className="font-display text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-[1.1] mb-6 max-w-4xl mx-auto"
           >
             Don&apos;t just take <br className="hidden sm:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-600 italic">our word for it.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-sky-600 italic">our word for it.</span>
           </motion.h1>
 
           <motion.p
@@ -149,7 +149,7 @@ export default function TestimonialsPage() {
                    transition={{ duration: 0.5, delay: i * 0.1 }}
                    className="flex flex-col items-center text-center p-6 bg-white rounded-3xl border border-stone-200 shadow-sm"
                  >
-                    <div className="w-12 h-12 rounded-full bg-orange-50 flex items-center justify-center mb-4">
+                    <div className="w-12 h-12 rounded-full bg-primary-50 flex items-center justify-center mb-4">
                       {metric.icon}
                     </div>
                     <div className="font-display text-4xl font-bold text-stone-950 mb-2">{metric.value}</div>
@@ -162,7 +162,7 @@ export default function TestimonialsPage() {
 
       {/* Featured Testimonials */}
       <section className="py-24 bg-stone-950 text-white relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[600px] bg-orange-600/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[600px] bg-primary-600/5 rounded-full blur-[100px] pointer-events-none" />
         
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <div className="mb-16 text-center">
@@ -185,7 +185,7 @@ export default function TestimonialsPage() {
                   <div className="relative z-10 flex flex-col h-full">
                     <div className="flex gap-1 mb-8">
                       {[...Array(testimonial.rating)].map((_, idx) => (
-                         <Star key={idx} className="w-5 h-5 fill-orange-500 text-orange-500" />
+                         <Star key={idx} className="w-5 h-5 fill-primary-500 text-primary-500" />
                       ))}
                     </div>
                     
@@ -230,12 +230,12 @@ export default function TestimonialsPage() {
                  whileInView={{ opacity: 1, y: 0 }}
                  viewport={{ once: true }}
                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                 className="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm hover:shadow-xl hover:border-orange-200 transition-all duration-300 flex flex-col"
+                 className="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm hover:shadow-xl hover:border-primary-200 transition-all duration-300 flex flex-col"
                >
                  <div className="flex justify-between items-start mb-6">
                    <div className="flex gap-1">
                       {[...Array(testimonial.rating)].map((_, idx) => (
-                         <Star key={idx} className="w-4 h-4 fill-orange-500 text-orange-500" />
+                         <Star key={idx} className="w-4 h-4 fill-primary-500 text-primary-500" />
                       ))}
                    </div>
                    <Quote className="w-8 h-8 text-stone-200" />
@@ -274,13 +274,13 @@ export default function TestimonialsPage() {
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
              transition={{ duration: 0.8 }}
-             className="bg-orange-600 rounded-[3rem] p-12 md:p-24 text-center shadow-xl relative overflow-hidden text-white"
+             className="bg-primary-600 rounded-[3rem] p-12 md:p-24 text-center shadow-xl relative overflow-hidden text-white"
            >
              <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/noise/800/800')] opacity-10 mix-blend-overlay"></div>
              
              <div className="relative z-10 max-w-3xl mx-auto">
                <h2 className="font-display text-4xl md:text-6xl font-bold mb-6">Ready to become our next success story?</h2>
-               <p className="text-xl text-orange-100 mb-10 leading-relaxed">
+               <p className="text-xl text-primary-100 mb-10 leading-relaxed">
                  We&apos;re currently taking on new projects. Let&apos;s discuss how we can build something incredible together.
                </p>
                <Link

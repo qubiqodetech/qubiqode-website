@@ -31,7 +31,7 @@ const testimonials = [
 export function Testimonials() {
   return (
     <section id="testimonials" className="py-24 lg:py-32 bg-stone-950 text-white overflow-hidden relative">
-      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[800px] h-[800px] bg-orange-950/20 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[800px] h-[800px] bg-primary-950/20 rounded-full blur-[100px] pointer-events-none" />
       
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -63,14 +63,14 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="bg-stone-900 border border-white/10 p-8 rounded-[2rem] relative group hover:border-orange-500/30 transition-colors duration-300"
+              className="bg-stone-900 border border-white/10 p-8 rounded-[2rem] relative group hover:border-primary-500/30 transition-colors duration-300"
             >
-              <Quote className="absolute top-8 right-8 w-12 h-12 text-white/5 rotate-180 group-hover:text-orange-500/10 transition-colors duration-300" />
+              <Quote className="absolute top-8 right-8 w-12 h-12 text-white/5 rotate-180 group-hover:text-primary-500/10 transition-colors duration-300" />
               <div className="flex gap-1 mb-8">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star
                     key={star}
-                    className="w-4 h-4 fill-orange-500 text-orange-500"
+                    className="w-4 h-4 fill-primary-500 text-primary-500"
                   />
                 ))}
               </div>
@@ -78,7 +78,7 @@ export function Testimonials() {
                 &quot;{testimonial.quote}&quot;
               </p>
               <div className="flex items-center gap-4 mt-auto">
-                <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-stone-800 group-hover:border-orange-500 transition-colors duration-300">
+                <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-stone-800 group-hover:border-primary-500 transition-colors duration-300">
                   <Image
                     src={testimonial.avatar}
                     alt={testimonial.name}

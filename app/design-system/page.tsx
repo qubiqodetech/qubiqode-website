@@ -21,11 +21,11 @@ import {
 } from "lucide-react";
 
 const colors = [
-  { name: "Orange 50", hex: "#fff7ed", class: "bg-orange-50", text: "text-orange-900" },
-  { name: "Orange 100", hex: "#ffedd5", class: "bg-orange-100", text: "text-orange-900" },
-  { name: "Orange 500", hex: "#f97316", class: "bg-orange-500", text: "text-white" },
-  { name: "Orange 600", hex: "#ea580c", class: "bg-orange-600", text: "text-white" },
-  { name: "Orange 900", hex: "#7c2d12", class: "bg-orange-900", text: "text-orange-100" },
+  { name: "Blue 50", hex: "#eff6ff", class: "bg-primary-50", text: "text-primary-900" },
+  { name: "Blue 100", hex: "#dbeafe", class: "bg-primary-100", text: "text-primary-900" },
+  { name: "Blue 500", hex: "#1E90FF", class: "bg-primary-500", text: "text-white" },
+  { name: "Blue 600", hex: "#0F6FD6", class: "bg-primary-600", text: "text-white" },
+  { name: "Blue 900", hex: "#1e3a8a", class: "bg-primary-900", text: "text-primary-100" },
 ];
 
 const neutrals = [
@@ -39,11 +39,11 @@ const neutrals = [
 
 export default function DesignSystemPage() {
   return (
-    <main className="min-h-screen bg-stone-50 selection:bg-orange-200 pb-24">
+    <main className="min-h-screen bg-stone-50 selection:bg-primary-200 pb-24">
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 lg:pt-48 lg:pb-24 bg-stone-950 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-900/20 via-stone-950 to-stone-950 pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-900/20 via-stone-950 to-stone-950 pointer-events-none" />
         
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <motion.div
@@ -199,10 +199,10 @@ export default function DesignSystemPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white p-8 rounded-[2rem] border border-stone-200 shadow-sm flex flex-col items-start gap-4">
               <span className="text-sm font-medium text-stone-500 mb-2">Primary Button</span>
-              <button className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-orange-600 text-white font-semibold shadow-xl shadow-orange-900/10 hover:bg-orange-500 hover:-translate-y-0.5 transition-all duration-300 w-full active:scale-95">
+              <button className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold shadow-xl shadow-primary-900/10 hover:bg-primary-500 hover:-translate-y-0.5 transition-all duration-300 w-full active:scale-95">
                 Primary Action
               </button>
-              <button className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-orange-600 text-white font-semibold opacity-50 cursor-not-allowed w-full">
+              <button className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-primary-600 text-white font-semibold opacity-50 cursor-not-allowed w-full">
                 Disabled State
               </button>
             </div>
@@ -219,7 +219,7 @@ export default function DesignSystemPage() {
 
             <div className="bg-white p-8 rounded-[2rem] border border-stone-200 shadow-sm flex flex-col items-start gap-4">
               <span className="text-sm font-medium text-stone-500 mb-2">Icon Buttons</span>
-              <button className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-orange-100 text-orange-700 font-semibold hover:bg-orange-200 transition-colors w-full group">
+              <button className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-primary-100 text-primary-700 font-semibold hover:bg-primary-200 transition-colors w-full group">
                 Continue
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </button>
@@ -255,7 +255,7 @@ export default function DesignSystemPage() {
                    <input 
                      type="text" 
                      placeholder="John Doe"
-                     className="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-colors"
+                     className="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-colors"
                    />
                  </div>
                  
@@ -268,7 +268,7 @@ export default function DesignSystemPage() {
                       <input 
                         type="email" 
                         placeholder="you@example.com"
-                        className="w-full pl-11 pr-4 py-3 rounded-xl border border-stone-200 bg-white text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-colors"
+                        className="w-full pl-11 pr-4 py-3 rounded-xl border border-stone-200 bg-white text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-colors"
                       />
                    </div>
                  </div>
@@ -278,7 +278,7 @@ export default function DesignSystemPage() {
                    <textarea 
                      rows={3}
                      placeholder="Tell us about your project..."
-                     className="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-colors resize-none"
+                     className="w-full px-4 py-3 rounded-xl border border-stone-200 bg-white text-stone-900 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-colors resize-none"
                    />
                  </div>
                </div>
@@ -308,7 +308,7 @@ export default function DesignSystemPage() {
                  </div>
 
                  <div className="pt-4 flex items-center gap-3">
-                   <div className="w-6 h-6 rounded border border-stone-300 flex items-center justify-center bg-orange-600 border-none">
+                   <div className="w-6 h-6 rounded border border-stone-300 flex items-center justify-center bg-primary-600 border-none">
                      <Check className="w-4 h-4 text-white" />
                    </div>
                    <span className="text-sm text-stone-700">Custom Checkbox Style (Checked)</span>
@@ -329,21 +329,21 @@ export default function DesignSystemPage() {
             
             {/* Standard Item Card */}
             <div className="bg-white rounded-[2rem] p-8 border border-stone-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
-              <div className="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-orange-600 mb-6 group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 mb-6 group-hover:scale-110 transition-transform">
                 <ImageIcon className="w-6 h-6" />
               </div>
               <h3 className="font-display text-xl font-bold text-stone-950 mb-2">Feature Card</h3>
               <p className="text-stone-600 text-sm leading-relaxed mb-6">
                 Used for abstracting services, features, and grid items. Hover me to see the premium elevation effect.
               </p>
-              <span className="text-sm font-semibold text-orange-600 group-hover:text-orange-700 flex items-center">
+              <span className="text-sm font-semibold text-primary-600 group-hover:text-primary-700 flex items-center">
                 Learn more <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </span>
             </div>
 
             {/* Profile / Testimonial Style */}
             <div className="bg-stone-50 rounded-[2rem] p-8 border border-stone-200">
-               <div className="flex text-orange-400 mb-4">
+               <div className="flex text-primary-400 mb-4">
                  {[...Array(5)].map((_, i) => (
                    <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                  ))}
@@ -364,13 +364,13 @@ export default function DesignSystemPage() {
 
             {/* Dark Premium Card */}
             <div className="bg-stone-950 rounded-[2rem] p-8 border border-stone-800 text-white relative overflow-hidden group hover:border-stone-700 transition-colors">
-               <div className="absolute -top-10 -right-10 w-40 h-40 bg-orange-600/20 blur-[40px] rounded-full group-hover:bg-orange-500/30 transition-colors" />
+               <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary-600/20 blur-[40px] rounded-full group-hover:bg-primary-500/30 transition-colors" />
                <h3 className="font-display text-2xl font-bold mb-2 relative z-10">Premium Tier</h3>
                <div className="text-3xl font-bold mb-6 relative z-10">$99<span className="text-lg text-stone-400 font-normal">/mo</span></div>
                <ul className="space-y-3 mb-8 relative z-10">
-                 <li className="flex items-center text-sm text-stone-300 gap-2"><Check className="w-4 h-4 text-orange-500" /> Feature A</li>
-                 <li className="flex items-center text-sm text-stone-300 gap-2"><Check className="w-4 h-4 text-orange-500" /> Feature B</li>
-                 <li className="flex items-center text-sm text-stone-300 gap-2"><Check className="w-4 h-4 text-orange-500" /> Feature C</li>
+                 <li className="flex items-center text-sm text-stone-300 gap-2"><Check className="w-4 h-4 text-primary-500" /> Feature A</li>
+                 <li className="flex items-center text-sm text-stone-300 gap-2"><Check className="w-4 h-4 text-primary-500" /> Feature B</li>
+                 <li className="flex items-center text-sm text-stone-300 gap-2"><Check className="w-4 h-4 text-primary-500" /> Feature C</li>
                </ul>
                <button className="w-full py-3 rounded-xl bg-white text-stone-950 font-bold hover:bg-stone-200 transition-colors relative z-10">
                  Select Plan
@@ -393,7 +393,7 @@ export default function DesignSystemPage() {
                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-stone-100 text-stone-700 border border-stone-200">
                  Neutral Badge
                </span>
-               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-50 text-orange-700 border border-orange-200">
+               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary-50 text-primary-700 border border-primary-200">
                  Primary Badge
                </span>
                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-green-50 text-green-700 border border-green-200">
@@ -414,11 +414,11 @@ export default function DesignSystemPage() {
                  </div>
                </div>
 
-               <div className="p-4 rounded-xl bg-orange-50 border border-orange-200 flex items-start gap-3">
-                 <AlertCircle className="w-5 h-5 text-orange-600 shrink-0 mt-0.5" />
+               <div className="p-4 rounded-xl bg-primary-50 border border-primary-200 flex items-start gap-3">
+                 <AlertCircle className="w-5 h-5 text-primary-600 shrink-0 mt-0.5" />
                  <div>
-                   <h4 className="text-sm font-semibold text-orange-900">Warning Notice</h4>
-                   <p className="text-sm text-orange-800 mt-1">Please be aware of this warning before proceeding further.</p>
+                   <h4 className="text-sm font-semibold text-primary-900">Warning Notice</h4>
+                   <p className="text-sm text-primary-800 mt-1">Please be aware of this warning before proceeding further.</p>
                  </div>
                </div>
 

@@ -7,22 +7,22 @@ import { ArrowRight, Code2, Server, Smartphone, Zap, CheckCircle2, Layout, Datab
 
 const siteTypes = [
   {
-    icon: <Layout className="w-8 h-8 text-orange-500" />,
+    icon: <Layout className="w-8 h-8 text-primary-500" />,
     title: "E-Commerce Platforms",
     description: "High-converting online stores built on headless architecture for blazing fast load times and limitless scalability."
   },
   {
-    icon: <Server className="w-8 h-8 text-orange-500" />,
+    icon: <Server className="w-8 h-8 text-primary-500" />,
     title: "Corporate Websites",
     description: "Premium digital presences for B2B brands that establish authority, build trust, and generate qualified leads."
   },
   {
-    icon: <Smartphone className="w-8 h-8 text-orange-500" />,
+    icon: <Smartphone className="w-8 h-8 text-primary-500" />,
     title: "Web Applications",
     description: "Complex SaaS products and custom dashboards with rich interactivity and seamless user experiences."
   },
   {
-    icon: <Database className="w-8 h-8 text-orange-500" />,
+    icon: <Database className="w-8 h-8 text-primary-500" />,
     title: "Headless CMS Solutions",
     description: "Flexible content management setups using Sanity or Contentful, decoupled from the frontend for ultimate speed."
   }
@@ -83,12 +83,12 @@ const techStack = [
 
 export default function WebDevelopmentPage() {
   return (
-    <main className="min-h-screen bg-stone-50 selection:bg-orange-200">
+    <main className="min-h-screen bg-stone-50 selection:bg-primary-200">
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-stone-950 text-white">
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-orange-600/20 via-orange-900/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary-600/20 via-primary-900/10 to-transparent rounded-full blur-3xl pointer-events-none" />
         </div>
 
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
@@ -105,7 +105,7 @@ export default function WebDevelopmentPage() {
                 transition={{ duration: 0.6 }}
               >
                 <div className="inline-flex items-center rounded-full border border-stone-800 bg-stone-900/60 backdrop-blur-md px-4 py-1.5 text-xs font-medium text-stone-300 mb-8 shadow-sm">
-                  <Code2 className="w-3.5 h-3.5 text-orange-500 mr-2" />
+                  <Code2 className="w-3.5 h-3.5 text-primary-500 mr-2" />
                   Engineering Excellence
                 </div>
               </motion.div>
@@ -117,7 +117,7 @@ export default function WebDevelopmentPage() {
                 className="font-display text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-[1.1] mb-6"
               >
                 High-performance <br className="hidden lg:block"/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-600">web architecture.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-sky-600">web architecture.</span>
               </motion.h1>
 
               <motion.p
@@ -152,7 +152,7 @@ export default function WebDevelopmentPage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative lg:h-[600px] flex justify-center lg:justify-end items-center mt-12 lg:mt-0"
             >
-              <div className="relative w-full max-w-lg aspect-[4/3] bg-stone-900 border border-stone-800 rounded-2xl shadow-2xl overflow-hidden shadow-orange-900/20">
+              <div className="relative w-full max-w-lg aspect-[4/3] bg-stone-900 border border-stone-800 rounded-2xl shadow-2xl overflow-hidden shadow-primary-900/20">
                 {/* Header */}
                 <div className="flex items-center px-4 py-3 border-b border-stone-800 bg-stone-950/50">
                   <div className="flex gap-1.5 focus:outline-none">
@@ -200,7 +200,7 @@ export default function WebDevelopmentPage() {
                     transition={{ delay: 1.0, duration: 0.5 }}
                     className="pl-8 text-stone-400"
                   >
-                    &lt;<span className="text-red-400">html</span> <span className="text-orange-300">lang</span>=<span className="text-green-300">"en"</span>&gt;
+                    &lt;<span className="text-red-400">html</span> <span className="text-primary-300">lang</span>=<span className="text-green-300">"en"</span>&gt;
                   </motion.div>
                   <motion.div 
                     initial={{ opacity: 0, y: 10 }}
@@ -208,7 +208,7 @@ export default function WebDevelopmentPage() {
                     transition={{ delay: 1.1, duration: 0.5 }}
                     className="pl-12 text-stone-400"
                   >
-                    &lt;<span className="text-red-400">body</span> <span className="text-orange-300">className</span>=<span className="text-green-300">"antialiased"</span>&gt;
+                    &lt;<span className="text-red-400">body</span> <span className="text-primary-300">className</span>=<span className="text-green-300">"antialiased"</span>&gt;
                   </motion.div>
                   <motion.div 
                     initial={{ opacity: 0, y: 10 }}
@@ -289,9 +289,9 @@ export default function WebDevelopmentPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm hover:shadow-xl hover:border-orange-200 transition-all duration-300"
+                className="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm hover:shadow-xl hover:border-primary-200 transition-all duration-300"
               >
-                <div className="w-16 h-16 rounded-2xl bg-orange-50 flex items-center justify-center mb-6">
+                <div className="w-16 h-16 rounded-2xl bg-primary-50 flex items-center justify-center mb-6">
                   {type.icon}
                 </div>
                 <h3 className="font-display text-2xl font-bold text-stone-950 mb-4">{type.title}</h3>
@@ -304,7 +304,7 @@ export default function WebDevelopmentPage() {
 
       {/* Benefits */}
       <section className="py-24 bg-stone-950 text-white overflow-hidden relative">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-[600px] bg-orange-600/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-[600px] bg-primary-600/10 rounded-full blur-[120px] pointer-events-none" />
         
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -324,8 +324,8 @@ export default function WebDevelopmentPage() {
                     transition={{ duration: 0.5, delay: i * 0.1 }}
                     className="flex gap-4"
                   >
-                    <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-orange-500/20 flex items-center justify-center">
-                      <Zap className="w-3.5 h-3.5 text-orange-500" />
+                    <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-primary-500/20 flex items-center justify-center">
+                      <Zap className="w-3.5 h-3.5 text-primary-500" />
                     </div>
                     <div>
                       <h4 className="font-bold text-lg mb-2">{benefit.title}</h4>
@@ -387,9 +387,9 @@ export default function WebDevelopmentPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="group relative bg-white border border-stone-200 px-6 py-4 rounded-full shadow-sm hover:border-orange-500 hover:shadow-md transition-all cursor-default"
+                className="group relative bg-white border border-stone-200 px-6 py-4 rounded-full shadow-sm hover:border-primary-500 hover:shadow-md transition-all cursor-default"
               >
-                <div className="font-semibold text-stone-950 group-hover:text-orange-600 transition-colors">
+                <div className="font-semibold text-stone-950 group-hover:text-primary-600 transition-colors">
                   {tech.name}
                 </div>
                 <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-stone-950 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
@@ -441,13 +441,13 @@ export default function WebDevelopmentPage() {
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
              transition={{ duration: 0.8 }}
-             className="bg-orange-600 rounded-[3rem] p-12 md:p-24 text-center shadow-2xl relative overflow-hidden"
+             className="bg-primary-600 rounded-[3rem] p-12 md:p-24 text-center shadow-2xl relative overflow-hidden"
            >
              <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/noise/800/800')] opacity-5 mix-blend-overlay"></div>
              
              <div className="relative z-10 max-w-3xl mx-auto text-white">
                <h2 className="font-display text-4xl md:text-6xl font-bold mb-6">Ready to upgrade your web presence?</h2>
-               <p className="text-xl text-orange-100 mb-10">
+               <p className="text-xl text-primary-100 mb-10">
                  Let's talk about your technical requirements and build something extraordinary.
                </p>
                <Link

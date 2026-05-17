@@ -50,7 +50,7 @@ export default async function ServicePage({ params }: Props) {
 
           <div className="flex flex-col lg:flex-row gap-16 items-start">
             <div className="lg:w-3/5">
-              <div className="inline-flex items-center rounded-full border border-orange-200 bg-orange-50 px-4 py-1.5 text-sm font-medium text-orange-800 mb-6">
+              <div className="inline-flex items-center rounded-full border border-primary-200 bg-primary-50 px-4 py-1.5 text-sm font-medium text-primary-800 mb-6">
                 <Icon className="w-4 h-4 mr-2" />
                 Service Overview
               </div>
@@ -78,7 +78,7 @@ export default async function ServicePage({ params }: Props) {
               <ul className="space-y-4">
                 {service.benefits.map((benefit, idx) => (
                   <li key={idx} className="flex items-start">
-                    <CheckCircle2 className="w-6 h-6 text-orange-500 mr-3 flex-shrink-0" />
+                    <CheckCircle2 className="w-6 h-6 text-primary-500 mr-3 flex-shrink-0" />
                     <span className="text-stone-700 leading-tight pt-0.5">
                       {benefit}
                     </span>

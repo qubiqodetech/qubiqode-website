@@ -59,7 +59,7 @@ export function About() {
                 </div>
               </div>
               <p className="font-display text-4xl font-bold text-white mb-2">
-                10+ <span className="text-orange-500">Years</span>
+                10+ <span className="text-primary-500">Years</span>
               </p>
               <p className="text-stone-400 font-medium leading-tight text-sm">
                 Of combined experience crafting digital excellence.
@@ -98,7 +98,7 @@ export function About() {
                   transition={{ delay: 0.4 + i * 0.1 }}
                   className="flex items-center text-stone-700"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-orange-500 mr-3 shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-500 mr-3 shrink-0" />
                   <span className="font-medium">{feature}</span>
                 </motion.li>
               ))}

@@ -8,7 +8,7 @@ import { ArrowRight, Code2, PenTool, Search, Sparkles, Video, Bot, ArrowUpRight,
 const servicesList = [
   {
     id: "web-development",
-    icon: <Code2 className="w-8 h-8 text-orange-500" />,
+    icon: <Code2 className="w-8 h-8 text-primary-500" />,
     title: "Web Development",
     description: "High-performance, scalable web applications built with modern frameworks. We deliver robust architecture and pristine code quality.",
     features: ["Next.js & React", "E-commerce Platforms", "Custom Web Apps", "CMS Integration"],
@@ -16,7 +16,7 @@ const servicesList = [
   },
   {
     id: "ui-ux-design",
-    icon: <PenTool className="w-8 h-8 text-orange-500" />,
+    icon: <PenTool className="w-8 h-8 text-primary-500" />,
     title: "UI/UX Design",
     description: "Intuitive, beautiful, and conversion-focused design. We create interfaces that captivate users and elevate your brand aesthetic.",
     features: ["User Research", "Wireframing & Prototyping", "Design Systems", "Web & Mobile App Design"],
@@ -24,7 +24,7 @@ const servicesList = [
   },
   {
     id: "seo",
-    icon: <Search className="w-8 h-8 text-orange-500" />,
+    icon: <Search className="w-8 h-8 text-primary-500" />,
     title: "SEO Optimization",
     description: "Data-driven SEO strategies that drive organic growth. We ensure your digital presence dominates search engine results.",
     features: ["Technical SEO", "On-page Optimization", "Content Strategy", "Performance Audits"],
@@ -32,7 +32,7 @@ const servicesList = [
   },
   {
     id: "branding",
-    icon: <Sparkles className="w-8 h-8 text-orange-500" />,
+    icon: <Sparkles className="w-8 h-8 text-primary-500" />,
     title: "Branding & Creative Media",
     description: "Strategic brand identities that leave a lasting impression. From logos to comprehensive brand guidelines.",
     features: ["Brand Strategy", "Visual Identity", "Typography & Color", "Brand Guidelines"],
@@ -40,7 +40,7 @@ const servicesList = [
   },
   {
     id: "video-editing",
-    icon: <Video className="w-8 h-8 text-orange-500" />,
+    icon: <Video className="w-8 h-8 text-primary-500" />,
     title: "Video Editing & Animation",
     description: "Cinematic quality video production and editing. We tell your brand's story through compelling visual narratives.",
     features: ["Commercial Video", "Motion Graphics", "Social Media Content", "Post-production"],
@@ -48,7 +48,7 @@ const servicesList = [
   },
   {
     id: "ai-automation",
-    icon: <Bot className="w-8 h-8 text-orange-500" />,
+    icon: <Bot className="w-8 h-8 text-primary-500" />,
     title: "AI & Automation Solutions",
     description: "Leverage cutting-edge AI to streamline operations and create intelligent, personalized user experiences.",
     features: ["AI Integrations", "Workflow Automation", "Chatbots", "Data Analytics"],
@@ -81,11 +81,11 @@ const processSteps = [
 
 export default function ServicesPage() {
   return (
-    <main className="min-h-screen pt-32 pb-20 bg-stone-50 overflow-hidden selection:bg-orange-200">
+    <main className="min-h-screen pt-32 pb-20 bg-stone-50 overflow-hidden selection:bg-primary-200">
       
       {/* Hero Section */}
       <section className="container mx-auto px-6 max-w-7xl mb-24 md:mb-32 relative">
-        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-200/40 via-amber-100/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-200/40 via-sky-100/10 to-transparent rounded-full blur-3xl pointer-events-none" />
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div
@@ -94,7 +94,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex flex-col items-center gap-4 mb-8">
-              <span className="uppercase tracking-widest text-sm font-semibold text-orange-600 bg-orange-100/50 border border-orange-200/50 rounded-full px-5 py-2">Our Expertise</span>
+              <span className="uppercase tracking-widest text-sm font-semibold text-primary-600 bg-primary-100/50 border border-primary-200/50 rounded-full px-5 py-2">Our Expertise</span>
             </div>
             
             <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tight text-stone-950 mb-8 leading-[1.1]">
@@ -121,16 +121,16 @@ export default function ServicesPage() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
               <Link href={service.href} className="block h-full group">
-                <div className="h-full bg-white rounded-3xl p-8 border border-stone-200 shadow-sm hover:shadow-xl hover:border-orange-200 transition-all duration-300 relative overflow-hidden flex flex-col">
+                <div className="h-full bg-white rounded-3xl p-8 border border-stone-200 shadow-sm hover:shadow-xl hover:border-primary-200 transition-all duration-300 relative overflow-hidden flex flex-col">
                   {/* Hover Background Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
                   <div className="relative z-10 flex flex-col h-full">
                     <div className="w-16 h-16 rounded-2xl bg-stone-50 border border-stone-100 flex items-center justify-center mb-6 group-hover:bg-white group-hover:scale-110 transition-all duration-300 shadow-sm">
                       {service.icon}
                     </div>
                     
-                    <h3 className="font-display text-2xl font-bold text-stone-950 mb-4 group-hover:text-orange-600 transition-colors">
+                    <h3 className="font-display text-2xl font-bold text-stone-950 mb-4 group-hover:text-primary-600 transition-colors">
                       {service.title}
                     </h3>
                     
@@ -141,13 +141,13 @@ export default function ServicesPage() {
                     <div className="space-y-3 mb-8">
                       {service.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center text-sm text-stone-500 font-medium">
-                          <CheckCircle2 className="w-4 h-4 text-orange-500 mr-3 shrink-0" />
+                          <CheckCircle2 className="w-4 h-4 text-primary-500 mr-3 shrink-0" />
                           {feature}
                         </div>
                       ))}
                     </div>
                     
-                    <div className="mt-auto inline-flex items-center font-semibold text-stone-950 group-hover:text-orange-600 transition-colors">
+                    <div className="mt-auto inline-flex items-center font-semibold text-stone-950 group-hover:text-primary-600 transition-colors">
                       Learn more <ArrowUpRight className="ml-1 w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </div>
                   </div>
@@ -167,11 +167,11 @@ export default function ServicesPage() {
           transition={{ duration: 0.8 }}
           className="bg-stone-950 rounded-[3rem] p-8 md:p-16 lg:p-20 text-white relative overflow-hidden"
         >
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-600/20 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-600/20 rounded-full blur-[120px] pointer-events-none" />
           
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
             <div>
-              <div className="inline-flex items-center rounded-full border border-white/20 bg-white/5 backdrop-blur-md px-4 py-1.5 text-xs font-semibold text-orange-400 mb-8 tracking-wide uppercase">
+              <div className="inline-flex items-center rounded-full border border-white/20 bg-white/5 backdrop-blur-md px-4 py-1.5 text-xs font-semibold text-primary-400 mb-8 tracking-wide uppercase">
                 Featured Specialty
               </div>
               <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 leading-tight">
@@ -182,8 +182,8 @@ export default function ServicesPage() {
               </p>
               <ul className="space-y-4 mb-10">
                 <li className="flex items-start">
-                  <div className="bg-orange-500/20 p-1 rounded-full mr-4 mt-0.5">
-                    <CheckCircle2 className="w-5 h-5 text-orange-500" />
+                  <div className="bg-primary-500/20 p-1 rounded-full mr-4 mt-0.5">
+                    <CheckCircle2 className="w-5 h-5 text-primary-500" />
                   </div>
                   <div>
                     <span className="block font-bold text-white mb-1">Blazing Fast Performance</span>
@@ -191,8 +191,8 @@ export default function ServicesPage() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <div className="bg-orange-500/20 p-1 rounded-full mr-4 mt-0.5">
-                    <CheckCircle2 className="w-5 h-5 text-orange-500" />
+                  <div className="bg-primary-500/20 p-1 rounded-full mr-4 mt-0.5">
+                    <CheckCircle2 className="w-5 h-5 text-primary-500" />
                   </div>
                   <div>
                     <span className="block font-bold text-white mb-1">Scalable Architecture</span>
@@ -243,7 +243,7 @@ export default function ServicesPage() {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="text-center px-4"
               >
-                <div className="w-16 h-16 mx-auto bg-orange-100 text-orange-600 rounded-full flex items-center justify-center font-display text-2xl font-bold mb-6">
+                <div className="w-16 h-16 mx-auto bg-primary-100 text-primary-600 rounded-full flex items-center justify-center font-display text-2xl font-bold mb-6">
                   {i + 1}
                 </div>
                 <h3 className="font-bold text-2xl text-stone-950 mb-4">{item.title}</h3>
@@ -262,7 +262,7 @@ export default function ServicesPage() {
             <p className="text-xl text-stone-600 mb-8">
               A refined workflow designed for clarity, speed, and exceptional results.
             </p>
-            <Link href="/contact" className="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700 transition-colors uppercase tracking-widest text-sm">
+            <Link href="/contact" className="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors uppercase tracking-widest text-sm">
               Start your project <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </div>
@@ -275,9 +275,9 @@ export default function ServicesPage() {
                  whileInView={{ opacity: 1, scale: 1 }}
                  viewport={{ once: true }}
                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                 className="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm relative overflow-hidden group hover:border-orange-200 transition-colors"
+                 className="bg-white p-8 rounded-3xl border border-stone-200 shadow-sm relative overflow-hidden group hover:border-primary-200 transition-colors"
                >
-                 <div className="text-6xl font-display font-bold text-stone-100 mb-6 group-hover:text-orange-50 transition-colors">
+                 <div className="text-6xl font-display font-bold text-stone-100 mb-6 group-hover:text-primary-50 transition-colors">
                    {step.number}
                  </div>
                  <h3 className="text-xl font-bold text-stone-950 mb-3 relative z-10">{step.title}</h3>

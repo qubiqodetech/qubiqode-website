@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function TermsOfServicePage() {
   return (
-    <div className="container mx-auto px-6 max-w-4xl py-32 prose prose-stone">
+    <div className="container mx-auto px-6 max-w-4xl py-32 prose pindigo-stone">
       <h1 className="font-display text-4xl font-bold mb-8">Terms of Service</h1>
       <p className="text-stone-500 mb-8">Last updated: {new Date().toLocaleDateString()}</p>
 

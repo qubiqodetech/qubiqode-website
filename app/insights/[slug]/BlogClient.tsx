@@ -7,7 +7,7 @@ import { ArrowLeft, ArrowRight, Calendar, Clock, ChevronRight, Share2, Twitter, 
 
 export function BlogClient({ article, relatedPosts }: { article: any, relatedPosts: any[] }) {
   return (
-    <main className="min-h-screen bg-white selection:bg-orange-200">
+    <main className="min-h-screen bg-white selection:bg-primary-200">
       
       {/* Article Hero */}
       <section className="pt-32 pb-12 lg:pt-40 lg:pb-16 bg-stone-50 border-b border-stone-200">
@@ -23,7 +23,7 @@ export function BlogClient({ article, relatedPosts }: { article: any, relatedPos
              transition={{ duration: 0.6 }}
              className="flex items-center gap-4 mb-6"
            >
-             <span className="text-orange-600 bg-orange-50 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+             <span className="text-primary-600 bg-primary-50 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
                {article.category}
              </span>
              <div className="flex items-center gap-4 text-sm font-medium text-stone-500">
@@ -116,18 +116,18 @@ export function BlogClient({ article, relatedPosts }: { article: any, relatedPos
                  <div>
                    <h3 className="font-semibold text-stone-950 mb-4 uppercase tracking-widest text-xs">Table of Contents</h3>
                    <ul className="space-y-3 text-sm text-stone-500 font-medium border-l border-stone-200">
-                      <li><a href="#" className="block pl-4 border-l-2 border-transparent hover:border-orange-500 hover:text-orange-600 transition-colors">Introduction</a></li>
-                      <li><a href="#" className="block pl-4 border-l-2 border-orange-500 text-stone-900 transition-colors">Automating the Prototype</a></li>
-                      <li><a href="#" className="block pl-4 border-l-2 border-transparent hover:border-orange-500 hover:text-orange-600 transition-colors">Dynamic Personalization</a></li>
-                      <li><a href="#" className="block pl-4 border-l-2 border-transparent hover:border-orange-500 hover:text-orange-600 transition-colors">Key areas of impact</a></li>
-                      <li><a href="#" className="block pl-4 border-l-2 border-transparent hover:border-orange-500 hover:text-orange-600 transition-colors">Conclusion</a></li>
+                      <li><a href="#" className="block pl-4 border-l-2 border-transparent hover:border-primary-500 hover:text-primary-600 transition-colors">Introduction</a></li>
+                      <li><a href="#" className="block pl-4 border-l-2 border-primary-500 text-stone-900 transition-colors">Automating the Prototype</a></li>
+                      <li><a href="#" className="block pl-4 border-l-2 border-transparent hover:border-primary-500 hover:text-primary-600 transition-colors">Dynamic Personalization</a></li>
+                      <li><a href="#" className="block pl-4 border-l-2 border-transparent hover:border-primary-500 hover:text-primary-600 transition-colors">Key areas of impact</a></li>
+                      <li><a href="#" className="block pl-4 border-l-2 border-transparent hover:border-primary-500 hover:text-primary-600 transition-colors">Conclusion</a></li>
                    </ul>
                  </div>
 
                  <div className="bg-stone-50 p-6 rounded-2xl border border-stone-200">
                     <h3 className="font-bold text-stone-950 mb-2">Need strategic guidance?</h3>
                     <p className="text-sm text-stone-600 mb-4">Our specialized teams help enterprise clients navigate digital shifts.</p>
-                    <Link href="/contact" className="text-orange-600 text-sm font-bold flex items-center hover:text-orange-700 transition-colors">
+                    <Link href="/contact" className="text-primary-600 text-sm font-bold flex items-center hover:text-primary-700 transition-colors">
                       Book a consultation <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
                  </div>
@@ -137,13 +137,13 @@ export function BlogClient({ article, relatedPosts }: { article: any, relatedPos
            {/* Main Body */}
            <div className="lg:w-2/3 max-w-3xl">
               <article 
-                className="prose prose-lg md:prose-xl prose-stone max-w-none 
-                           prose-headings:font-display prose-headings:font-bold prose-headings:text-stone-950 prose-headings:tracking-tight 
-                           prose-p:text-stone-600 prose-p:leading-relaxed 
-                           prose-a:text-orange-600 prose-a:font-semibold prose-a:no-underline hover:prose-a:underline
-                           prose-blockquote:border-l-4 prose-blockquote:border-orange-500 prose-blockquote:bg-stone-50 prose-blockquote:px-6 prose-blockquote:py-4 prose-blockquote:rounded-r-xl prose-blockquote:my-10 prose-blockquote:font-medium prose-blockquote:text-stone-800 prose-blockquote:not-italic
-                           prose-strong:font-bold prose-strong:text-stone-900
-                           prose-li:text-stone-600"
+                className="prose pindigo-lg md:pindigo-xl pindigo-stone max-w-none 
+                           pindigo-headings:font-display pindigo-headings:font-bold pindigo-headings:text-stone-950 pindigo-headings:tracking-tight 
+                           pindigo-p:text-stone-600 pindigo-p:leading-relaxed 
+                           pindigo-a:text-primary-600 pindigo-a:font-semibold pindigo-a:no-underline hover:pindigo-a:underline
+                           pindigo-blockquote:border-l-4 pindigo-blockquote:border-primary-500 pindigo-blockquote:bg-stone-50 pindigo-blockquote:px-6 pindigo-blockquote:py-4 pindigo-blockquote:rounded-r-xl pindigo-blockquote:my-10 pindigo-blockquote:font-medium pindigo-blockquote:text-stone-800 pindigo-blockquote:not-italic
+                           pindigo-strong:font-bold pindigo-strong:text-stone-900
+                           pindigo-li:text-stone-600"
                 dangerouslySetInnerHTML={{ __html: article.content }}
               />
 
@@ -173,7 +173,7 @@ export function BlogClient({ article, relatedPosts }: { article: any, relatedPos
            <div className="container mx-auto px-6 max-w-7xl">
               <div className="flex items-center justify-between mb-12">
                 <h2 className="font-display text-3xl font-bold text-stone-950">Read Next</h2>
-                <Link href="/insights" className="hidden sm:flex items-center text-orange-600 font-bold hover:text-orange-700 transition-colors">
+                <Link href="/insights" className="hidden sm:flex items-center text-primary-600 font-bold hover:text-primary-700 transition-colors">
                   View all <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
@@ -188,7 +188,7 @@ export function BlogClient({ article, relatedPosts }: { article: any, relatedPos
                       transition={{ duration: 0.5, delay: i * 0.1 }}
                     >
                       <Link href={`/insights/${post.slug}`} className="block group h-full focus:outline-none">
-                        <div className="h-full flex flex-col bg-white rounded-3xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-orange-200 transition-all duration-500">
+                        <div className="h-full flex flex-col bg-white rounded-3xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-primary-200 transition-all duration-500">
                            <div className="relative aspect-[4/3] overflow-hidden bg-stone-100 shrink-0">
                               <Image 
                                 src={post.image}
@@ -201,18 +201,18 @@ export function BlogClient({ article, relatedPosts }: { article: any, relatedPos
                            
                            <div className="p-6 md:p-8 flex flex-col flex-1">
                               <div className="flex items-center gap-3 text-xs font-medium text-stone-400 mb-4">
-                                <span className="text-orange-600 font-bold uppercase tracking-wider">{post.category}</span>
+                                <span className="text-primary-600 font-bold uppercase tracking-wider">{post.category}</span>
                                 <span>&bull;</span>
                                 <span>{post.readTime}</span>
                               </div>
                               
-                              <h3 className="font-display font-bold text-xl text-stone-950 mb-3 group-hover:text-orange-600 transition-colors line-clamp-2">
+                              <h3 className="font-display font-bold text-xl text-stone-950 mb-3 group-hover:text-primary-600 transition-colors line-clamp-2">
                                 {post.title}
                               </h3>
                               
                               <div className="mt-auto pt-6 flex items-center justify-between">
                                  <span className="text-sm font-semibold text-stone-900">{post.author}</span>
-                                 <span className="flex items-center text-sm font-bold text-orange-600 group-hover:translate-x-1 transition-transform">
+                                 <span className="flex items-center text-sm font-bold text-primary-600 group-hover:translate-x-1 transition-transform">
                                    Read <ChevronRight className="w-4 h-4 ml-0.5" />
                                  </span>
                               </div>
@@ -236,7 +236,7 @@ export function BlogClient({ article, relatedPosts }: { article: any, relatedPos
              transition={{ duration: 0.8 }}
              className="bg-stone-950 rounded-[3rem] p-12 md:p-24 text-center shadow-2xl relative overflow-hidden"
            >
-             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-600/20 rounded-full blur-[120px] pointer-events-none" />
+             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-600/20 rounded-full blur-[120px] pointer-events-none" />
              
              <div className="relative z-10 max-w-3xl mx-auto text-white">
                <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">Want to apply these insights to your business?</h2>
@@ -245,7 +245,7 @@ export function BlogClient({ article, relatedPosts }: { article: any, relatedPos
                </p>
                <Link
                  href="/contact"
-                 className="inline-flex items-center justify-center rounded-full bg-orange-600 px-8 py-4 text-sm font-semibold text-white shadow-xl hover:bg-orange-500 transition-all duration-300"
+                 className="inline-flex items-center justify-center rounded-full bg-primary-600 px-8 py-4 text-sm font-semibold text-white shadow-xl hover:bg-primary-500 transition-all duration-300"
                >
                  Start a Project
                  <ArrowRight className="ml-2 h-4 w-4" />

@@ -8,7 +8,7 @@ import { portfolioProjects } from "@/lib/portfolio";
 
 export function CaseStudyClient({ project }: { project: typeof portfolioProjects[0] }) {
   return (
-    <main className="min-h-screen bg-stone-50 selection:bg-orange-200">
+    <main className="min-h-screen bg-stone-50 selection:bg-primary-200">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-stone-950 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -107,7 +107,7 @@ export function CaseStudyClient({ project }: { project: typeof portfolioProjects
                    transition={{ duration: 0.6 }}
                 >
                   <h2 className="font-display text-3xl md:text-4xl font-bold text-stone-950 mb-6">The Challenge</h2>
-                  <div className="prose prose-lg prose-stone max-w-none text-stone-600 leading-relaxed">
+                  <div className="prose pindigo-lg pindigo-stone max-w-none text-stone-600 leading-relaxed">
                     <p>{project.challenge}</p>
                   </div>
                 </motion.div>
@@ -137,7 +137,7 @@ export function CaseStudyClient({ project }: { project: typeof portfolioProjects
                    transition={{ duration: 0.6 }}
                 >
                   <h2 className="font-display text-3xl md:text-4xl font-bold text-stone-950 mb-6">The Solution</h2>
-                  <div className="prose prose-lg prose-stone max-w-none text-stone-600 leading-relaxed">
+                  <div className="prose pindigo-lg pindigo-stone max-w-none text-stone-600 leading-relaxed">
                     <p>{project.solution}</p>
                   </div>
                 </motion.div>
@@ -184,7 +184,7 @@ export function CaseStudyClient({ project }: { project: typeof portfolioProjects
                      <div className="space-y-8">
                        {project.impact.map((item: any, i: number) => (
                          <div key={i} className="border-l-2 border-stone-800 pl-6">
-                            <div className="font-display text-4xl md:text-5xl font-bold text-orange-500 mb-2">{item.metric}</div>
+                            <div className="font-display text-4xl md:text-5xl font-bold text-primary-500 mb-2">{item.metric}</div>
                             <div className="text-stone-400 text-sm tracking-wide uppercase font-semibold">{item.label}</div>
                          </div>
                        ))}

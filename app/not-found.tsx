@@ -6,7 +6,7 @@ import { Home, Grid, Mail } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <main className="min-h-screen bg-stone-50 flex items-center justify-center p-6 relative overflow-hidden selection:bg-orange-200">
+    <main className="min-h-screen bg-stone-50 flex items-center justify-center p-6 relative overflow-hidden selection:bg-primary-200">
       
       {/* Background Abstract Shapes */}
       <motion.div 
@@ -19,7 +19,7 @@ export default function NotFound() {
           repeat: Infinity, 
           ease: "easeInOut" 
         }}
-        className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-orange-600/5 rounded-full blur-[100px] pointer-events-none"
+        className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary-600/5 rounded-full blur-[100px] pointer-events-none"
       />
       <motion.div 
         animate={{ 
@@ -73,7 +73,7 @@ export default function NotFound() {
          >
             <Link
               href="/"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-orange-600 text-white font-semibold shadow-xl hover:bg-orange-500 hover:-translate-y-0.5 transition-all duration-300 group"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary-600 text-white font-semibold shadow-xl hover:bg-primary-500 hover:-translate-y-0.5 transition-all duration-300 group"
             >
               <Home className="w-4 h-4 mr-2" />
               Return Home

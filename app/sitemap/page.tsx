@@ -8,8 +8,8 @@ const sitemapData = [
   {
     category: "Main Pages",
     icon: <Map className="w-5 h-5" />,
-    color: "text-orange-600",
-    bgColor: "bg-orange-100",
+    color: "text-primary-600",
+    bgColor: "bg-primary-100",
     links: [
       { name: "Home", href: "/" },
       { name: "About Us", href: "/about" },
@@ -59,7 +59,7 @@ const sitemapData = [
 
 export default function SitemapPage() {
   return (
-    <main className="min-h-screen bg-stone-50 selection:bg-orange-200 pb-24">
+    <main className="min-h-screen bg-stone-50 selection:bg-primary-200 pb-24">
       
       {/* Header Section */}
       <section className="pt-32 pb-16 lg:pt-48 lg:pb-24 border-b border-stone-200 bg-white">
@@ -121,10 +121,10 @@ export default function SitemapPage() {
                                     href={link.href}
                                     className="group flex items-center justify-between py-2 border-b border-transparent hover:border-stone-200 transition-colors"
                                  >
-                                    <span className="text-stone-600 font-medium group-hover:text-orange-600 transition-colors">
+                                    <span className="text-stone-600 font-medium group-hover:text-primary-600 transition-colors">
                                        {link.name}
                                     </span>
-                                    <ArrowRight className="w-4 h-4 text-stone-300 group-hover:text-orange-600 group-hover:translate-x-1 transition-all" />
+                                    <ArrowRight className="w-4 h-4 text-stone-300 group-hover:text-primary-600 group-hover:translate-x-1 transition-all" />
                                  </Link>
                               </li>
                            ))}
@@ -152,7 +152,7 @@ export default function SitemapPage() {
                </p>
                <Link
                  href="/contact"
-                 className="inline-flex items-center justify-center rounded-xl bg-orange-600 px-8 py-4 font-semibold text-white shadow-xl hover:bg-orange-500 hover:-translate-y-0.5 transition-all duration-300"
+                 className="inline-flex items-center justify-center rounded-xl bg-primary-600 px-8 py-4 font-semibold text-white shadow-xl hover:bg-primary-500 hover:-translate-y-0.5 transition-all duration-300"
                >
                  Contact Support
                </Link>

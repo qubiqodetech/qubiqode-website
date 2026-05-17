@@ -104,10 +104,10 @@ export default function PortfolioPage() {
                   <div className="px-2 sm:px-4 flex justify-between items-end">
                      <div className="flex-1 pr-4">
                        <div className="text-sm font-semibold text-stone-500 mb-2 uppercase tracking-wider">{project.category}</div>
-                       <h3 className="font-display text-2xl sm:text-3xl font-bold text-stone-950 group-hover:text-orange-600 transition-colors duration-300 mb-2">{project.title}</h3>
+                       <h3 className="font-display text-2xl sm:text-3xl font-bold text-stone-950 group-hover:text-primary-600 transition-colors duration-300 mb-2">{project.title}</h3>
                        <p className="text-sm text-stone-500 line-clamp-2">{project.summary}</p>
                      </div>
-                     <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-stone-100 flex items-center justify-center shrink-0 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 mb-2">
+                     <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-stone-100 flex items-center justify-center shrink-0 group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300 mb-2">
                         <ArrowUpRight className="w-5 h-5 sm:w-6 sm:h-6" />
                      </div>
                   </div>
@@ -211,7 +211,7 @@ export default function PortfolioPage() {
       {/* Testimonials */}
       <section className="container mx-auto px-6 max-w-7xl mb-32">
          <div className="bg-stone-950 text-white rounded-[3rem] p-10 md:p-20 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-orange-600/10 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-600/10 rounded-full blur-[100px] pointer-events-none" />
             
             <div className="relative z-10 flex flex-col lg:flex-row gap-16 lg:items-center">
               <div className="lg:w-1/3">
@@ -233,7 +233,7 @@ export default function PortfolioPage() {
                   >
                     <div className="flex items-center gap-1 mb-6">
                       {[...Array(5)].map((_, idx) => (
-                        <Star key={idx} className="w-4 h-4 fill-orange-500 text-orange-500" />
+                        <Star key={idx} className="w-4 h-4 fill-primary-500 text-primary-500" />
                       ))}
                     </div>
                     

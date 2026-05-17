@@ -85,7 +85,7 @@ export default function FAQPage() {
   };
 
   return (
-    <main className="min-h-screen bg-stone-50 selection:bg-orange-200">
+    <main className="min-h-screen bg-stone-50 selection:bg-primary-200">
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 lg:pt-48 lg:pb-24 border-b border-stone-200">
@@ -106,7 +106,7 @@ export default function FAQPage() {
             className="font-display text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-stone-950 leading-[1.1] mb-6"
           >
             Clear answers to <br className="hidden md:block"/>
-            <span className="text-orange-600">common questions.</span>
+            <span className="text-primary-600">common questions.</span>
           </motion.h1>
 
           <motion.p
@@ -145,17 +145,17 @@ export default function FAQPage() {
                       return (
                         <div 
                           key={faqIdx} 
-                          className={`rounded-2xl border transition-all duration-300 ${isActive ? 'border-orange-500 shadow-md bg-white' : 'border-stone-200 bg-stone-50 hover:border-orange-200 hover:bg-white'}`}
+                          className={`rounded-2xl border transition-all duration-300 ${isActive ? 'border-primary-500 shadow-md bg-white' : 'border-stone-200 bg-stone-50 hover:border-primary-200 hover:bg-white'}`}
                         >
                           <button 
                             onClick={() => toggleFaq(id)}
                             className="w-full flex items-center justify-between text-left font-bold text-stone-950 p-6 md:p-8 focus:outline-none group"
                           >
-                            <span className={`text-lg md:text-xl pr-8 transition-colors ${isActive ? 'text-orange-600' : 'group-hover:text-stone-700'}`}>
+                            <span className={`text-lg md:text-xl pr-8 transition-colors ${isActive ? 'text-primary-600' : 'group-hover:text-stone-700'}`}>
                               {faq.question}
                             </span>
-                            <div className={`shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${isActive ? 'bg-orange-100' : 'bg-stone-200 group-hover:bg-orange-50'}`}>
-                              <ChevronDown className={`w-5 h-5 transition-transform duration-500 ${isActive ? 'rotate-180 text-orange-600' : 'text-stone-500 group-hover:text-orange-500'}`} />
+                            <div className={`shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${isActive ? 'bg-primary-100' : 'bg-stone-200 group-hover:bg-primary-50'}`}>
+                              <ChevronDown className={`w-5 h-5 transition-transform duration-500 ${isActive ? 'rotate-180 text-primary-600' : 'text-stone-500 group-hover:text-primary-500'}`} />
                             </div>
                           </button>
                           
@@ -195,11 +195,11 @@ export default function FAQPage() {
                transition={{ duration: 0.6 }}
                className="bg-stone-950 rounded-[3rem] p-10 md:p-16 text-center shadow-xl border border-stone-800 relative overflow-hidden"
             >
-               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-600/10 rounded-full blur-[100px] pointer-events-none" />
+               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-600/10 rounded-full blur-[100px] pointer-events-none" />
                
                <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center">
                   <div className="w-16 h-16 bg-stone-800 rounded-full flex items-center justify-center mb-6">
-                     <MessageSquare className="w-8 h-8 text-orange-500" />
+                     <MessageSquare className="w-8 h-8 text-primary-500" />
                   </div>
                   <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">Still have questions?</h2>
                   <p className="text-xl text-stone-400 leading-relaxed mb-10">
@@ -209,7 +209,7 @@ export default function FAQPage() {
                   <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                     <Link
                       href="/contact"
-                      className="inline-flex items-center justify-center rounded-xl bg-orange-600 px-8 py-4 text-sm font-semibold text-white shadow-xl hover:bg-orange-500 transition-all duration-300 w-full sm:w-auto"
+                      className="inline-flex items-center justify-center rounded-xl bg-primary-600 px-8 py-4 text-sm font-semibold text-white shadow-xl hover:bg-primary-500 transition-all duration-300 w-full sm:w-auto"
                     >
                       Contact Us
                       <ArrowRight className="ml-2 h-4 w-4" />

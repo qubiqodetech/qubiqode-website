@@ -35,7 +35,7 @@ const plans = [
     price: "$899",
     period: "/mo",
     featured: true,
-    buttonStyle: "bg-orange-600 text-white hover:bg-orange-500 shadow-xl shadow-orange-900/10",
+    buttonStyle: "bg-primary-600 text-white hover:bg-primary-500 shadow-xl shadow-primary-900/10",
     features: [
       "Everything in Essential",
       "10 Hours of Development/mo",
@@ -67,7 +67,7 @@ const benefits = [
   {
     title: "Uncompromising Security",
     description: "We proactively patch vulnerabilities and keep your tech stack updated before issues become liabilities.",
-    icon: <ShieldCheck className="w-6 h-6 text-orange-500" />
+    icon: <ShieldCheck className="w-6 h-6 text-primary-500" />
   },
   {
     title: "Peak Performance",
@@ -88,11 +88,11 @@ const benefits = [
 
 export default function MaintenancePage() {
   return (
-    <main className="min-h-screen bg-stone-50 selection:bg-orange-200">
+    <main className="min-h-screen bg-stone-50 selection:bg-primary-200">
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 lg:pt-48 lg:pb-24 relative overflow-hidden bg-stone-950 text-white border-b border-stone-800">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-orange-500/10 via-stone-950 to-stone-950 pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary-500/10 via-stone-950 to-stone-950 pointer-events-none" />
         
         <div className="container mx-auto px-6 max-w-7xl relative z-10 text-center">
           <motion.div
@@ -111,7 +111,7 @@ export default function MaintenancePage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-6 max-w-4xl mx-auto"
           >
-            Keep your digital asset <span className="text-orange-500 italic">performing.</span>
+            Keep your digital asset <span className="text-primary-500 italic">performing.</span>
           </motion.h1>
 
           <motion.p
@@ -136,10 +136,10 @@ export default function MaintenancePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`bg-white rounded-[2.5rem] p-8 md:p-10 border ${plan.featured ? 'border-orange-200 shadow-2xl shadow-orange-900/5 relative scale-100 lg:scale-[1.02] z-10' : 'border-stone-200 shadow-sm'} transition-transform duration-300 flex flex-col h-full`}
+                className={`bg-white rounded-[2.5rem] p-8 md:p-10 border ${plan.featured ? 'border-primary-200 shadow-2xl shadow-primary-900/5 relative scale-100 lg:scale-[1.02] z-10' : 'border-stone-200 shadow-sm'} transition-transform duration-300 flex flex-col h-full`}
               >
                 {plan.featured && (
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-orange-600 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg">
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-600 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg">
                     Most Popular
                   </div>
                 )}
@@ -170,7 +170,7 @@ export default function MaintenancePage() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: 0.3 + (i * 0.1) }}
                     >
-                      <CheckCircle2 className={`w-5 h-5 shrink-0 ${plan.featured ? 'text-orange-600' : 'text-stone-400'}`} />
+                      <CheckCircle2 className={`w-5 h-5 shrink-0 ${plan.featured ? 'text-primary-600' : 'text-stone-400'}`} />
                       <span className="text-stone-600 text-sm leading-relaxed">{feature}</span>
                     </motion.div>
                   ))}
@@ -235,7 +235,7 @@ export default function MaintenancePage() {
                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                  <Link
                    href="/contact"
-                   className="inline-flex items-center justify-center w-full sm:w-auto rounded-xl bg-orange-600 px-8 py-4 font-bold text-white shadow-xl hover:bg-orange-500 hover:-translate-y-0.5 transition-all duration-300"
+                   className="inline-flex items-center justify-center w-full sm:w-auto rounded-xl bg-primary-600 px-8 py-4 font-bold text-white shadow-xl hover:bg-primary-500 hover:-translate-y-0.5 transition-all duration-300"
                  >
                    Discuss Enterprise Support
                    <ArrowRight className="w-5 h-5 ml-2" />

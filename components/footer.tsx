@@ -10,7 +10,7 @@ export function Footer() {
     <footer className="relative bg-stone-950 text-white overflow-hidden pt-24 pb-12 lg:pt-32">
       {/* Background elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-stone-700 to-transparent" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-orange-500/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-primary-500/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
         
@@ -33,7 +33,7 @@ export function Footer() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-xl bg-orange-600 px-8 py-4 text-sm font-bold text-white shadow-xl shadow-orange-900/10 hover:bg-orange-500 active:scale-95 transition-all duration-200"
+              className="inline-flex items-center justify-center rounded-xl bg-primary-600 px-8 py-4 text-sm font-bold text-white shadow-xl shadow-primary-900/10 hover:bg-primary-500 active:scale-95 transition-all duration-200"
             >
               Get a Quote
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -72,7 +72,7 @@ export function Footer() {
             </p>
             <Link 
               href="/contact" 
-              className="inline-flex items-center text-sm font-semibold text-orange-500 hover:text-orange-400 transition-colors mb-8"
+              className="inline-flex items-center text-sm font-semibold text-primary-500 hover:text-primary-400 transition-colors mb-8"
             >
               Let&apos;s collaborate <ArrowRight className="ml-1 w-4 h-4" />
             </Link>
@@ -226,7 +226,7 @@ function SocialLink({ href, icon, label }: { href: string; icon: React.ReactNode
       target="_blank"
       rel="noreferrer"
       aria-label={label}
-      className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-stone-400 hover:bg-orange-500 hover:border-orange-500 hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-sm"
+      className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-stone-400 hover:bg-primary-500 hover:border-primary-500 hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-sm"
     >
       {icon}
     </Link>

@@ -49,14 +49,14 @@ const sections = [
 
 export default function TermsAndConditionsPage() {
   return (
-    <main className="min-h-screen bg-white selection:bg-orange-200">
+    <main className="min-h-screen bg-white selection:bg-primary-200">
       
       {/* Header Section */}
       <section className="pt-32 pb-16 border-b border-stone-200 bg-stone-50">
         <div className="container mx-auto px-6 max-w-3xl">
           <Link 
             href="/"
-            className="inline-flex items-center text-sm font-semibold text-stone-500 hover:text-orange-600 transition-colors mb-8"
+            className="inline-flex items-center text-sm font-semibold text-stone-500 hover:text-primary-600 transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
@@ -68,8 +68,8 @@ export default function TermsAndConditionsPage() {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-3 mb-6"
           >
-            <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
-              <Scale className="w-6 h-6 text-orange-600" />
+            <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center">
+              <Scale className="w-6 h-6 text-primary-600" />
             </div>
             <h1 className="font-display text-4xl md:text-5xl font-bold text-stone-950">Terms & Conditions</h1>
           </motion.div>
@@ -92,7 +92,7 @@ export default function TermsAndConditionsPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="prose prose-stone max-w-none"
+            className="prose pindigo-stone max-w-none"
           >
             <p className="text-lg text-stone-600 leading-relaxed mb-12">
               Please read these Terms and Conditions carefully before using our website or engaging QubiQode for digital services. These terms govern your use of the site and form the foundation of our working relationship.

@@ -28,8 +28,8 @@ const industries = [
     title: "E-Commerce",
     description: "High-converting online stores, secure payment integrations, and inventory automation to scale your retail business globally.",
     icon: <ShoppingBag className="w-6 h-6" />,
-    color: "text-orange-500",
-    bgColor: "bg-orange-50",
+    color: "text-primary-500",
+    bgColor: "bg-primary-50",
     features: ["Custom Storefronts", "Payment Integration", "Conversion Optimization"]
   },
   {
@@ -72,11 +72,11 @@ const industries = [
 
 export default function IndustriesPage() {
   return (
-    <main className="min-h-screen bg-stone-50 selection:bg-orange-200">
+    <main className="min-h-screen bg-stone-50 selection:bg-primary-200">
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 lg:pt-48 lg:pb-24 relative overflow-hidden bg-white border-b border-stone-200">
-        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-orange-600/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-primary-600/5 rounded-full blur-[100px] pointer-events-none" />
         
         <div className="container mx-auto px-6 max-w-7xl relative z-10 text-center">
           <motion.div
@@ -94,7 +94,7 @@ export default function IndustriesPage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-stone-950 mb-6 max-w-4xl mx-auto"
           >
-            Tailored solutions for <span className="text-orange-600 italic">your sector.</span>
+            Tailored solutions for <span className="text-primary-600 italic">your sector.</span>
           </motion.h1>
 
           <motion.p
@@ -119,7 +119,7 @@ export default function IndustriesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group bg-white border border-stone-200 hover:border-orange-200 rounded-[2rem] p-8 md:p-10 shadow-sm hover:shadow-xl hover:shadow-orange-900/5 transition-all duration-500 flex flex-col h-full"
+                className="group bg-white border border-stone-200 hover:border-primary-200 rounded-[2rem] p-8 md:p-10 shadow-sm hover:shadow-xl hover:shadow-primary-900/5 transition-all duration-500 flex flex-col h-full"
               >
                 <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 ${industry.bgColor} ${industry.color} group-hover:scale-110 transition-transform duration-500`}>
                   {industry.icon}
@@ -159,7 +159,7 @@ export default function IndustriesPage() {
             >
               <h2 className="font-display text-3xl md:text-5xl font-bold leading-tight mb-6">
                 Universal principles, <br/>
-                <span className="text-orange-500 italic">specialized application.</span>
+                <span className="text-primary-500 italic">specialized application.</span>
               </h2>
               <p className="text-stone-400 text-lg leading-relaxed mb-8">
                 While every industry requires a different tactical approach, our core methodology remains strict. We bring enterprise-grade engineering, obsessive attention to UI/UX, and performance-first architecture to every project, regardless of the vertical.
@@ -168,7 +168,7 @@ export default function IndustriesPage() {
               <ul className="space-y-6">
                 <li className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-stone-900 flex items-center justify-center shrink-0 border border-stone-800">
-                    <span className="text-orange-500 font-bold">1</span>
+                    <span className="text-primary-500 font-bold">1</span>
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white mb-1">Deep Discovery</h3>
@@ -177,7 +177,7 @@ export default function IndustriesPage() {
                 </li>
                 <li className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-stone-900 flex items-center justify-center shrink-0 border border-stone-800">
-                    <span className="text-orange-500 font-bold">2</span>
+                    <span className="text-primary-500 font-bold">2</span>
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white mb-1">Scalable Foundation</h3>
@@ -194,7 +194,7 @@ export default function IndustriesPage() {
               transition={{ duration: 0.8 }}
               className="bg-stone-900 rounded-[2rem] p-8 md:p-12 border border-stone-800 relative overflow-hidden"
             >
-               <div className="absolute top-0 right-0 w-64 h-64 bg-orange-600/20 blur-[80px] rounded-full pointer-events-none" />
+               <div className="absolute top-0 right-0 w-64 h-64 bg-primary-600/20 blur-[80px] rounded-full pointer-events-none" />
                <h3 className="font-display text-2xl font-bold text-white mb-8">Ready to disrupt your industry?</h3>
                <p className="text-stone-400 mb-10 leading-relaxed font-medium">
                  See how we&apos;ve helped companies in your sector achieve their digital goals, or speak directly with our strategy team to discuss your particular use case.
@@ -205,7 +205,7 @@ export default function IndustriesPage() {
                    className="w-full inline-flex items-center justify-between rounded-xl bg-white px-6 py-4 font-bold text-stone-900 shadow-xl hover:bg-stone-100 transition-all duration-300 group"
                  >
                    Explore Our Services
-                   <ArrowRight className="w-5 h-5 text-stone-400 group-hover:text-orange-600 group-hover:translate-x-1 transition-all" />
+                   <ArrowRight className="w-5 h-5 text-stone-400 group-hover:text-primary-600 group-hover:translate-x-1 transition-all" />
                  </Link>
                  <Link
                    href="/book"

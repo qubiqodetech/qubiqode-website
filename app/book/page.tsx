@@ -9,17 +9,17 @@ const benefits = [
   {
     title: "Strategic Alignment",
     description: "We don't just take orders. We dive deep into your business goals to ensure our solution actually solves your core problems.",
-    icon: <Target className="w-6 h-6 text-orange-500" />
+    icon: <Target className="w-6 h-6 text-primary-500" />
   },
   {
     title: "Technical Feasibility",
     description: "Get immediate feedback on what's possible, what's complex, and what structural approach will scale best.",
-    icon: <Lightbulb className="w-6 h-6 text-orange-500" />
+    icon: <Lightbulb className="w-6 h-6 text-primary-500" />
   },
   {
     title: "Risk Mitigation",
     description: "Identify potential roadblocks early and establish a clear minimum viable product (MVP) blueprint to reduce project risk.",
-    icon: <ShieldCheck className="w-6 h-6 text-orange-500" />
+    icon: <ShieldCheck className="w-6 h-6 text-primary-500" />
   }
 ];
 
@@ -66,11 +66,11 @@ export default function BookConsultationPage() {
   };
 
   return (
-    <main className="min-h-screen bg-stone-50 selection:bg-orange-200">
+    <main className="min-h-screen bg-stone-50 selection:bg-primary-200">
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 lg:pt-48 lg:pb-24 border-b border-stone-200 bg-stone-950 text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-orange-600/20 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary-600/20 rounded-full blur-[120px] pointer-events-none" />
         
         <div className="container mx-auto px-6 max-w-7xl relative z-10 text-center">
           <motion.div
@@ -89,7 +89,7 @@ export default function BookConsultationPage() {
             className="font-display text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-6 max-w-4xl mx-auto"
           >
              Let&apos;s discuss your <br className="hidden md:block"/>
-            <span className="text-orange-500 italic">next big move.</span>
+            <span className="text-primary-500 italic">next big move.</span>
           </motion.h1>
 
           <motion.p
@@ -120,7 +120,7 @@ export default function BookConsultationPage() {
                      <div className="space-y-8">
                        {benefits.map((benefit, i) => (
                          <div key={i} className="flex items-start gap-4">
-                           <div className="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center shrink-0">
+                           <div className="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center shrink-0">
                              {benefit.icon}
                            </div>
                            <div>
@@ -165,7 +165,7 @@ export default function BookConsultationPage() {
                      <div className="shrink-0 hidden sm:block">
                         <div className="w-16 h-16 rounded-full bg-stone-200 border-4 border-white shadow-sm overflow-hidden relative">
                            {/* Using a placeholder for avatar */}
-                           <div className="absolute inset-0 bg-orange-100 flex items-center justify-center text-orange-600 font-bold text-xl">
+                           <div className="absolute inset-0 bg-primary-100 flex items-center justify-center text-primary-600 font-bold text-xl">
                              Q
                            </div>
                         </div>
@@ -218,10 +218,10 @@ export default function BookConsultationPage() {
                                             onClick={() => handleDateSelect(day)}
                                             className={`aspect-square rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-300 ${
                                               isSelected 
-                                                ? "bg-orange-600 text-white shadow-md shadow-orange-600/30 font-bold" 
+                                                ? "bg-primary-600 text-white shadow-md shadow-primary-600/30 font-bold" 
                                                 : isPast 
                                                   ? "text-stone-300 cursor-not-allowed" 
-                                                  : "text-stone-700 hover:bg-orange-50 hover:text-orange-600"
+                                                  : "text-stone-700 hover:bg-primary-50 hover:text-primary-600"
                                             }`}
                                           >
                                             {day}
@@ -244,7 +244,7 @@ export default function BookConsultationPage() {
                                               className={`flex-1 py-3 px-4 rounded-xl text-center text-sm font-semibold border transition-all duration-300 ${
                                                 selectedTime === time 
                                                   ? "bg-stone-900 border-stone-900 text-white" 
-                                                  : "bg-white border-stone-200 text-stone-700 hover:border-orange-500 hover:text-orange-600"
+                                                  : "bg-white border-stone-200 text-stone-700 hover:border-primary-500 hover:text-primary-600"
                                               }`}
                                             >
                                               {time}
@@ -252,7 +252,7 @@ export default function BookConsultationPage() {
                                             {selectedTime === time && (
                                               <button 
                                                 onClick={handleContinue}
-                                                className="shrink-0 bg-orange-600 hover:bg-orange-500 text-white py-3 px-6 rounded-xl text-sm font-bold transition-all shadow-md"
+                                                className="shrink-0 bg-primary-600 hover:bg-primary-500 text-white py-3 px-6 rounded-xl text-sm font-bold transition-all shadow-md"
                                               >
                                                 Next
                                               </button>
@@ -301,7 +301,7 @@ export default function BookConsultationPage() {
                                   <input 
                                     required
                                     type="text" 
-                                    className="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all font-medium" 
+                                    className="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all font-medium" 
                                   />
                                 </div>
                                 <div className="space-y-2">
@@ -309,7 +309,7 @@ export default function BookConsultationPage() {
                                   <input 
                                     required
                                     type="email" 
-                                    className="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all font-medium" 
+                                    className="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all font-medium" 
                                   />
                                 </div>
                                 <div className="space-y-2">
@@ -317,13 +317,13 @@ export default function BookConsultationPage() {
                                   <textarea 
                                     required
                                     rows={4}
-                                    className="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all font-medium resize-y" 
+                                    className="w-full bg-white border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all font-medium resize-y" 
                                     placeholder="Briefly describe your project..."
                                   />
                                 </div>
                                 <button
                                   type="submit"
-                                  className="w-full bg-orange-600 hover:bg-orange-500 text-white rounded-xl px-4 py-4 font-bold text-sm transition-all duration-300 shadow-xl mt-4"
+                                  className="w-full bg-primary-600 hover:bg-primary-500 text-white rounded-xl px-4 py-4 font-bold text-sm transition-all duration-300 shadow-xl mt-4"
                                 >
                                   Schedule Event
                                 </button>
@@ -354,7 +354,7 @@ export default function BookConsultationPage() {
 
                              <Link 
                                href="/"
-                               className="text-orange-600 font-bold hover:text-orange-700 transition-colors flex items-center gap-1"
+                               className="text-primary-600 font-bold hover:text-primary-700 transition-colors flex items-center gap-1"
                              >
                                Return to Homepage
                                <ArrowRight className="w-4 h-4 ml-1" />
@@ -375,7 +375,7 @@ export default function BookConsultationPage() {
             <div className="grid sm:grid-cols-2 gap-8 text-left">
                <div className="bg-stone-50 rounded-2xl p-8 border border-stone-100">
                   <h3 className="font-bold text-lg text-stone-950 mb-3 flex items-center gap-2">
-                    <HelpCircle className="w-5 h-5 text-orange-500" /> Do I need a full brief?
+                    <HelpCircle className="w-5 h-5 text-primary-500" /> Do I need a full brief?
                   </h3>
                   <p className="text-stone-600 text-sm leading-relaxed">
                     Not at all. Whether you have a 30-page RFP or just a rough idea sketched on a napkin, our strategy team is adept at drawing out the core requirements and guiding you toward the optimal path forward.
@@ -383,7 +383,7 @@ export default function BookConsultationPage() {
                </div>
                <div className="bg-stone-50 rounded-2xl p-8 border border-stone-100">
                   <h3 className="font-bold text-lg text-stone-950 mb-3 flex items-center gap-2">
-                    <HelpCircle className="w-5 h-5 text-orange-500" /> Am I committing to anything?
+                    <HelpCircle className="w-5 h-5 text-primary-500" /> Am I committing to anything?
                   </h3>
                   <p className="text-stone-600 text-sm leading-relaxed">
                     Our initial 30-minute discovery calls are completely complementary and non-binding. We believe in providing upfront value, regardless of whether we end up partnering together.

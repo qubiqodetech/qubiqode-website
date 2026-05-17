@@ -40,7 +40,7 @@ export function Services() {
               className="font-display text-4xl md:text-5xl font-bold tracking-tight text-stone-950 mb-4"
             >
               Capabilities that drive{" "}
-              <span className="text-orange-600">growth</span>.
+              <span className="text-primary-600">growth</span>.
             </motion.h2>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -61,7 +61,7 @@ export function Services() {
           >
             <Link
               href="/services"
-              className="group flex items-center text-sm font-semibold text-stone-950 hover:text-orange-600 transition-colors bg-white px-6 py-3 rounded-full shadow-sm border border-stone-200"
+              className="group flex items-center text-sm font-semibold text-stone-950 hover:text-primary-600 transition-colors bg-white px-6 py-3 rounded-full shadow-sm border border-stone-200"
             >
               View all services
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -84,14 +84,14 @@ export function Services() {
                 variants={itemVariants}
                 className="group p-8 rounded-3xl bg-white border border-stone-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col relative overflow-hidden"
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-stone-50 rounded-bl-full -z-10 group-hover:bg-orange-50 transition-colors duration-500" />
-                <div className="w-14 h-14 rounded-2xl bg-stone-50 border border-stone-100 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-orange-600 group-hover:border-orange-500 transition-all duration-300 shadow-sm">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-stone-50 rounded-bl-full -z-10 group-hover:bg-primary-50 transition-colors duration-500" />
+                <div className="w-14 h-14 rounded-2xl bg-stone-50 border border-stone-100 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-primary-600 group-hover:border-primary-500 transition-all duration-300 shadow-sm">
                   <Icon className="w-6 h-6 text-stone-700 group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="font-display text-xl font-bold text-stone-950 mb-3">
                   <Link
                     href={`/services/${service.slug}`}
-                    className="hover:text-orange-600 transition-colors after:absolute after:inset-0"
+                    className="hover:text-primary-600 transition-colors after:absolute after:inset-0"
                   >
                     {service.title}
                   </Link>
@@ -99,7 +99,7 @@ export function Services() {
                 <p className="text-stone-600 leading-relaxed text-sm">
                   {service.summary}
                 </p>
-                <div className="mt-auto pt-6 flex items-center text-sm font-medium text-stone-400 group-hover:text-orange-600 transition-colors">
+                <div className="mt-auto pt-6 flex items-center text-sm font-medium text-stone-400 group-hover:text-primary-600 transition-colors">
                   <span className="mr-2">Learn more</span>
                   <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                 </div>

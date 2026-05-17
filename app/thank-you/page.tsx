@@ -6,10 +6,10 @@ import { ArrowRight, CheckCircle, Home, Grid, MessageCircle } from "lucide-react
 
 export default function ThankYouPage() {
   return (
-    <main className="min-h-screen bg-stone-50 flex items-center justify-center p-6 relative overflow-hidden selection:bg-orange-200">
+    <main className="min-h-screen bg-stone-50 flex items-center justify-center p-6 relative overflow-hidden selection:bg-primary-200">
       
       {/* Background Subtle Gradient */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-100/40 via-stone-50 to-stone-50 pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-100/40 via-stone-50 to-stone-50 pointer-events-none" />
 
       <div className="relative z-10 max-w-2xl w-full text-center">
          
@@ -77,7 +77,7 @@ export default function ThankYouPage() {
                  </p>
               </li>
               <li className="flex items-start gap-4">
-                 <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center shrink-0 text-orange-600 font-bold text-sm">
+                 <div className="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center shrink-0 text-primary-600 font-bold text-sm">
                    3
                  </div>
                  <p className="text-stone-600 text-sm mt-1.5 leading-relaxed">

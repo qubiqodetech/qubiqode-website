@@ -81,7 +81,7 @@ export default function ResourcesPage() {
   });
 
   return (
-    <main className="min-h-screen bg-stone-50 selection:bg-orange-200">
+    <main className="min-h-screen bg-stone-50 selection:bg-primary-200">
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 lg:pt-48 lg:pb-24 border-b border-stone-200">
@@ -102,7 +102,7 @@ export default function ResourcesPage() {
             className="font-display text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-stone-950 leading-[1.1] mb-6 max-w-4xl"
           >
              Tools for builders & <br className="hidden md:block"/>
-            <span className="text-orange-600">creative professionals.</span>
+            <span className="text-primary-600">creative professionals.</span>
           </motion.h1>
 
           <motion.p
@@ -143,13 +143,13 @@ export default function ResourcesPage() {
                           referrerPolicy="no-referrer"
                         />
                         <div className="absolute top-4 left-4">
-                          <span className="bg-orange-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm flex items-center gap-1.5">
+                          <span className="bg-primary-600 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm flex items-center gap-1.5">
                             {resource.icon} {resource.type}
                           </span>
                         </div>
                      </div>
                      <div className="sm:w-3/5 p-8 md:p-10 flex flex-col justify-center">
-                        <div className="text-orange-500 text-xs font-bold uppercase tracking-wider mb-3">
+                        <div className="text-primary-500 text-xs font-bold uppercase tracking-wider mb-3">
                           {resource.category}
                         </div>
                         <h3 className="font-display text-2xl font-bold text-white mb-4 leading-tight">
@@ -159,7 +159,7 @@ export default function ResourcesPage() {
                           {resource.description}
                         </p>
                         
-                        <button className="mt-auto inline-flex items-center text-sm font-semibold text-white bg-stone-800 hover:bg-orange-600 w-fit px-6 py-3 rounded-xl transition-colors duration-300 group/btn">
+                        <button className="mt-auto inline-flex items-center text-sm font-semibold text-white bg-stone-800 hover:bg-primary-600 w-fit px-6 py-3 rounded-xl transition-colors duration-300 group/btn">
                            Download File 
                            <Download className="w-4 h-4 ml-2 group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 transition-transform" />
                         </button>
@@ -207,7 +207,7 @@ export default function ResourcesPage() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.4 }}
-                    className="bg-white rounded-3xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-orange-200 transition-all duration-500 group flex flex-col"
+                    className="bg-white rounded-3xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-primary-200 transition-all duration-500 group flex flex-col"
                   >
                      <div className="relative aspect-[4/3] bg-stone-100 overflow-hidden border-b border-stone-100">
                         <Image 
@@ -223,10 +223,10 @@ export default function ResourcesPage() {
                      </div>
                      
                      <div className="p-8 flex flex-col flex-1">
-                        <div className="text-orange-600 text-xs font-bold uppercase tracking-wider mb-2">
+                        <div className="text-primary-600 text-xs font-bold uppercase tracking-wider mb-2">
                           {resource.category}
                         </div>
-                        <h3 className="font-display font-bold text-xl text-stone-950 mb-3 group-hover:text-orange-600 transition-colors line-clamp-2">
+                        <h3 className="font-display font-bold text-xl text-stone-950 mb-3 group-hover:text-primary-600 transition-colors line-clamp-2">
                           {resource.title}
                         </h3>
                         <p className="text-stone-600 text-sm leading-relaxed mb-8 flex-1 line-clamp-3">
@@ -235,7 +235,7 @@ export default function ResourcesPage() {
                         
                         <div className="mt-auto border-t border-stone-100 pt-6 flex items-center justify-between">
                            <span className="text-sm font-semibold text-stone-400">Free Download</span>
-                           <button className="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-900 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                           <button className="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-900 group-hover:bg-primary-600 group-hover:text-white transition-colors">
                               <Download className="w-4 h-4 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
                            </button>
                         </div>
@@ -272,7 +272,7 @@ export default function ResourcesPage() {
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
              transition={{ duration: 0.8 }}
-             className="bg-orange-600 rounded-[3rem] p-10 md:p-16 shadow-xl relative overflow-hidden text-center text-white"
+             className="bg-primary-600 rounded-[3rem] p-10 md:p-16 shadow-xl relative overflow-hidden text-center text-white"
            >
              <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/noise/800/800')] opacity-10 mix-blend-overlay"></div>
              
@@ -281,7 +281,7 @@ export default function ResourcesPage() {
                    <Download className="w-8 h-8 text-white" />
                 </div>
                 <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">Get new resources directly in your inbox.</h2>
-                <p className="text-lg text-orange-100 leading-relaxed mb-10">
+                <p className="text-lg text-primary-100 leading-relaxed mb-10">
                   Join 10,000+ designers and developers who receive our latest tools, UI kits, and frameworks before anyone else.
                 </p>
                 
@@ -290,7 +290,7 @@ export default function ResourcesPage() {
                      type="email" 
                      placeholder="Enter your email"
                      required
-                     className="w-full bg-white/10 border border-white/20 rounded-full px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/20 transition-all font-medium placeholder:text-orange-200"
+                     className="w-full bg-white/10 border border-white/20 rounded-full px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-white/20 transition-all font-medium placeholder:text-primary-200"
                    />
                    <button 
                      type="submit"

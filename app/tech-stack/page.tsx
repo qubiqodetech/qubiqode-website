@@ -41,9 +41,9 @@ const techCategories = [
     title: "Cloud & DevOps",
     description: "Automated deployments and resilient infrastructure.",
     icon: <Cloud className="w-6 h-6" />,
-    color: "text-orange-500",
-    bgColor: "bg-orange-500/10",
-    borderColor: "border-orange-500/20",
+    color: "text-primary-500",
+    bgColor: "bg-primary-500/10",
+    borderColor: "border-primary-500/20",
     glowColor: "group-hover:shadow-[0_0_30px_-5px_rgba(249,115,22,0.2)]",
     technologies: [
       { name: "AWS", desc: "Cloud Infrastructure" },
@@ -96,13 +96,13 @@ const principles = [
 
 export default function TechStackPage() {
   return (
-    <main className="min-h-screen bg-stone-950 text-stone-50 selection:bg-orange-500/30">
+    <main className="min-h-screen bg-stone-950 text-stone-50 selection:bg-primary-500/30">
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 lg:pt-48 lg:pb-32 relative overflow-hidden">
         {/* Subtle background glow */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-orange-600/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-600/10 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <div className="text-center max-w-4xl mx-auto">
@@ -122,7 +122,7 @@ export default function TechStackPage() {
               className="font-display text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-8"
             >
               Built with <br className="hidden sm:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-indigo-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-indigo-400">
                 modern technology.
               </span>
             </motion.h1>
@@ -233,7 +233,7 @@ export default function TechStackPage() {
               className="bg-gradient-to-br from-stone-900 to-stone-950 border border-stone-800 rounded-[3rem] p-12 md:p-20 shadow-2xl relative overflow-hidden"
             >
                {/* Abstract glow inside CTA */}
-               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[400px] max-h-[400px] bg-orange-500/10 blur-[80px] rounded-full pointer-events-none" />
+               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[400px] max-h-[400px] bg-primary-500/10 blur-[80px] rounded-full pointer-events-none" />
 
                <div className="relative z-10">
                  <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6">
@@ -245,7 +245,7 @@ export default function TechStackPage() {
                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                    <Link
                      href="/book"
-                     className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl bg-orange-600 px-8 py-4 font-bold text-white shadow-[0_0_40px_-10px_rgba(234,88,12,0.4)] hover:bg-orange-500 hover:shadow-[0_0_60px_-15px_rgba(234,88,12,0.5)] hover:-translate-y-0.5 transition-all duration-300"
+                     className="w-full sm:w-auto inline-flex items-center justify-center rounded-xl bg-primary-600 px-8 py-4 font-bold text-white shadow-[0_0_40px_-10px_rgba(30,144,255,0.4)] hover:bg-primary-500 hover:shadow-[0_0_60px_-15px_rgba(30,144,255,0.5)] hover:-translate-y-0.5 transition-all duration-300"
                    >
                      Discuss Your Project
                      <ArrowRight className="w-5 h-5 ml-2" />

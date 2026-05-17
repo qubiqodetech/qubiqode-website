@@ -7,22 +7,22 @@ import { ArrowRight, PenTool, Layout, Palette, Users, Eye, Target, MousePointer2
 
 const capabilities = [
   {
-    icon: <Users className="w-8 h-8 text-orange-500" />,
+    icon: <Users className="w-8 h-8 text-primary-500" />,
     title: "User Research & Strategy",
     description: "Deep diving into user behavior, needs, and pain points to inform data-driven design decisions."
   },
   {
-    icon: <Layout className="w-8 h-8 text-orange-500" />,
+    icon: <Layout className="w-8 h-8 text-primary-500" />,
     title: "Wireframing & Prototyping",
     description: "Mapping out user journeys and creating interactive prototypes to validate concepts early."
   },
   {
-    icon: <Palette className="w-8 h-8 text-orange-500" />,
+    icon: <Palette className="w-8 h-8 text-primary-500" />,
     title: "Visual Interface Design",
     description: "Crafting beautiful, pixel-perfect interfaces that reflect your brand's identity and values."
   },
   {
-    icon: <Layers className="w-8 h-8 text-orange-500" />,
+    icon: <Layers className="w-8 h-8 text-primary-500" />,
     title: "Design Systems",
     description: "Building scalable, reusable component libraries to ensure consistency and speed up development."
   }
@@ -72,12 +72,12 @@ const processSteps = [
 
 export default function UiUxDesignPage() {
   return (
-    <main className="min-h-screen bg-stone-50 selection:bg-orange-200">
+    <main className="min-h-screen bg-stone-50 selection:bg-primary-200">
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-stone-50 text-stone-950">
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute top-[10%] right-[10%] w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-200/50 via-amber-100/20 to-transparent rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute top-[10%] right-[10%] w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-200/50 via-sky-100/20 to-transparent rounded-full blur-[100px] pointer-events-none" />
           <div className="absolute top-[50%] left-[-10%] w-[500px] h-[500px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-stone-200/50 via-stone-100/20 to-transparent rounded-full blur-[100px] pointer-events-none" />
         </div>
 
@@ -95,7 +95,7 @@ export default function UiUxDesignPage() {
                 transition={{ duration: 0.6 }}
               >
                 <div className="inline-flex items-center rounded-full border border-stone-200 bg-white shadow-sm px-4 py-1.5 text-xs font-medium text-stone-600 mb-8">
-                  <PenTool className="w-3.5 h-3.5 text-orange-500 mr-2" />
+                  <PenTool className="w-3.5 h-3.5 text-primary-500 mr-2" />
                   Premium Design
                 </div>
               </motion.div>
@@ -107,7 +107,7 @@ export default function UiUxDesignPage() {
                 className="font-display text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-stone-950 leading-[1.1] mb-6"
               >
                 Interfaces designed for <br className="hidden lg:block"/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">human connection.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-sky-500">human connection.</span>
               </motion.h1>
 
               <motion.p
@@ -144,7 +144,7 @@ export default function UiUxDesignPage() {
             >
               <div className="relative w-full max-w-lg aspect-square">
                  {/* Background Blur */}
-                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-orange-400/20 rounded-full blur-3xl" />
+                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-primary-400/20 rounded-full blur-3xl" />
                  
                  {/* Floating Element 1 - Main Mockup Card */}
                  <motion.div
@@ -159,7 +159,7 @@ export default function UiUxDesignPage() {
                    </div>
                    <div className="p-6 flex-1 bg-stone-50/50">
                      <div className="flex gap-4 mb-6">
-                       <div className="w-12 h-12 rounded-full bg-orange-100 shrink-0" />
+                       <div className="w-12 h-12 rounded-full bg-primary-100 shrink-0" />
                        <div className="space-y-2 flex-1 pt-1">
                          <div className="h-3 bg-stone-200 rounded w-1/2" />
                          <div className="h-2 bg-stone-100 rounded w-3/4" />
@@ -180,9 +180,9 @@ export default function UiUxDesignPage() {
                  >
                     <div className="flex justify-between items-center mb-4">
                       <div className="w-16 h-3 bg-stone-700 rounded-full" />
-                      <MousePointer2 className="w-4 h-4 text-orange-500 origin-top-left -rotate-12" />
+                      <MousePointer2 className="w-4 h-4 text-primary-500 origin-top-left -rotate-12" />
                     </div>
-                    <div className="h-10 bg-orange-500 rounded-xl flex items-center justify-center">
+                    <div className="h-10 bg-primary-500 rounded-xl flex items-center justify-center">
                        <span className="w-12 h-2 bg-white/50 rounded-full" />
                     </div>
                  </motion.div>
@@ -207,7 +207,7 @@ export default function UiUxDesignPage() {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-display text-3xl md:text-5xl font-bold text-stone-950 leading-tight mb-6">
-              Design is not just what it looks like. Design is how it <span className="italic text-orange-600">works</span>.
+              Design is not just what it looks like. Design is how it <span className="italic text-primary-600">works</span>.
             </h2>
             <p className="text-xl text-stone-600 leading-relaxed">
               We go beyond aesthetics. Our design process ensures every click, swipe, and scroll serves a purpose, driving engagement and creating delightful user journeys.
@@ -220,7 +220,7 @@ export default function UiUxDesignPage() {
       <section className="py-24 bg-stone-50">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="mb-16">
-             <span className="text-orange-600 font-semibold tracking-wider uppercase text-sm mb-2 block">Our Expertise</span>
+             <span className="text-primary-600 font-semibold tracking-wider uppercase text-sm mb-2 block">Our Expertise</span>
             <h2 className="font-display text-4xl font-bold text-stone-950 mb-6">Comprehensive UX/UI Services</h2>
           </div>
 
@@ -232,9 +232,9 @@ export default function UiUxDesignPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-white p-8 lg:p-10 rounded-3xl border border-stone-200 shadow-sm hover:shadow-xl hover:border-orange-200 transition-all duration-300 group"
+                className="bg-white p-8 lg:p-10 rounded-3xl border border-stone-200 shadow-sm hover:shadow-xl hover:border-primary-200 transition-all duration-300 group"
               >
-                <div className="w-16 h-16 rounded-2xl bg-orange-50 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-orange-100 transition-transform">
+                <div className="w-16 h-16 rounded-2xl bg-primary-50 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary-100 transition-transform">
                   {cap.icon}
                 </div>
                 <h3 className="font-display text-2xl font-bold text-stone-950 mb-4">{cap.title}</h3>
@@ -262,7 +262,7 @@ export default function UiUxDesignPage() {
               <ul className="space-y-4">
                 {['Consistent Brand Identity', 'Faster Development Cycles', 'Accessible Color Palettes', 'Reusable Code Components'].map((item, i) => (
                   <li key={i} className="flex items-center text-stone-300">
-                    <Target className="w-5 h-5 text-orange-500 mr-3 shrink-0" />
+                    <Target className="w-5 h-5 text-primary-500 mr-3 shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -280,7 +280,7 @@ export default function UiUxDesignPage() {
               <div className="flex justify-between items-end border-b border-stone-800 pb-4">
                 <div className="text-sm font-mono text-stone-500">Design Tokens</div>
                 <div className="flex gap-2">
-                  <div className="w-8 h-8 rounded-full bg-orange-500" />
+                  <div className="w-8 h-8 rounded-full bg-primary-500" />
                   <div className="w-8 h-8 rounded-full bg-blue-500" />
                   <div className="w-8 h-8 rounded-full bg-emerald-500" />
                   <div className="w-8 h-8 rounded-full bg-stone-100" />
@@ -335,7 +335,7 @@ export default function UiUxDesignPage() {
                  transition={{ duration: 0.5, delay: i * 0.1 }}
                  className="relative z-10 flex flex-col items-center text-center group"
                >
-                 <div className="w-14 h-14 rounded-full bg-white border-2 border-orange-500 text-orange-600 flex items-center justify-center font-display font-bold text-xl mb-6 shadow-[0_0_0_8px_rgba(255,255,255,1)] group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">
+                 <div className="w-14 h-14 rounded-full bg-white border-2 border-primary-500 text-primary-600 flex items-center justify-center font-display font-bold text-xl mb-6 shadow-[0_0_0_8px_rgba(255,255,255,1)] group-hover:bg-primary-500 group-hover:text-white transition-colors duration-300">
                    {step.number}
                  </div>
                  <h3 className="text-xl font-bold text-stone-950 mb-3">{step.title}</h3>
@@ -386,8 +386,8 @@ export default function UiUxDesignPage() {
              transition={{ duration: 0.8 }}
              className="bg-stone-950 rounded-[3rem] p-12 md:p-24 text-center shadow-xl relative overflow-hidden text-white"
            >
-             <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/20 rounded-full blur-[80px]" />
-             <div className="absolute bottom-0 left-0 w-64 h-64 bg-amber-500/20 rounded-full blur-[80px]" />
+             <div className="absolute top-0 right-0 w-64 h-64 bg-primary-500/20 rounded-full blur-[80px]" />
+             <div className="absolute bottom-0 left-0 w-64 h-64 bg-sky-500/20 rounded-full blur-[80px]" />
              
              <div className="relative z-10 max-w-3xl mx-auto">
                <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">Ready to redesign your digital presence?</h2>

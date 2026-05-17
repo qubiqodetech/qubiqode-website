@@ -136,7 +136,7 @@ export function Chatbot() {
             {/* Header */}
             <div className="bg-stone-950 text-white p-4 flex items-center justify-between shadow-sm z-10">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-orange-600 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0">
                   <MessageSquare className="w-5 h-5 text-white" />
                 </div>
                 <div>
@@ -172,12 +172,12 @@ export function Chatbot() {
                     <div
                       className={`max-w-[85%] px-4 py-3 rounded-2xl text-[15px] leading-relaxed ${
                         msg.role === "user"
-                          ? "bg-orange-600 text-white rounded-tr-sm"
+                          ? "bg-primary-600 text-white rounded-tr-sm"
                           : "bg-white text-stone-900 border border-stone-200 rounded-tl-sm shadow-sm"
                       }`}
                     >
                       {msg.role === "assistant" ? (
-                        <div className="prose prose-sm prose-stone max-w-none prose-p:leading-relaxed prose-pre:bg-stone-100 prose-pre:text-stone-900 prose-a:text-orange-600 hover:prose-a:text-orange-700">
+                        <div className="prose pindigo-sm pindigo-stone max-w-none pindigo-p:leading-relaxed pindigo-pre:bg-stone-100 pindigo-pre:text-stone-900 pindigo-a:text-primary-600 hover:pindigo-a:text-primary-700">
                           <Markdown>{msg.content}</Markdown>
                         </div>
                       ) : (
@@ -209,7 +209,7 @@ export function Chatbot() {
                     <button
                       key={i}
                       onClick={() => sendQuery(replyText)}
-                      className="self-start text-left text-sm bg-white border border-stone-200 hover:border-orange-600 hover:text-orange-600 text-stone-700 py-2 px-4 rounded-full transition-colors"
+                      className="self-start text-left text-sm bg-white border border-stone-200 hover:border-primary-600 hover:text-primary-600 text-stone-700 py-2 px-4 rounded-full transition-colors"
                     >
                       {replyText}
                     </button>
@@ -230,7 +230,7 @@ export function Chatbot() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Type your message..."
-                  className="w-full pl-5 pr-12 py-3 rounded-full border border-stone-200 bg-stone-50 outline-none focus:ring-2 focus:ring-orange-500 transition-all text-sm"
+                  className="w-full pl-5 pr-12 py-3 rounded-full border border-stone-200 bg-stone-50 outline-none focus:ring-2 focus:ring-primary-500 transition-all text-sm"
                   disabled={isLoading}
                 />
                 <button

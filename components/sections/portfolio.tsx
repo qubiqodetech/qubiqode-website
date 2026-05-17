@@ -42,7 +42,7 @@ export function Portfolio() {
           >
             <Link
               href="/portfolio"
-              className="group flex items-center text-sm font-semibold hover:text-orange-500 transition-colors uppercase tracking-widest border border-white/20 rounded-full px-6 py-3 hover:border-orange-500"
+              className="group flex items-center text-sm font-semibold hover:text-primary-500 transition-colors uppercase tracking-widest border border-white/20 rounded-full px-6 py-3 hover:border-primary-500"
             >
               View all projects
               <ArrowUpRight className="ml-2 w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -80,7 +80,7 @@ export function Portfolio() {
               </Link>
               <div className="mt-8 flex justify-between items-start px-2">
                 <div>
-                  <h3 className="font-display text-3xl font-bold mb-2 group-hover:text-orange-500 transition-colors">
+                  <h3 className="font-display text-3xl font-bold mb-2 group-hover:text-primary-500 transition-colors">
                     <Link href={`/portfolio/${project.slug}`}>
                       {project.title}
                     </Link>
@@ -89,7 +89,7 @@ export function Portfolio() {
                 </div>
                 <Link
                   href={`/portfolio/${project.slug}`}
-                  className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 group-hover:text-white transition-all duration-300"
+                  className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-primary-500 group-hover:border-primary-500 group-hover:text-white transition-all duration-300"
                 >
                   <ArrowUpRight className="w-6 h-6 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
                 </Link>

@@ -51,7 +51,7 @@ export function Process() {
                 transition={{ delay: 0.1 }}
                 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-stone-950 mb-6"
               >
-                Our proven <span className="text-orange-600">process</span>.
+                Our proven <span className="text-primary-600">process</span>.
               </motion.h2>
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
@@ -83,18 +83,18 @@ export function Process() {
                       whileInView={{ height: "100%" }}
                       viewport={{ once: true }}
                       transition={{ duration: 1, delay: 0.5 + index * 0.2 }}
-                      className="w-full bg-orange-200"
+                      className="w-full bg-primary-200"
                     />
                   </div>
                   <div className="md:pl-12 flex flex-col md:flex-row md:items-start gap-4 md:gap-8">
                     <div className="flex-shrink-0 relative">
-                      <div className="hidden md:flex absolute -left-[53px] top-3 w-3 h-3 rounded-full bg-stone-300 border-[3px] border-stone-50 group-hover:bg-orange-500 transition-colors duration-300 z-10" />
-                      <span className="font-display text-5xl md:text-6xl font-light text-stone-300 group-hover:text-orange-500 transition-colors duration-500 block">
+                      <div className="hidden md:flex absolute -left-[53px] top-3 w-3 h-3 rounded-full bg-stone-300 border-[3px] border-stone-50 group-hover:bg-primary-500 transition-colors duration-300 z-10" />
+                      <span className="font-display text-5xl md:text-6xl font-light text-stone-300 group-hover:text-primary-500 transition-colors duration-500 block">
                         {step.number}
                       </span>
                     </div>
                     <div className="pt-2 md:pt-4">
-                      <h3 className="text-2xl md:text-3xl font-bold text-stone-950 mb-4 group-hover:text-orange-600 transition-colors duration-300">
+                      <h3 className="text-2xl md:text-3xl font-bold text-stone-950 mb-4 group-hover:text-primary-600 transition-colors duration-300">
                         {step.title}
                       </h3>
                       <p className="text-lg text-stone-600 leading-relaxed max-w-xl">

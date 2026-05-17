@@ -7,22 +7,22 @@ import { ArrowRight, Sparkles, Palette, Fingerprint, Layers, MonitorPlay, Image 
 
 const capabilities = [
   {
-    icon: <Fingerprint className="w-8 h-8 text-rose-500" />,
+    icon: <Fingerprint className="w-8 h-8 text-indigo-500" />,
     title: "Brand Identity Systems",
     description: "Comprehensive visual identities including logos, typography, color palettes, and brand guidelines that tell your unique story."
   },
   {
-    icon: <Palette className="w-8 h-8 text-rose-500" />,
+    icon: <Palette className="w-8 h-8 text-indigo-500" />,
     title: "Visual Direction",
     description: "Establishing a cohesive aesthetic language across all touchpoints, ensuring your brand looks premium everywhere."
   },
   {
-    icon: <MonitorPlay className="w-8 h-8 text-rose-500" />,
+    icon: <MonitorPlay className="w-8 h-8 text-indigo-500" />,
     title: "Creative Content",
     description: "High-impact visual assets, from engaging social media creatives to bespoke illustrations and 3D graphics."
   },
   {
-    icon: <Layers className="w-8 h-8 text-rose-500" />,
+    icon: <Layers className="w-8 h-8 text-indigo-500" />,
     title: "Marketing Collateral",
     description: "Beautifully designed digital and physical assets, including pitch decks, brochures, and corporate stationery."
   }
@@ -37,7 +37,7 @@ const portfolioItems = [
 
 export default function BrandingPage() {
   return (
-    <main className="min-h-screen bg-stone-50 selection:bg-rose-200">
+    <main className="min-h-screen bg-stone-50 selection:bg-indigo-200">
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-stone-950 text-white">
@@ -48,7 +48,7 @@ export default function BrandingPage() {
               opacity: [0.3, 0.5, 0.3],
             }}
             transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-rose-600/30 via-pink-900/10 to-transparent rounded-full blur-[120px] pointer-events-none" 
+            className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-600/30 via-pink-900/10 to-transparent rounded-full blur-[120px] pointer-events-none" 
           />
           <motion.div 
             animate={{ 
@@ -56,7 +56,7 @@ export default function BrandingPage() {
               opacity: [0.2, 0.4, 0.2],
             }}
             transition={{ duration: 20, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-            className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-500/20 via-rose-900/10 to-transparent rounded-full blur-[100px] pointer-events-none" 
+            className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-500/20 via-indigo-900/10 to-transparent rounded-full blur-[100px] pointer-events-none" 
           />
         </div>
 
@@ -74,7 +74,7 @@ export default function BrandingPage() {
                 transition={{ duration: 0.6 }}
               >
                 <div className="inline-flex items-center rounded-full border border-stone-800 bg-stone-900/60 backdrop-blur-md px-4 py-1.5 text-xs font-medium text-stone-300 mb-8 shadow-sm">
-                  <Sparkles className="w-3.5 h-3.5 text-rose-500 mr-2" />
+                  <Sparkles className="w-3.5 h-3.5 text-indigo-500 mr-2" />
                   Creative & Strategy
                 </div>
               </motion.div>
@@ -86,7 +86,7 @@ export default function BrandingPage() {
                 className="font-display text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-[1.1] mb-6"
               >
                 Brands that command <br className="hidden lg:block"/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-orange-500">attention.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-primary-500">attention.</span>
               </motion.h1>
 
               <motion.p
@@ -128,7 +128,7 @@ export default function BrandingPage() {
                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                    className="absolute top-[10%] right-[10%] w-[70%] h-[70%] bg-stone-900 rounded-2xl shadow-2xl overflow-hidden z-20 border border-stone-800 p-6 flex flex-col"
                  >
-                   <div className="flex-1 rounded-xl bg-gradient-to-br from-rose-500 to-orange-500 relative overflow-hidden flex items-center justify-center">
+                   <div className="flex-1 rounded-xl bg-gradient-to-br from-indigo-500 to-primary-500 relative overflow-hidden flex items-center justify-center">
                       <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/noise/400/400')] opacity-20 mix-blend-overlay" />
                       <Shapes className="w-24 h-24 text-white opacity-80 mix-blend-overlay" />
                    </div>
@@ -137,7 +137,7 @@ export default function BrandingPage() {
                        <div className="text-white font-bold font-display text-lg">Aura</div>
                        <div className="text-stone-500 text-xs uppercase tracking-widest">Brand Guidelines</div>
                      </div>
-                     <div className="text-rose-500 text-sm font-mono">2026</div>
+                     <div className="text-indigo-500 text-sm font-mono">2026</div>
                    </div>
                  </motion.div>
 
@@ -160,8 +160,8 @@ export default function BrandingPage() {
                  >
                     <div className="text-xs font-bold text-stone-400 mb-3 uppercase tracking-wider">Colors</div>
                     <div className="space-y-2">
-                      <div className="h-8 rounded-lg bg-rose-500 flex items-center px-2 text-[10px] text-white/80 font-mono">#F43F5E</div>
-                      <div className="h-8 rounded-lg bg-orange-500 flex items-center px-2 text-[10px] text-white/80 font-mono">#F97316</div>
+                      <div className="h-8 rounded-lg bg-indigo-500 flex items-center px-2 text-[10px] text-white/80 font-mono">#F43F5E</div>
+                      <div className="h-8 rounded-lg bg-primary-500 flex items-center px-2 text-[10px] text-white/80 font-mono">#1E90FF</div>
                       <div className="h-8 rounded-lg bg-stone-900 flex items-center px-2 text-[10px] text-white/80 font-mono">#1C1917</div>
                     </div>
                  </motion.div>
@@ -177,7 +177,7 @@ export default function BrandingPage() {
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-display text-3xl md:text-5xl font-bold text-stone-950 leading-tight mb-6">
-              A great brand is a <span className="italic text-rose-500">promise</span>, beautifully delivered.
+              A great brand is a <span className="italic text-indigo-500">promise</span>, beautifully delivered.
             </h2>
             <p className="text-xl text-stone-600 leading-relaxed">
               We translate your business objectives into powerful visual stories. From logo design to comprehensive media campaigns, we engineer aesthetics that resonate and convert.
@@ -190,7 +190,7 @@ export default function BrandingPage() {
       <section className="py-24 bg-stone-50">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="mb-16">
-             <span className="text-rose-500 font-semibold tracking-wider uppercase text-sm mb-2 block">Our Expertise</span>
+             <span className="text-indigo-500 font-semibold tracking-wider uppercase text-sm mb-2 block">Our Expertise</span>
             <h2 className="font-display text-4xl font-bold text-stone-950 mb-6">Creative Services</h2>
           </div>
 
@@ -202,9 +202,9 @@ export default function BrandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-white p-8 lg:p-10 rounded-3xl border border-stone-200 shadow-sm hover:shadow-xl hover:border-rose-200 transition-all duration-300 group"
+                className="bg-white p-8 lg:p-10 rounded-3xl border border-stone-200 shadow-sm hover:shadow-xl hover:border-indigo-200 transition-all duration-300 group"
               >
-                <div className="w-16 h-16 rounded-2xl bg-rose-50 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-rose-100 transition-transform">
+                <div className="w-16 h-16 rounded-2xl bg-indigo-50 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-indigo-100 transition-transform">
                   {cap.icon}
                 </div>
                 <h3 className="font-display text-2xl font-bold text-stone-950 mb-4">{cap.title}</h3>
@@ -272,8 +272,8 @@ export default function BrandingPage() {
                   { title: "Equity", desc: "A great brand increases the overall enterprise value of your company." }
                 ].map((item, i) => (
                   <li key={i} className="flex gap-4">
-                     <div className="w-8 h-8 rounded-full bg-rose-100 flex items-center justify-center shrink-0 mt-1">
-                       <Crosshair className="w-4 h-4 text-rose-500" />
+                     <div className="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center shrink-0 mt-1">
+                       <Crosshair className="w-4 h-4 text-indigo-500" />
                      </div>
                      <div>
                        <h4 className="font-bold text-lg text-stone-950">{item.title}</h4>
@@ -312,14 +312,14 @@ export default function BrandingPage() {
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
              transition={{ duration: 0.8 }}
-             className="bg-rose-600 rounded-[3rem] p-12 md:p-24 text-center shadow-2xl relative overflow-hidden"
+             className="bg-indigo-600 rounded-[3rem] p-12 md:p-24 text-center shadow-2xl relative overflow-hidden"
            >
              <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/noise/800/800')] opacity-10 mix-blend-overlay"></div>
              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1/2 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
              
              <div className="relative z-10 max-w-3xl mx-auto text-white">
                <h2 className="font-display text-4xl md:text-6xl font-bold mb-6">Let's craft your identity.</h2>
-               <p className="text-xl text-rose-100 mb-10">
+               <p className="text-xl text-indigo-100 mb-10">
                  Partner with our creative team to build a brand that leaves a legacy.
                </p>
                <Link

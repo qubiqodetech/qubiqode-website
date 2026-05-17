@@ -27,7 +27,7 @@ const pricingPlans = [
     description: "Comprehensive digital solutions for scaling businesses.",
     price: "25k+",
     period: "per project",
-    icon: <Zap className="w-6 h-6 text-orange-500" />,
+    icon: <Zap className="w-6 h-6 text-primary-500" />,
     features: [
       "Everything in Ignite",
       "Custom Web Application",
@@ -93,7 +93,7 @@ export default function PricingPage() {
   const [activeFaq, setActiveFaq] = useState<number | null>(0);
 
   return (
-    <main className="min-h-screen bg-stone-50 selection:bg-orange-200">
+    <main className="min-h-screen bg-stone-50 selection:bg-primary-200">
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 lg:pt-48 lg:pb-24 border-b border-stone-200">
@@ -114,7 +114,7 @@ export default function PricingPage() {
             className="font-display text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-stone-950 leading-[1.1] mb-6 max-w-4xl mx-auto"
           >
             Transparent pricing for <br className="hidden md:block"/>
-            <span className="text-orange-600">world-class execution.</span>
+            <span className="text-primary-600">world-class execution.</span>
           </motion.h1>
 
           <motion.p
@@ -140,12 +140,12 @@ export default function PricingPage() {
                 transition={{ duration: 0.8, delay: 0.2 + (i * 0.1) }}
                 className={`relative bg-white rounded-3xl p-8 lg:p-10 shadow-xl border ${
                   plan.popular 
-                    ? "border-orange-500 ring-4 ring-orange-500/10 lg:-translate-y-4" 
-                    : "border-stone-200 hover:border-orange-200"
+                    ? "border-primary-500 ring-4 ring-primary-500/10 lg:-translate-y-4" 
+                    : "border-stone-200 hover:border-primary-200"
                 } transition-all duration-300 flex flex-col h-full`}
               >
                 {plan.popular && (
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-orange-600 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-600 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
                     Most Popular
                   </div>
                 )}
@@ -154,7 +154,7 @@ export default function PricingPage() {
                    <div className="w-12 h-12 rounded-2xl bg-stone-50 border border-stone-100 flex items-center justify-center shrink-0">
                      {plan.icon}
                    </div>
-                   {plan.popular && <span className="text-orange-500 font-semibold text-sm">Best Value</span>}
+                   {plan.popular && <span className="text-primary-500 font-semibold text-sm">Best Value</span>}
                 </div>
                 
                 <h3 className="font-display font-bold text-2xl text-stone-950 mb-2">{plan.name}</h3>
@@ -171,8 +171,8 @@ export default function PricingPage() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                      <div className="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-orange-50 flex items-center justify-center">
-                        <Check className="w-3 h-3 text-orange-600 stroke-[3]" />
+                      <div className="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-primary-50 flex items-center justify-center">
+                        <Check className="w-3 h-3 text-primary-600 stroke-[3]" />
                       </div>
                       <span className="text-stone-700 text-sm">{feature}</span>
                     </li>
@@ -183,7 +183,7 @@ export default function PricingPage() {
                   href="/contact"
                   className={`mt-auto w-full inline-flex items-center justify-center rounded-xl px-6 py-4 text-sm font-semibold transition-all duration-300 ${
                     plan.popular 
-                      ? "bg-orange-600 text-white shadow-lg hover:bg-orange-500" 
+                      ? "bg-primary-600 text-white shadow-lg hover:bg-primary-500" 
                       : "bg-stone-100 text-stone-900 border border-stone-200 hover:bg-stone-200"
                   }`}
                 >
@@ -223,7 +223,7 @@ export default function PricingPage() {
                       <td key={idx} className="py-4 px-4 border-b border-stone-100 text-center">
                         {included ? (
                           <div className="w-8 h-8 rounded-full bg-stone-100 flex items-center justify-center mx-auto">
-                            <Check className="w-4 h-4 text-orange-600" />
+                            <Check className="w-4 h-4 text-primary-600" />
                           </div>
                         ) : (
                           <span className="text-stone-300 font-bold">-</span>
@@ -248,7 +248,7 @@ export default function PricingPage() {
              transition={{ duration: 0.8 }}
              className="bg-stone-950 rounded-[3rem] p-10 md:p-16 lg:p-20 text-white flex flex-col md:flex-row items-center justify-between gap-12 border border-stone-800 shadow-2xl relative"
            >
-             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-orange-600/10 rounded-full blur-[100px] pointer-events-none" />
+             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary-600/10 rounded-full blur-[100px] pointer-events-none" />
              
              <div className="max-w-xl relative z-10">
                <h3 className="font-display text-3xl md:text-5xl font-bold mb-6">Need something highly custom?</h3>
@@ -259,7 +259,7 @@ export default function PricingPage() {
              <div className="shrink-0 relative z-10 w-full md:w-auto">
                <Link
                  href="/contact"
-                 className="inline-flex w-full md:w-auto items-center justify-center rounded-xl bg-orange-600 px-8 py-5 text-base font-semibold text-white shadow-[0_0_20px_rgba(234,88,12,0.3)] hover:bg-orange-500 transition-all duration-300 whitespace-nowrap"
+                 className="inline-flex w-full md:w-auto items-center justify-center rounded-xl bg-primary-600 px-8 py-5 text-base font-semibold text-white shadow-[0_0_20px_rgba(30,144,255,0.3)] hover:bg-primary-500 transition-all duration-300 whitespace-nowrap"
                >
                  Request Custom Quote <ArrowRight className="w-5 h-5 ml-2" />
                </Link>
@@ -278,13 +278,13 @@ export default function PricingPage() {
             
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <div key={idx} className="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:border-orange-200 transition-colors">
+                <div key={idx} className="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:border-primary-200 transition-colors">
                   <button 
                     onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
                     className="w-full flex items-center justify-between text-left font-bold text-stone-950 p-6 focus:outline-none"
                   >
                     <span className="pr-8">{faq.question}</span>
-                    <ChevronDown className={`w-5 h-5 text-stone-400 shrink-0 transition-transform duration-300 ${activeFaq === idx ? 'rotate-180 text-orange-500' : ''}`} />
+                    <ChevronDown className={`w-5 h-5 text-stone-400 shrink-0 transition-transform duration-300 ${activeFaq === idx ? 'rotate-180 text-primary-500' : ''}`} />
                   </button>
                   <AnimatePresence>
                     {activeFaq === idx && (

@@ -35,11 +35,11 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen bg-stone-50 selection:bg-orange-200">
+    <main className="min-h-screen bg-stone-50 selection:bg-primary-200">
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 lg:pt-48 lg:pb-24 bg-stone-950 text-white relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-600/20 via-stone-950/5 to-transparent pointer-events-none" />
+        <div className="absolute top-0 left-0 w-full h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary-600/20 via-stone-950/5 to-transparent pointer-events-none" />
         
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <div className="max-w-3xl">
@@ -58,7 +58,7 @@ export default function ContactPage() {
                transition={{ duration: 0.6, delay: 0.1 }}
                className="font-display text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-8"
              >
-               Let&apos;s build something <span className="text-orange-500 italic">extraordinary.</span>
+               Let&apos;s build something <span className="text-primary-500 italic">extraordinary.</span>
              </motion.h1>
              
              <motion.p
@@ -102,7 +102,7 @@ export default function ContactPage() {
                           </p>
                           <button
                             onClick={() => setFormState("idle")}
-                            className="text-stone-900 font-semibold underline underline-offset-4 hover:text-orange-600 transition-colors"
+                            className="text-stone-900 font-semibold underline underline-offset-4 hover:text-primary-600 transition-colors"
                           >
                             Send another message
                           </button>
@@ -122,46 +122,46 @@ export default function ContactPage() {
                          <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid md:grid-cols-2 gap-6">
                                <div className="space-y-2">
-                                 <label htmlFor="firstName" className="text-sm font-semibold text-stone-950">First name <span className="text-orange-500">*</span></label>
+                                 <label htmlFor="firstName" className="text-sm font-semibold text-stone-950">First name <span className="text-primary-500">*</span></label>
                                  <input 
                                    id="firstName"
                                    type="text" 
                                    required
-                                   className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all font-medium placeholder:text-stone-400"
+                                   className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all font-medium placeholder:text-stone-400"
                                    placeholder="John"
                                  />
                                </div>
                                <div className="space-y-2">
-                                 <label htmlFor="lastName" className="text-sm font-semibold text-stone-950">Last name <span className="text-orange-500">*</span></label>
+                                 <label htmlFor="lastName" className="text-sm font-semibold text-stone-950">Last name <span className="text-primary-500">*</span></label>
                                  <input 
                                    id="lastName"
                                    type="text" 
                                    required
-                                   className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all font-medium placeholder:text-stone-400"
+                                   className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all font-medium placeholder:text-stone-400"
                                    placeholder="Doe"
                                  />
                                </div>
                             </div>
                             
                             <div className="space-y-2">
-                              <label htmlFor="email" className="text-sm font-semibold text-stone-950">Work email <span className="text-orange-500">*</span></label>
+                              <label htmlFor="email" className="text-sm font-semibold text-stone-950">Work email <span className="text-primary-500">*</span></label>
                               <input 
                                 id="email"
                                 type="email" 
                                 required
-                                className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all font-medium placeholder:text-stone-400"
+                                className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all font-medium placeholder:text-stone-400"
                                 placeholder="john@company.com"
                               />
                             </div>
 
                             <div className="space-y-2">
-                              <label htmlFor="interest" className="text-sm font-semibold text-stone-950">What are you looking for? <span className="text-orange-500">*</span></label>
+                              <label htmlFor="interest" className="text-sm font-semibold text-stone-950">What are you looking for? <span className="text-primary-500">*</span></label>
                               <div className="relative">
                                 <select 
                                   id="interest"
                                   required
                                   defaultValue=""
-                                  className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all font-medium appearance-none"
+                                  className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all font-medium appearance-none"
                                 >
                                   <option value="" disabled>Select a service...</option>
                                   <option value="web-dev">Web Development</option>
@@ -175,12 +175,12 @@ export default function ContactPage() {
                             </div>
                             
                             <div className="space-y-2">
-                              <label htmlFor="message" className="text-sm font-semibold text-stone-950">Project details <span className="text-orange-500">*</span></label>
+                              <label htmlFor="message" className="text-sm font-semibold text-stone-950">Project details <span className="text-primary-500">*</span></label>
                               <textarea 
                                 id="message"
                                 required
                                 rows={5}
-                                className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all font-medium placeholder:text-stone-400 resize-y"
+                                className="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all font-medium placeholder:text-stone-400 resize-y"
                                 placeholder="Tell us about your goals, timeline, and budget..."
                               />
                             </div>
@@ -193,7 +193,7 @@ export default function ContactPage() {
                               type="submit"
                               disabled={formState === "submitting"}
                               className={`w-full group flex items-center justify-center rounded-xl px-8 py-4 text-sm font-semibold text-white shadow-xl transition-all duration-300 ${
-                                formState === "submitting" ? "bg-stone-400 cursor-not-allowed" : "bg-orange-600 hover:bg-orange-500"
+                                formState === "submitting" ? "bg-stone-400 cursor-not-allowed" : "bg-primary-600 hover:bg-primary-500"
                               }`}
                             >
                               {formState === "submitting" ? "Sending..." : "Submit Inquiry"}
@@ -214,13 +214,13 @@ export default function ContactPage() {
                >
                   {/* Direct Contact Cards */}
                   <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-4">
-                     <a href="mailto:hello@qubiqode.com" className="flex items-start gap-4 p-6 bg-white rounded-2xl border border-stone-200 hover:border-orange-500 hover:shadow-lg transition-all group">
-                        <div className="w-12 h-12 bg-orange-50 text-orange-600 rounded-full flex items-center justify-center shrink-0 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                     <a href="mailto:hello@qubiqode.com" className="flex items-start gap-4 p-6 bg-white rounded-2xl border border-stone-200 hover:border-primary-500 hover:shadow-lg transition-all group">
+                        <div className="w-12 h-12 bg-primary-50 text-primary-600 rounded-full flex items-center justify-center shrink-0 group-hover:bg-primary-600 group-hover:text-white transition-colors">
                            <Mail className="w-5 h-5" />
                         </div>
                         <div>
                            <div className="text-sm font-semibold text-stone-500 mb-1">Email Us</div>
-                           <div className="font-bold text-stone-950 group-hover:text-orange-600 transition-colors">hello@qubiqode.com</div>
+                           <div className="font-bold text-stone-950 group-hover:text-primary-600 transition-colors">hello@qubiqode.com</div>
                         </div>
                      </a>
                      
@@ -305,7 +305,7 @@ export default function ContactPage() {
       {/* Global Presence Map or Banner */}
       <section className="py-24 bg-stone-950 text-white relative overflow-hidden mt-12">
         <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/noise/800/800')] opacity-5 mix-blend-overlay pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[600px] bg-orange-600/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[600px] bg-primary-600/5 rounded-full blur-[100px] pointer-events-none" />
         
         <div className="container mx-auto px-6 max-w-5xl text-center relative z-10">
            <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">Global reach. Local impact.</h2>

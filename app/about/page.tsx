@@ -14,22 +14,22 @@ const stats = [
 
 const values = [
   {
-    icon: <Diamond className="w-6 h-6 text-orange-500" />,
+    icon: <Diamond className="w-6 h-6 text-primary-500" />,
     title: "Premium Quality",
     description: "We don't settle for 'good enough'. Every pixel, every line of code is meticulously crafted to perfection."
   },
   {
-    icon: <Users className="w-6 h-6 text-orange-500" />,
+    icon: <Users className="w-6 h-6 text-primary-500" />,
     title: "Client Partnership",
     description: "We work with you, not just for you. Your goals become our goals, ensuring total alignment."
   },
   {
-    icon: <Lightbulb className="w-6 h-6 text-orange-500" />,
+    icon: <Lightbulb className="w-6 h-6 text-primary-500" />,
     title: "Continuous Innovation",
     description: "The digital landscape evolves rapidly. We stay ahead of the curve to leverage the latest tech."
   },
   {
-    icon: <Compass className="w-6 h-6 text-orange-500" />,
+    icon: <Compass className="w-6 h-6 text-primary-500" />,
     title: "Strategic Focus",
     description: "Everything we build is rooted in strategy. We design for conversion, engagement, and growth."
   }
@@ -64,11 +64,11 @@ const team = [
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen pt-32 pb-20 bg-stone-50 overflow-hidden selection:bg-orange-200">
+    <main className="min-h-screen pt-32 pb-20 bg-stone-50 overflow-hidden selection:bg-primary-200">
       
       {/* Hero Section */}
       <section className="container mx-auto px-6 max-w-7xl mb-32 relative">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-orange-200/40 via-amber-100/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary-200/40 via-sky-100/10 to-transparent rounded-full blur-3xl pointer-events-none" />
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div
@@ -77,7 +77,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex flex-col items-center gap-4 mb-8">
-              <span className="uppercase tracking-widest text-sm font-semibold text-orange-600 bg-orange-100/50 border border-orange-200/50 rounded-full px-5 py-2">Our Story</span>
+              <span className="uppercase tracking-widest text-sm font-semibold text-primary-600 bg-primary-100/50 border border-primary-200/50 rounded-full px-5 py-2">Our Story</span>
             </div>
             
             <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tight text-stone-950 mb-8 leading-[1.1]">
@@ -123,8 +123,8 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="font-display text-3xl md:text-5xl font-bold text-stone-950 mb-6">
-              Driven by <span className="text-orange-600">purpose</span>,<br />
-              obsessed with <span className="text-orange-600">craft</span>.
+              Driven by <span className="text-primary-600">purpose</span>,<br />
+              obsessed with <span className="text-primary-600">craft</span>.
             </h2>
             <div className="space-y-6 text-lg text-stone-600 leading-relaxed">
               <p>
@@ -136,7 +136,7 @@ export default function AboutPage() {
             </div>
             
             <div className="mt-10 inline-flex items-center gap-4 text-stone-900 font-semibold uppercase tracking-wider text-sm border-b-2 border-stone-900 pb-2">
-              <Sparkles className="w-5 h-5 text-orange-500" />
+              <Sparkles className="w-5 h-5 text-primary-500" />
               Award Winning Agency
             </div>
           </motion.div>
@@ -185,7 +185,7 @@ export default function AboutPage() {
               }`}
             >
               {/* Timeline dot */}
-              <div className={`absolute top-1 left-[-10.5px] md:top-2 md:left-auto w-3 h-3 rounded-full bg-orange-500 border-4 box-content border-stone-50 z-10 ${
+              <div className={`absolute top-1 left-[-10.5px] md:top-2 md:left-auto w-3 h-3 rounded-full bg-primary-500 border-4 box-content border-stone-50 z-10 ${
                 i % 2 === 0 ? "md:-right-[10.5px]" : "md:-left-[10.5px]"
               }`} />
               
@@ -257,7 +257,7 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-stone-950/20 group-hover:bg-transparent transition-colors duration-700" />
               </div>
               <h3 className="font-display text-2xl font-bold text-stone-950 mb-1">{member.name}</h3>
-              <p className="text-orange-600 font-semibold text-sm uppercase tracking-wider mb-3">{member.role}</p>
+              <p className="text-primary-600 font-semibold text-sm uppercase tracking-wider mb-3">{member.role}</p>
               <p className="text-stone-600 text-sm leading-relaxed">{member.bio}</p>
             </motion.div>
           ))}
@@ -267,7 +267,7 @@ export default function AboutPage() {
       {/* Tech Approach */}
       <section className="container mx-auto px-6 max-w-7xl mb-32">
         <div className="bg-white rounded-[3rem] p-10 md:p-20 border border-stone-200 shadow-[0_20px_50px_rgba(0,0,0,0.05)] text-center relative overflow-hidden">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1/2 bg-orange-100/50 rounded-b-full blur-[100px] pointer-events-none" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-1/2 bg-primary-100/50 rounded-b-full blur-[100px] pointer-events-none" />
           
           <div className="relative z-10 max-w-3xl mx-auto">
             <h2 className="font-display text-4xl font-bold text-stone-950 mb-6">Our Engineering Approach</h2>

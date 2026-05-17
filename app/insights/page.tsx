@@ -89,7 +89,7 @@ export default function InsightsPage() {
   });
 
   return (
-    <main className="min-h-screen bg-stone-50 selection:bg-orange-200">
+    <main className="min-h-screen bg-stone-50 selection:bg-primary-200">
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 lg:pt-48 lg:pb-24">
@@ -149,7 +149,7 @@ export default function InsightsPage() {
 
                    <div className="p-8 md:p-16 flex flex-col justify-center">
                       <div className="flex items-center gap-3 mb-6">
-                        <span className="text-orange-600 bg-orange-50 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                        <span className="text-primary-600 bg-primary-50 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
                           {featuredArticle.category}
                         </span>
                         <div className="flex items-center gap-1 text-stone-400 text-sm font-medium">
@@ -158,7 +158,7 @@ export default function InsightsPage() {
                         </div>
                       </div>
                       
-                      <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-stone-950 mb-6 group-hover:text-orange-600 transition-colors duration-300 line-clamp-3">
+                      <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-stone-950 mb-6 group-hover:text-primary-600 transition-colors duration-300 line-clamp-3">
                         {featuredArticle.title}
                       </h2>
                       
@@ -174,7 +174,7 @@ export default function InsightsPage() {
                           <div className="text-sm font-medium text-stone-950">{featuredArticle.author}</div>
                         </div>
                         
-                        <div className="w-12 h-12 rounded-full border border-stone-200 flex items-center justify-center group-hover:bg-orange-600 group-hover:border-orange-600 group-hover:text-white transition-all duration-300">
+                        <div className="w-12 h-12 rounded-full border border-stone-200 flex items-center justify-center group-hover:bg-primary-600 group-hover:border-primary-600 group-hover:text-white transition-all duration-300">
                           <ArrowRight className="w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-300" />
                         </div>
                       </div>
@@ -213,7 +213,7 @@ export default function InsightsPage() {
               <input 
                 type="text" 
                 placeholder="Search insights..." 
-                className="pl-11 pr-4 py-3 bg-stone-50 border border-stone-200 rounded-full text-sm font-medium text-stone-900 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 w-full md:w-64 transition-all"
+                className="pl-11 pr-4 py-3 bg-stone-50 border border-stone-200 rounded-full text-sm font-medium text-stone-900 focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 w-full md:w-64 transition-all"
               />
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-400" />
             </div>
@@ -232,7 +232,7 @@ export default function InsightsPage() {
                   transition={{ duration: 0.4, type: "spring", bounce: 0.3 }}
                 >
                    <Link href={`/insights/${article.slug}`} className="block group h-full focus:outline-none">
-                     <div className="h-full flex flex-col bg-white rounded-3xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-orange-200 transition-all duration-500">
+                     <div className="h-full flex flex-col bg-white rounded-3xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-primary-200 transition-all duration-500">
                         {/* Image */}
                         <div className="relative aspect-[4/3] overflow-hidden bg-stone-100 shrink-0">
                            <Image 
@@ -263,7 +263,7 @@ export default function InsightsPage() {
                              </div>
                            </div>
                            
-                           <h3 className="font-display font-bold text-xl md:text-2xl text-stone-950 mb-3 group-hover:text-orange-600 transition-colors line-clamp-2">
+                           <h3 className="font-display font-bold text-xl md:text-2xl text-stone-950 mb-3 group-hover:text-primary-600 transition-colors line-clamp-2">
                              {article.title}
                            </h3>
                            
@@ -273,7 +273,7 @@ export default function InsightsPage() {
                            
                            <div className="mt-auto pt-6 border-t border-stone-100 flex items-center justify-between">
                               <span className="text-sm font-semibold text-stone-900">{article.author}</span>
-                              <span className="flex items-center text-sm font-bold text-orange-600 group-hover:translate-x-1 transition-transform">
+                              <span className="flex items-center text-sm font-bold text-primary-600 group-hover:translate-x-1 transition-transform">
                                 Read <ChevronRight className="w-4 h-4 ml-0.5" />
                               </span>
                            </div>
@@ -314,12 +314,12 @@ export default function InsightsPage() {
              transition={{ duration: 0.8 }}
              className="bg-stone-950 rounded-[3rem] p-10 md:p-20 shadow-2xl relative overflow-hidden"
            >
-             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-600/10 rounded-full blur-[100px] pointer-events-none" />
+             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-600/10 rounded-full blur-[100px] pointer-events-none" />
              
              <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                    <div className="w-12 h-12 bg-stone-800 rounded-full flex items-center justify-center mb-6">
-                      <Mail className="w-6 h-6 text-orange-500" />
+                      <Mail className="w-6 h-6 text-primary-500" />
                    </div>
                    <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">Subscribe to our newsletter</h2>
                    <p className="text-lg text-stone-400 leading-relaxed mb-6">
@@ -333,11 +333,11 @@ export default function InsightsPage() {
                        type="email" 
                        placeholder="Enter your email address"
                        required
-                       className="w-full bg-stone-900 border border-stone-800 rounded-full px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all font-medium placeholder:text-stone-500"
+                       className="w-full bg-stone-900 border border-stone-800 rounded-full px-6 py-4 text-white focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 transition-all font-medium placeholder:text-stone-500"
                      />
                      <button 
                        type="submit"
-                       className="shrink-0 rounded-full bg-orange-600 px-8 py-4 text-sm font-semibold text-white shadow-xl hover:bg-orange-500 transition-all duration-300"
+                       className="shrink-0 rounded-full bg-primary-600 px-8 py-4 text-sm font-semibold text-white shadow-xl hover:bg-primary-500 transition-all duration-300"
                      >
                        Subscribe
                      </button>

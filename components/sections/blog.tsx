@@ -61,7 +61,7 @@ export function Blog() {
           >
             <Link
               href="#blog"
-              className="group flex items-center text-sm font-semibold text-stone-950 hover:text-orange-600 transition-colors bg-white border border-stone-200 rounded-full px-6 py-3 shadow-sm"
+              className="group flex items-center text-sm font-semibold text-stone-950 hover:text-primary-600 transition-colors bg-white border border-stone-200 rounded-full px-6 py-3 shadow-sm"
             >
               Read all articles
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -97,12 +97,12 @@ export function Blog() {
                 />
               </Link>
               <div className="flex items-center gap-4 text-xs font-semibold text-stone-500 mb-4 px-2">
-                <span className="text-orange-600 bg-orange-50 px-3 py-1 rounded-full uppercase tracking-widest border border-orange-100">
+                <span className="text-primary-600 bg-primary-50 px-3 py-1 rounded-full uppercase tracking-widest border border-primary-100">
                   {post.category}
                 </span>
                 <span>{post.date}</span>
               </div>
-              <h3 className="font-display text-2xl font-bold text-stone-950 group-hover:text-orange-600 transition-colors line-clamp-3 leading-snug px-2">
+              <h3 className="font-display text-2xl font-bold text-stone-950 group-hover:text-primary-600 transition-colors line-clamp-3 leading-snug px-2">
                 <Link href={post.slug} className="before:absolute before:inset-0">
                   {post.title}
                 </Link>

@@ -9,22 +9,22 @@ const values = [
   {
     title: "Craftsmanship First",
     description: "We don't settle for 'good enough'. We take pride in writing elegant code, designing thoughtful interfaces, and delivering premium outcomes.",
-    icon: <Flame className="w-6 h-6 text-orange-500" />
+    icon: <Flame className="w-6 h-6 text-primary-500" />
   },
   {
     title: "Extreme Ownership",
     description: "Autonomy is our default. We hire smart people and trust them to lead projects, make critical decisions, and own the results.",
-    icon: <Target className="w-6 h-6 text-orange-500" />
+    icon: <Target className="w-6 h-6 text-primary-500" />
   },
   {
     title: "Radical Candor",
     description: "Feedback is a gift. We champion honest, direct, and kind communication across all levels of the organization.",
-    icon: <Zap className="w-6 h-6 text-orange-500" />
+    icon: <Zap className="w-6 h-6 text-primary-500" />
   },
   {
     title: "Always Exploring",
     description: "The digital landscape shifts daily. We allocate time and significant budget for continuous learning and R&D.",
-    icon: <Compass className="w-6 h-6 text-orange-500" />
+    icon: <Compass className="w-6 h-6 text-primary-500" />
   }
 ];
 
@@ -117,12 +117,12 @@ const processSteps = [
 
 export default function CareersPage() {
   return (
-    <main className="min-h-screen bg-stone-50 selection:bg-orange-200">
+    <main className="min-h-screen bg-stone-50 selection:bg-primary-200">
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 lg:pt-48 lg:pb-32 bg-stone-950 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://picsum.photos/seed/noise/800/800')] opacity-5 mix-blend-overlay pointer-events-none" />
-        <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-600/20 via-orange-900/5 to-transparent rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-600/20 via-primary-900/5 to-transparent rounded-full blur-[100px] pointer-events-none" />
         
         <div className="container mx-auto px-6 max-w-7xl relative z-10 grid lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -142,7 +142,7 @@ export default function CareersPage() {
               className="font-display text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-[1.1] mb-6"
             >
                Do the best work <br />
-               <span className="text-orange-500 italic">of your career.</span>
+               <span className="text-primary-500 italic">of your career.</span>
             </motion.h1>
 
             <motion.p
@@ -190,7 +190,7 @@ export default function CareersPage() {
                    whileInView={{ opacity: 1, y: 0 }}
                    viewport={{ once: true }}
                    transition={{ duration: 0.5, delay: i * 0.1 }}
-                   className="bg-stone-50 rounded-3xl p-8 border border-stone-100 hover:border-orange-200 hover:bg-white transition-all duration-300 group"
+                   className="bg-stone-50 rounded-3xl p-8 border border-stone-100 hover:border-primary-200 hover:bg-white transition-all duration-300 group"
                  >
                     <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform duration-300">
                        {value.icon}
@@ -257,10 +257,10 @@ export default function CareersPage() {
                    viewport={{ once: true }}
                    transition={{ duration: 0.4, delay: i * 0.1 }}
                  >
-                    <Link href="#apply" className="group block bg-white border border-stone-200 rounded-2xl p-6 md:p-8 hover:border-orange-500 hover:shadow-lg transition-all duration-300">
+                    <Link href="#apply" className="group block bg-white border border-stone-200 rounded-2xl p-6 md:p-8 hover:border-primary-500 hover:shadow-lg transition-all duration-300">
                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                           <div>
-                             <h3 className="font-display text-2xl font-bold text-stone-950 group-hover:text-orange-600 transition-colors mb-2">
+                             <h3 className="font-display text-2xl font-bold text-stone-950 group-hover:text-primary-600 transition-colors mb-2">
                                {job.title}
                              </h3>
                              <div className="flex flex-wrap items-center gap-3 text-sm font-semibold text-stone-500">
@@ -272,7 +272,7 @@ export default function CareersPage() {
                              </div>
                           </div>
                           
-                          <div className="shrink-0 w-12 h-12 rounded-full border border-stone-200 flex items-center justify-center group-hover:bg-orange-600 group-hover:border-transparent group-hover:text-white transition-all duration-300">
+                          <div className="shrink-0 w-12 h-12 rounded-full border border-stone-200 flex items-center justify-center group-hover:bg-primary-600 group-hover:border-transparent group-hover:text-white transition-all duration-300">
                              <ArrowUpRight className="w-5 h-5 text-stone-400 group-hover:text-white transition-colors" />
                           </div>
                        </div>
@@ -284,7 +284,7 @@ export default function CareersPage() {
            <div className="mt-12 text-center bg-stone-50 rounded-2xl p-8 border border-stone-200">
               <h3 className="font-bold text-stone-950 mb-2">Don&apos;t see a perfect fit?</h3>
               <p className="text-stone-600 text-sm mb-4">We are always open to connecting with brilliant people.</p>
-              <a href="mailto:careers@qubiqode.com" className="text-orange-600 font-bold hover:text-orange-700 transition-colors underline underline-offset-4">
+              <a href="mailto:careers@qubiqode.com" className="text-primary-600 font-bold hover:text-primary-700 transition-colors underline underline-offset-4">
                 Send a general application
               </a>
            </div>
@@ -335,7 +335,7 @@ export default function CareersPage() {
              </p>
              <Link
                href="mailto:careers@qubiqode.com"
-               className="inline-flex items-center justify-center rounded-full bg-orange-600 px-8 py-4 text-sm font-semibold text-white shadow-xl hover:bg-orange-500 transition-all duration-300"
+               className="inline-flex items-center justify-center rounded-full bg-primary-600 px-8 py-4 text-sm font-semibold text-white shadow-xl hover:bg-primary-500 transition-all duration-300"
              >
                Apply Now via Email
                <ArrowRight className="ml-2 h-4 w-4" />
