@@ -176,65 +176,65 @@ export function Navbar() {
             </button>
           </div>
         </div>
-
-        {/* Full-screen Mobile Nav */}
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, clipPath: "circle(0% at 100% 0)" }}
-              animate={{ opacity: 1, clipPath: "circle(150% at 100% 0)" }}
-              exit={{ opacity: 0, clipPath: "circle(0% at 100% 0)" }}
-              transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
-              className="fixed inset-0 bg-stone-50/95 backdrop-blur-xl z-40 lg:hidden flex flex-col justify-center pt-24 pb-12 px-6"
-            >
-              <div className="w-full max-w-sm mx-auto flex flex-col items-center text-center space-y-6 flex-1 justify-center">
-                {navLinks.map((link, i) => (
-                  <motion.div
-                    key={link.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    transition={{ delay: i * 0.05 + 0.1, duration: 0.4 }}
-                  >
-                    <Link
-                      href={link.href}
-                      className="text-4xl sm:text-5xl font-display font-bold tracking-tight text-stone-900 hover:text-orange-600 transition-colors relative group block py-2"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {link.name}
-                      <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 bg-orange-600 rounded-full transition-all duration-300 group-hover:w-1/2" />
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                transition={{ delay: 0.4, duration: 0.4 }}
-                className="w-full max-w-sm mx-auto flex flex-col gap-4 mt-auto border-t border-stone-200/50 pt-8"
-              >
-                <Link
-                  href="/contact"
-                  className="w-full inline-flex justify-center items-center gap-2 rounded-full bg-stone-950 px-6 py-4 text-sm font-semibold text-white shadow-xl hover:bg-stone-800 hover:-translate-y-0.5 active:scale-95 transition-all duration-200 font-display uppercase tracking-widest"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Get a Quote
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="w-full inline-flex justify-center items-center rounded-full bg-white border border-stone-200 px-6 py-4 text-sm font-semibold text-stone-900 shadow-sm hover:bg-stone-50 active:scale-95 transition-all duration-200 font-display uppercase tracking-widest"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Let&apos;s Talk
-                </Link>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </header>
+
+      {/* Full-screen Mobile Nav */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, clipPath: "circle(0% at 100% 0)" }}
+            animate={{ opacity: 1, clipPath: "circle(150% at 100% 0)" }}
+            exit={{ opacity: 0, clipPath: "circle(0% at 100% 0)" }}
+            transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
+            className="fixed inset-0 bg-stone-50/95 backdrop-blur-xl z-40 lg:hidden flex flex-col justify-center pt-24 pb-12 px-6"
+          >
+            <div className="w-full max-w-sm mx-auto flex flex-col items-center text-center space-y-6 flex-1 justify-center">
+              {navLinks.map((link, i) => (
+                <motion.div
+                  key={link.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{ delay: i * 0.05 + 0.1, duration: 0.4 }}
+                >
+                  <Link
+                    href={link.href}
+                    className="text-4xl sm:text-5xl font-display font-bold tracking-tight text-stone-900 hover:text-orange-600 transition-colors relative group block py-2"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                    <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 bg-orange-600 rounded-full transition-all duration-300 group-hover:w-1/2" />
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ delay: 0.4, duration: 0.4 }}
+              className="w-full max-w-sm mx-auto flex flex-col gap-4 mt-auto border-t border-stone-200/50 pt-8"
+            >
+              <Link
+                href="/contact"
+                className="w-full inline-flex justify-center items-center gap-2 rounded-full bg-stone-950 px-6 py-4 text-sm font-semibold text-white shadow-xl hover:bg-stone-800 hover:-translate-y-0.5 active:scale-95 transition-all duration-200 font-display uppercase tracking-widest"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Get a Quote
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/contact"
+                className="w-full inline-flex justify-center items-center rounded-full bg-white border border-stone-200 px-6 py-4 text-sm font-semibold text-stone-900 shadow-sm hover:bg-stone-50 active:scale-95 transition-all duration-200 font-display uppercase tracking-widest"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Let&apos;s Talk
+              </Link>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
