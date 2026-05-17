@@ -2,12 +2,21 @@
 
 import { useState, useRef, useEffect } from "react";
 import { MessageSquare, X, Send, Minus } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
+import Markdown from "react-markdown";
 
 type Message = {
   id: string;
   role: "user" | "assistant";
   content: string;
 };
+
+const QUICK_REPLIES = [
+  "What services do you offer?",
+  "Show me your portfolio",
+  "How much does a website cost?",
+  "Start a project",
+];
 
 export function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +25,7 @@ export function Chatbot() {
       id: "welcome",
       role: "assistant",
       content:
-        "Hi! I'm Qubi, the QubiQode virtual assistant. How can I help you today?",
+        "Hi! I'm QubiQode Assistant. I can help you explore our services, view projects, or connect you with our team. What would you like to know?",
     },
   ]);
   const [input, setInput] = useState("");
@@ -31,14 +40,15 @@ export function Chatbot() {
     scrollToBottom();
   }, [messages, isOpen]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!input.trim() || isLoading) return;
+  const sendQuery = async (text: string) => {
+    if (!text.trim() || isLoading) return;
 
+    // eslint-disable-next-line react-hooks/purity
+    const tempUserId = Math.random().toString();
     const userMessage: Message = {
-      id: Date.now().toString(),
+      id: tempUserId,
       role: "user",
-      content: input.trim(),
+      content: text.trim(),
     };
 
     setMessages((prev) => [...prev, userMessage]);
@@ -63,7 +73,9 @@ export function Chatbot() {
 
       if (!reader) throw new Error("No reader available");
 
-      const assistantMessageId = Date.now().toString();
+      // eslint-disable-next-line react-hooks/purity
+      const assistantMessageId = Math.random().toString();
+      // eslint-disable-next-line react-hooks/immutability
       let fullContent = "";
 
       setMessages((prev) => [
@@ -76,6 +88,7 @@ export function Chatbot() {
         if (done) break;
 
         const textBase = decoder.decode(value, { stream: true });
+        // eslint-disable-next-line react-hooks/immutability
         fullContent += textBase;
 
         setMessages((prev) =>
@@ -91,7 +104,8 @@ export function Chatbot() {
       setMessages((prev) => [
         ...prev,
         {
-          id: Date.now().toString(),
+          // eslint-disable-next-line react-hooks/purity
+          id: Math.random().toString(),
           role: "assistant",
           content:
             "Sorry, I'm having trouble connecting right now. Please try again later.",
@@ -102,111 +116,160 @@ export function Chatbot() {
     }
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    await sendQuery(input);
+  };
+
   return (
     <div className="fixed z-[99999]" style={{ bottom: "24px", right: "24px" }}>
       {/* Chat Window */}
-      <div
-        className={`absolute bottom-20 right-0 w-[350px] sm:w-[400px] h-[500px] max-h-[calc(100vh-8rem)] bg-white border border-stone-200 rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 origin-bottom-right ${
-          isOpen ? "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-50 pointer-events-none"
-        }`}
-      >
-        {/* Header */}
-        <div className="bg-stone-950 text-white p-4 flex items-center justify-between shadow-sm z-10">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-orange-600 flex items-center justify-center flex-shrink-0">
-              <MessageSquare className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <h3 className="font-medium text-base leading-none m-0">
-                Qubi Assistant
-              </h3>
-              <div className="flex items-center gap-1.5 mt-1">
-                <span className="w-2 h-2 rounded-full bg-green-400"></span>
-                <p className="text-xs text-stone-300">Online</p>
-              </div>
-            </div>
-          </div>
-          <button
-            onClick={() => setIsOpen(false)}
-            className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors border-none text-white cursor-pointer"
-            aria-label="Close Chat"
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 20 }}
+            transition={{ type: "spring", stiffness: 300, damping: 25 }}
+            className="absolute bottom-20 right-0 w-[350px] sm:w-[400px] h-[500px] max-h-[calc(100vh-8rem)] bg-white border border-stone-200 rounded-2xl shadow-2xl flex flex-col overflow-hidden origin-bottom-right"
           >
-            <Minus className="w-4 h-4" />
-          </button>
-        </div>
-
-        {/* Messages */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-stone-50 flex flex-col gap-4">
-          {messages.map((msg) => (
-            <div
-              key={msg.id}
-              className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
-            >
-              <div
-                className={`max-w-[85%] px-4 py-3 rounded-2xl text-[15px] leading-relaxed ${
-                  msg.role === 'user' 
-                    ? 'bg-orange-600 text-white rounded-tr-sm'
-                    : 'bg-white text-stone-900 border border-stone-200 rounded-tl-sm shadow-sm'
-                }`}
-              >
-                {msg.content}
+            {/* Header */}
+            <div className="bg-stone-950 text-white p-4 flex items-center justify-between shadow-sm z-10">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-orange-600 flex items-center justify-center flex-shrink-0">
+                  <MessageSquare className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-medium text-base leading-none m-0">
+                    Qubi Assistant
+                  </h3>
+                  <div className="flex items-center gap-1.5 mt-1">
+                    <span className="w-2 h-2 rounded-full bg-green-400"></span>
+                    <p className="text-xs text-stone-300">Online</p>
+                  </div>
+                </div>
               </div>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors border-none text-white cursor-pointer"
+                aria-label="Close Chat"
+              >
+                <Minus className="w-4 h-4" />
+              </button>
             </div>
-          ))}
-          {isLoading && (
-            <div className="flex justify-start">
-               <div className="bg-white px-4 py-3 rounded-2xl rounded-tl-sm border border-stone-200 shadow-sm">
-                 <div className="flex gap-1.5">
-                   <span className="w-2 h-2 rounded-full bg-stone-300 animate-bounce delay-75"></span>
-                   <span className="w-2 h-2 rounded-full bg-stone-300 animate-bounce delay-150"></span>
-                   <span className="w-2 h-2 rounded-full bg-stone-300 animate-bounce delay-300"></span>
-                 </div>
-               </div>
-            </div>
-          )}
-          <div ref={messagesEndRef} />
-        </div>
 
-        {/* Input */}
-        <form
-          onSubmit={handleSubmit}
-          className="p-4 border-t border-stone-200 bg-white"
-        >
-          <div className="relative flex items-center">
-            <input
-              type="text"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              placeholder="Type your message..."
-              className="w-full pl-5 pr-12 py-3 rounded-full border border-stone-200 bg-stone-50 outline-none focus:ring-2 focus:ring-orange-500 transition-all text-sm"
-              disabled={isLoading}
-            />
-            <button
-              type="submit"
-              disabled={!input.trim() || isLoading}
-              className="absolute right-1 w-10 h-10 rounded-full bg-stone-950 text-white border-none flex items-center justify-center cursor-pointer disabled:bg-stone-300 disabled:cursor-not-allowed hover:bg-stone-800 transition-colors"
-              aria-label="Send Message"
+            {/* Messages */}
+            <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-stone-50/50 flex flex-col gap-4">
+              <AnimatePresence initial={false}>
+                {messages.map((msg) => (
+                  <motion.div
+                    key={msg.id}
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                    className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+                  >
+                    <div
+                      className={`max-w-[85%] px-4 py-3 rounded-2xl text-[15px] leading-relaxed ${
+                        msg.role === "user"
+                          ? "bg-orange-600 text-white rounded-tr-sm"
+                          : "bg-white text-stone-900 border border-stone-200 rounded-tl-sm shadow-sm"
+                      }`}
+                    >
+                      {msg.role === "assistant" ? (
+                        <div className="prose prose-sm prose-stone max-w-none prose-p:leading-relaxed prose-pre:bg-stone-100 prose-pre:text-stone-900 prose-a:text-orange-600 hover:prose-a:text-orange-700">
+                          <Markdown>{msg.content}</Markdown>
+                        </div>
+                      ) : (
+                        msg.content
+                      )}
+                    </div>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+              {isLoading && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="flex justify-start"
+                >
+                  <div className="bg-white px-4 py-3 rounded-2xl rounded-tl-sm border border-stone-200 shadow-sm">
+                    <div className="flex gap-1.5 py-1">
+                      <span className="w-2 h-2 rounded-full bg-stone-300 animate-bounce delay-75"></span>
+                      <span className="w-2 h-2 rounded-full bg-stone-300 animate-bounce delay-150"></span>
+                      <span className="w-2 h-2 rounded-full bg-stone-300 animate-bounce delay-300"></span>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+              {!isLoading && messages.length === 1 && (
+                <div className="flex flex-col gap-2 mt-4 px-2">
+                  {QUICK_REPLIES.map((replyText, i) => (
+                    <button
+                      key={i}
+                      onClick={() => sendQuery(replyText)}
+                      className="self-start text-left text-sm bg-white border border-stone-200 hover:border-orange-600 hover:text-orange-600 text-stone-700 py-2 px-4 rounded-full transition-colors"
+                    >
+                      {replyText}
+                    </button>
+                  ))}
+                </div>
+              )}
+              <div ref={messagesEndRef} />
+            </div>
+
+            {/* Input */}
+            <form
+              onSubmit={handleSubmit}
+              className="p-4 border-t border-stone-200 bg-white"
             >
-              <Send className="w-4 h-4 ml-0.5" />
-            </button>
-          </div>
-          <div className="text-center mt-2">
-            <span className="text-[10px] text-stone-400 font-medium">Powered by Gemini</span>
-          </div>
-        </form>
-      </div>
+              <div className="relative flex items-center">
+                <input
+                  type="text"
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  placeholder="Type your message..."
+                  className="w-full pl-5 pr-12 py-3 rounded-full border border-stone-200 bg-stone-50 outline-none focus:ring-2 focus:ring-orange-500 transition-all text-sm"
+                  disabled={isLoading}
+                />
+                <button
+                  type="submit"
+                  disabled={!input.trim() || isLoading}
+                  className="absolute right-1 w-10 h-10 rounded-full bg-stone-950 text-white border-none flex items-center justify-center cursor-pointer disabled:bg-stone-300 disabled:cursor-not-allowed hover:bg-stone-800 transition-colors"
+                  aria-label="Send Message"
+                >
+                  <Send className="w-4 h-4 ml-0.5" />
+                </button>
+              </div>
+              <div className="text-center mt-2">
+                <span className="text-[10px] text-stone-400 font-medium">
+                  Powered by Gemini
+                </span>
+              </div>
+            </form>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Floating Button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className={`absolute bottom-0 right-0 w-14 h-14 rounded-full bg-stone-950 text-white border-2 border-white flex justify-center items-center cursor-pointer shadow-xl hover:scale-105 active:scale-95 transition-transform ${
-          isOpen ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"
-        }`}
-        aria-label="Open Chat"
-        type="button"
-      >
-        <MessageSquare className="w-6 h-6" />
-      </button>
+      <AnimatePresence>
+        {!isOpen && (
+          <motion.button
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.5 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setIsOpen(true)}
+            className="absolute bottom-0 right-0 w-14 h-14 rounded-full bg-stone-950 text-white border-2 border-white flex justify-center items-center cursor-pointer shadow-xl"
+            aria-label="Open Chat"
+            type="button"
+          >
+            <MessageSquare className="w-6 h-6" />
+          </motion.button>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
