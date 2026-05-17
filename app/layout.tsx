@@ -52,6 +52,9 @@ export const metadata: Metadata = {
     "video editing",
     "SEO",
   ],
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
