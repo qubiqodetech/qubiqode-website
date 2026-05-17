@@ -118,8 +118,8 @@ export function Footer() {
                 <FooterLink href="/services/ui-ux-design">UI/UX Design</FooterLink>
                 <FooterLink href="/services/seo">SEO Optimization</FooterLink>
                 <FooterLink href="/services/branding">Branding & Media</FooterLink>
-                <FooterLink href="/services/video">Video & Animation</FooterLink>
-                <FooterLink href="/services/ai">AI & Automation</FooterLink>
+                <FooterLink href="/services/video-editing">Video & Animation</FooterLink>
+                <FooterLink href="/services/ai-automation">AI & Automation</FooterLink>
               </ul>
             </motion.div>
 
@@ -132,8 +132,8 @@ export function Footer() {
               <h3 className="font-semibold text-stone-100 tracking-wide mb-6 text-sm uppercase">Work</h3>
               <ul className="space-y-4">
                 <FooterLink href="/portfolio">Portfolio</FooterLink>
-                <FooterLink href="/case-studies">Case Studies</FooterLink>
-                <FooterLink href="/tech">Technology Stack</FooterLink>
+                <FooterLink href="/portfolio">Case Studies</FooterLink>
+                <FooterLink href="/tech-stack">Technology Stack</FooterLink>
                 <FooterLink href="/industries">Industries Served</FooterLink>
                 <FooterLink href="/design-system">UI Showcase</FooterLink>
               </ul>
@@ -147,7 +147,7 @@ export function Footer() {
             >
               <h3 className="font-semibold text-stone-100 tracking-wide mb-6 text-sm uppercase">Resources</h3>
               <ul className="space-y-4">
-                <FooterLink href="/blog">Blog</FooterLink>
+                <FooterLink href="/insights">Blog</FooterLink>
                 <FooterLink href="/resources">Freebies</FooterLink>
                 <FooterLink href="/faq">FAQ</FooterLink>
                 <FooterLink href="/maintenance">Maintenance Plans</FooterLink>
@@ -163,7 +163,7 @@ export function Footer() {
               <h3 className="font-semibold text-stone-100 tracking-wide mb-6 text-sm uppercase">Contact</h3>
               <ul className="space-y-4 mb-6">
                 <FooterLink href="/contact">Get in Touch</FooterLink>
-                <FooterLink href="/contact">Book Consultation</FooterLink>
+                <FooterLink href="/book">Book Consultation</FooterLink>
               </ul>
               
               <div className="space-y-3">

@@ -54,16 +54,16 @@ const navGroups = [
       { name: "UI/UX Design", href: "/services/ui-ux-design", icon: PenTool, description: "Premium interface design" },
       { name: "SEO Optimization", href: "/services/seo", icon: LineChart, description: "Technical & content SEO" },
       { name: "Branding", href: "/services/branding", icon: Sparkles, description: "Modern brand identity" },
-      { name: "Video & Animation", href: "/services/video", icon: Video, description: "Motion graphics & editing" },
-      { name: "AI Solutions", href: "/services/ai", icon: Cpu, description: "Smart business solutions" },
+      { name: "Video & Animation", href: "/services/video-editing", icon: Video, description: "Motion graphics & editing" },
+      { name: "AI Solutions", href: "/services/ai-automation", icon: Cpu, description: "Smart business solutions" },
     ]
   },
   {
     name: "Work",
     items: [
       { name: "Portfolio", href: "/portfolio", icon: ImageIcon, description: "Our latest featured projects" },
-      { name: "Case Studies", href: "/case-studies", icon: FileText, description: "In-depth project reviews" },
-      { name: "Tech Stack", href: "/tech", icon: Layers, description: "The tools we use to build" },
+      { name: "Case Studies", href: "/portfolio", icon: FileText, description: "In-depth project reviews" },
+      { name: "Tech Stack", href: "/tech-stack", icon: Layers, description: "The tools we use to build" },
       { name: "Industries", href: "/industries", icon: Building2, description: "Sectors we specialize in" },
       { name: "Design System", href: "/design-system", icon: Palette, description: "UI component showcase" },
     ]
@@ -71,7 +71,7 @@ const navGroups = [
   {
     name: "Content",
     items: [
-      { name: "Blog", href: "/blog", icon: BookOpen, description: "Articles and industry insights" },
+      { name: "Blog", href: "/insights", icon: BookOpen, description: "Articles and industry insights" },
       { name: "Resources", href: "/resources", icon: Download, description: "Free templates and guides" },
       { name: "FAQ", href: "/faq", icon: HelpCircle, description: "Common questions answered" },
     ]
@@ -80,7 +80,7 @@ const navGroups = [
     name: "Contact",
     items: [
       { name: "Contact Us", href: "/contact", icon: Phone, description: "Get in touch with our team" },
-      { name: "Book Consultation", href: "/contact", icon: Calendar, description: "Schedule a discussion" },
+      { name: "Book Consultation", href: "/book", icon: Calendar, description: "Schedule a discussion" },
       { name: "Maintenance Plans", href: "/maintenance", icon: LifeBuoy, description: "Ongoing support & SLAs" },
     ]
   }
