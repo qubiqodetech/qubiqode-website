@@ -1,235 +1,264 @@
 <div align="center">
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
+
+  <img src="https://via.placeholder.com/1200x400/0a0a0a/1E90FF?text=QubiQode+Digital+Experiences" alt="QubiQode Premium Banner" width="100%" />
+
+  <br />
+  <br />
+
+  <h1 align="center"><strong>QubiQode</strong></h1>
+  
+  <p align="center">
+    <strong>Building futuristic digital experiences with AI, motion, and premium engineering.</strong>
+  </p>
+
+  <p align="center">
+    <a href="https://nextjs.org"><img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" /></a>
+    <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" /></a>
+    <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind_CSS-0a0a0a?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC" alt="Tailwind CSS" /></a>
+    <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" /></a>
+    <a href="https://motion.dev/"><img src="https://img.shields.io/badge/Framer_Motion-1E90FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" /></a>
+    <a href="https://openai.com/"><img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" /></a>
+  </p>
+
+  <br />
+
 </div>
 
-<h1 align="center">QubiQode Digital Agency</h1>
+---
 
-<p align="center">
-  <strong>Modern premium digital agency platform built with Next.js and Tailwind CSS.</strong>
-</p>
+## 🌌 Project Overview
 
-<p align="center">
-  A state-of-the-art web presence engineered for high performance, exceptional UI/UX, and conversion optimization.
-</p>
+**QubiQode** is a premium creative technology and digital solutions brand. We engineer cinematic modern UI, AI-powered experiences, and premium motion systems leveraging advanced frontend architecture and scalable design systems. It explores the intersection of high-end digital craftsmanship and futuristic SaaS aesthetics, providing interactive experiences that elevate the brand's digital footprint.
 
 ---
 
-## 📖 Project Overview
+## ✨ New Feature Highlights
 
-**QubiQode** is a creative technology and digital solutions brand. This repository contains the source code for our primary web platform. The purpose of this website is to establish a premium digital footprint, showcase our portfolio, offer our digital services, and generate highly qualified leads.
+### 🚀 Core Features
+- **Premium cinematic hero section** with dynamic, layered architecture.
+- **Advanced motion design** capturing smooth and immersive interactions.
+- **Glassmorphism UI system** for modern, translucent depth layering.
+- **Scroll-triggered animations** guiding users effortlessly down the page.
+- **Dynamic marquees** delivering smooth infinite-scrolling text and logos.
+- **Page transition animations** maintaining narrative flow between views.
+- **Cinematic preloader** for an elegant initial greeting.
+- **Multi-level navigation** with responsive modern layouts.
+- **Premium footer system** capturing architectural aesthetic.
 
-**Primary Goals:**
-- Deliver a world-class, premium agency experience.
-- Maintain top-tier performance metrics (Core Web Vitals).
-- Maximize lead generation through optimized user journeys.
-- Communicate our technical expertise through the platform's execution itself.
+### 🧠 AI Features
+- **Intelligent chatbot architecture** crafted for seamless conversational UI.
+- **Conversational experience** driving a smart lead capture system.
+- **Future-ready AI integrations** set up for context-aware workflows.
 
----
-
-## ✨ Features
-
-- 💎 **Premium UI/UX:** Glassmorphism, subtle gradients, and elegant spacing.
-- 🚀 **Next.js App Router:** Server components and robust routing architecture.
-- 🎨 **Responsive Design:** Mobile-first approach scaling beautifully to ultra-wide displays.
-- 💫 **Framer Motion:** Cinematic scroll animations and refined micro-interactions.
-- 🔍 **SEO Optimized:** Dynamic metadata, semantic HTML, and high-performance load times.
-- 📈 **Conversion Focused:** Strategically placed CTAs, lead forms, and service pages.
-- 📑 **Dynamic Navigation:** Multi-column mega menu with mobile drawer.
-- 🌗 **Premium Theming:** High-contrast modern color palette.
-
----
-
-## 🛠️ Tech Stack
-
-### Frontend
-- **Framework:** [Next.js 15+](https://nextjs.org/)
-- **Library:** [React](https://react.dev/)
-- **Language:** [TypeScript](https://www.typescriptlang.org/)
-- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
-- **Animation:** [Framer Motion](https://motion.dev/)
-- **Icons:** [Lucide React](https://lucide.dev/)
-
-### Tooling & Deployment
-- **Linting:** ESLint & Prettier
-- **Hosting:** [Vercel](https://vercel.com/)
-- **Design:** Figma
+### 🎨 UX Features
+- **Smooth microinteractions** providing rich user feedback.
+- **Floating UI elements** and scroll-to-top systems for intuitive navigation.
+- **Dynamic gradients** shifting elegantly with scroll and interaction.
+- **Interactive visual systems** engaging cursor and user intent.
 
 ---
 
-## 📂 Folder Structure
+## 🛠 Updated Tech Stack
 
-```text
-├── app/                  # Next.js App Router pages and layouts
-├── components/           # Reusable UI components (Navbar, Footer, etc.)
-│   ├── sections/         # Page-specific building blocks (Hero, Features, etc.)
-├── hooks/                # Custom React hooks
-├── lib/                  # Utility functions and configuration
-├── public/               # Static assets (images, fonts, etc.)
-├── next.config.ts        # Next.js configuration
-├── postcss.config.mjs    # PostCSS configuration for Tailwind
-└── package.json          # Project dependencies and scripts
-```
+Our platform leverages a vast, world-class technology stack categorized for scale, performance, and artificial intelligence.
 
----
+<details open>
+<summary><strong>🌐 Frontend</strong></summary>
+<br>
+<img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/Tailwind_CSS-0a0a0a?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC" />
+<img src="https://img.shields.io/badge/Framer_Motion-1E90FF?style=for-the-badge&logo=framer&logoColor=white" />
+<img src="https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white" />
+<img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white" />
+</details>
 
-## 🚀 Installation & Setup
+<details open>
+<summary><strong>⚙️ Backend</strong></summary>
+<br>
+<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
+<img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" />
+<img src="https://img.shields.io/badge/REST_APIs-005571?style=for-the-badge&logo=openapi-initiative&logoColor=white" />
+</details>
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/qubiqode.git
-   cd qubiqode
-   ```
+<details open>
+<summary><strong>🧠 AI & Machine Learning</strong></summary>
+<br>
+<img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" />
+<img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
+<img src="https://img.shields.io/badge/Hugging_Face-FF9D00?style=for-the-badge&logo=huggingface&logoColor=white" />
+</details>
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+<details open>
+<summary><strong>☁️ Cloud & DevOps</strong></summary>
+<br>
+<img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" />
+<img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" />
+<img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" />
+</details>
 
-3. **Run the development server**
-   ```bash
-   npm run dev
-   ```
+<details open>
+<summary><strong>🗄️ Database</strong></summary>
+<br>
+<img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
+<img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
+<img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" />
+</details>
 
-4. **Build for production**
-   ```bash
-   npm run build
-   npm run start
-   ```
-
----
-
-## ⚙️ Environment Variables
-
-Create a `.env.example` or `.env` file in the root directory for local development:
-
-```env
-# Example environment configuration
-NEXT_PUBLIC_SITE_URL="https://qubiqode.com"
-```
-
----
-
-## 📜 Scripts
-
-- `npm run dev` — Starts the development server with fast refresh.
-- `npm run build` — Compiles the application for production.
-- `npm run start` — Runs the compiled production build.
-- `npm run lint` — Runs ESLint to catch syntax and style issues.
+<details open>
+<summary><strong>🎨 Design & Creative</strong></summary>
+<br>
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" />
+<img src="https://img.shields.io/badge/Adobe_Creative_Suite-FF0000?style=for-the-badge&logo=adobe&logoColor=white" />
+<img src="https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white" />
+<img src="https://img.shields.io/badge/Spline-000000?style=for-the-badge&logo=spline&logoColor=white" />
+</details>
 
 ---
 
 ## 🎨 UI/UX Philosophy
 
-The QubiQode UI is built around a "Modern Minimalist Agency" aesthetic. We believe that less is more, but quality is everything.
-- **Strong Spacing:** Generous whitespace to let content breathe.
-- **Conversion-focused:** Clear visual hierarchy guiding users to CTAs.
-- **Accessibility:** High contrast ratios, semantic HTML, and keyboard navigation support.
-- **Elegant Motion:** Motion is used to draw attention and confirm actions, not to distract.
+The soul of QubiQode lies in its **futuristic design language** and **modern visual storytelling**. We combine dark aesthetics, premium typography, and a **blue brand accent (`#1E90FF`)** to establish trust and technological prowess. Our motion-first experiences prioritize interaction design, driving a cinematic UI rooted in premium SaaS inspiration.
 
 ---
 
-## 🎬 Animation System
+## 🎬 Motion Design & Animation System
 
-Powered by **Framer Motion**, our animation system focuses on elegance and performance:
-- **Scroll Reveal:** Elements gracefully fade and slide up as they enter the viewport.
-- **Micro-interactions:** Buttons and cards respond physically (`scale: 0.98`) to interactions.
-- **Layout Transitions:** Shared element routing and smooth accordion/drawer toggling.
-
----
-
-## 📊 SEO & Performance
-
-Built from the ground up for search engine dominance:
-- **Metadata:** Dynamic titles and descriptions per route.
-- **Open Graph:** Fully optimized for social sharing.
-- **Image Optimization:** Utilizes `next/image` for automatic WebP conversion and resizing.
-- **Core Web Vitals:** Pre-rendered HTML, code splitting, and zero-layout-shift design.
+Animations shouldn’t just move; they should *breathe*. Powered heavily by our **Framer Motion architecture**, we leverage:
+- **Cinematic Transitions:** Interwoven shared layouts seamlessly routing between states.
+- **Staggered Reveals & Scroll Animations:** Choreographed entrance layers that wait for the user to discover them.
+- **Floating Effects & Parallax Systems:** Enhancing depth perception utilizing real-time viewport intersections.
 
 ---
 
-## 🗺️ Pages Included
+## 🏗 Advanced Hero Section Showcase
 
-- **Core:** Home, About, Process, Testimonials, Careers.
-- **Services:** Overview, Web Development, UI/UX Design, SEO Optimization, Branding & Creative Media, Video Editing & Animation, AI & Automation Solutions.
-- **Work:** Portfolio, Case Studies, Technology Stack, Industries Served, Design System / UI Showcase.
-- **Resources:** Blog, Resources / Freebies, FAQ.
-- **Contact:** Contact, Book Consultation, Support / Maintenance Plans.
-- **Legal:** Privacy Policy, Terms & Conditions, Sitemap.
+Our immersive hero architecture serves as a blueprint for the remainder of the web platform. Utilizing **layered UI systems**, **interactive gradients**, and **floating dashboard elements**, the hero invites the user into a futuristic presentation.
+
+*Placeholder: Hero showcase GIF goes here.*
+
+---
+
+## 🤖 AI Chatbot System
+
+We integrate a hyper-responsive conversational UI that features:
+- Deep contextual awareness in our **AI assistant UI**.
+- Smart quick prompts and conversational lead generation.
+- Chatbot animations that mimic human thought intervals.
+
+---
+
+## ⚡ Performance & Optimization
+
+Premium UI doesn't compromise on speed.
+- **GPU-Friendly Animations:** Offloading complex calculations to the compositor.
+- **Optimized Rendering & Lazy Loading:** Sending only absolute necessities over the wire.
+- **Accessibility & Reduced Motion:** Respecting user OS preferences seamlessly.
+- **Responsive Architecture:** Honoring performance-first design methodologies across devices.
+
+---
+
+## 🗺️ Updated Pages Structure
+
+- **Core Paths:** Cinematic landing pages, Support plans, Resources page.
+- **Technical & Product:** Advanced tech stack page, AI solutions, Design system showcase.
+- **Creative:** Modern portfolio system mapping out innovative footprints.
+
+---
+
+## 📂 Folder Architecture
+
+A highly scalable repository structured for modular animations and component-driven architecture:
+
+```text
+├── app/                  # Next.js App Router root layouts & pages
+├── components/           # Extracted UI elements
+│   ├── animations/       # Modular interaction components
+│   ├── chatbot/          # Intelligent AI systems
+│   ├── effects/          # Blur systems, glow effects, floating particles
+│   ├── marquees/         # Infinite scrolling text & assets
+│   ├── motion/           # Wrapper components for Framer logic
+│   ├── sections/         # Cinematic page blocks
+│   ├── transitions/      # Page-to-page morphs & reveals
+│   └── ui/               # Core design system blocks
+├── hooks/                # React lifecycle & scroll tracking logic
+├── providers/            # Context API & global state layers
+├── lib/                  # Utilities, Types & Configs
+└── public/               # Static high-fidelity assets
+```
+
+---
+
+## 📐 Design System
+
+Our consistent, premium component system ensures scalable execution:
+- **Typography Hierarchy:** Engineered for legibility and visual rhythm.
+- **Spacing System:** Fluid values generating effortless breathing room.
+- **Glassmorphism & Overlays:** Tactile translucent surfaces interacting with background gradients.
+- **Shadow Systems & Blue Brand Palette:** Striking a balance between deep dark greys, off-whites, and vivid `#1E90FF` highlights.
+
+---
+
+## 🔮 Modern Visual Effects
+
+Beyond standard styling, elements are elevated via:
+- **Gradient Meshes & Interactive Lighting:** Contextual light sources reacting to mouse position.
+- **Floating Particles & Glow Effects:** Subtle atmospheric details.
+- **Blur Systems & Glassmorphism Layers:** Dynamic stacking contexts.
+
+---
+
+## 📸 Preview Showcase
+
+<div align="center">
+  <img src="https://via.placeholder.com/800x450/0a0a0a/1E90FF?text=Hero+Section+Showcase" alt="Hero Section" width="48%" />
+  <img src="https://via.placeholder.com/800x450/0a0a0a/1E90FF?text=AI+Chatbot+System" alt="AI Chatbot System" width="48%" />
+  <br/>
+  <img src="https://via.placeholder.com/800x450/0a0a0a/1E90FF?text=Technology+Stack" alt="Tech Stack" width="48%" />
+  <img src="https://via.placeholder.com/800x450/0a0a0a/1E90FF?text=Motion+System" alt="Motion" width="48%" />
+</div>
+
+---
+
+## 👨‍💻 Developer Experience
+
+Our codebase is a production-ready setup focused on:
+- **Reusable Architecture**
+- **Scalable Component System**
+- **Modular Animations**
+- **Maintainable Codebase**
 
 ---
 
 ## 🛣️ Future Roadmap
 
-- [ ] AI-powered interactive Chatbot for lead qualification.
-- [ ] Headless CMS integration for dynamic blog and portfolio management.
-- [ ] Client Portal with secure login for project tracking.
-- [ ] Internationalization (i18n) for global reach.
-- [ ] Advanced behavioral analytics dashboard.
+- [ ] Multi-agent AI workflow engines
+- [ ] Voice AI interfaces
+- [ ] Rendered 3D WebGL experiences
+- [ ] Advanced personalizations & CMS integration
+- [ ] Intelligent data analytics dashboards
 
 ---
 
-## 📸 Screenshots
+## 🤝 Open Source & Community
 
-> *(Screenshot placeholders - Update with actual site imagery)*
+We believe in a robust developer ecosystem. Open-source collaboration drives innovation, and our contribution philosophy encourages pushing the boundaries of web UI engineering. Read our guidelines to start making an impact.
+
+---
+
+<br />
+<br />
 
 <div align="center">
-  <img src="https://via.placeholder.com/800x450/1c1917/ffffff?text=Homepage+Hero" alt="Homepage Screenshot" width="48%" />
-  <img src="https://via.placeholder.com/800x450/1c1917/ffffff?text=Services+Page" alt="Services Screenshot" width="48%" />
-  <br/>
-  <img src="https://via.placeholder.com/800x450/1c1917/ffffff?text=Portfolio+Showcase" alt="Portfolio Screenshot" width="48%" />
-  <img src="https://via.placeholder.com/800x450/1c1917/ffffff?text=Mobile+Responsive" alt="Mobile Screenshot" width="48%" />
-</div>
-
----
-
-## 🤝 Contribution Guidelines
-
-We welcome contributions to improve the QubiQode platform.
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/your-feature-name`.
-3. Commit your changes: `git commit -m "Add some feature"`.
-4. Push to the branch: `git push origin feature/your-feature-name`.
-5. Submit a pull request.
-
-Please ensure you adhere to our ESLint and Prettier formatting guidelines.
-
----
-
-## 🌍 Deployment
-
-This project is optimized for deployment on [Vercel](https://vercel.com/).
-Connect your GitHub repository to Vercel and it will automatically handle build settings, environment variables, and CDN distribution.
-
----
-
-## 🏢 Branding
-
-**QubiQode** represents the intersection of creative vision and rigorous engineering. Our brand identity relies on:
-- **Creative Technology:** Beyond just code, we build experiences.
-- **Premium Real Estate:** Every pixel conveys trust and expertise.
-- **Performance:** Speed is a feature of our brand.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
-## 📫 Contact
-
-- **Website:** [qubiqode.com](https://qubiqode.com)
-- **GitHub:** [@qubiqode](https://github.com/qubiqode)
-- **LinkedIn:** [linkedin.com/company/qubiqode](https://linkedin.com)
-- **Instagram:** [@qubiqode](https://instagram.com)
-- **Email:** hello@qubiqode.com
-
----
-
-<div align="center">
-  <p><strong>Built with creativity, technology, and innovation by QubiQode.</strong></p>
+  <img src="https://img.shields.io/badge/Crafted_With-Passion-1E90FF?style=for-the-badge" alt="Crafted With Passion" />
+  <p><strong>Crafting the future of digital experiences through design, motion, AI, and engineering.</strong></p>
+  <p align="center">
+    <a href="https://qubiqode.com">Website</a> •
+    <a href="https://github.com/qubiqode">GitHub</a> •
+    <a href="https://linkedin.com">LinkedIn</a>
+  </p>
 </div>
